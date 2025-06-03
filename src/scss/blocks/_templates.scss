@@ -1,0 +1,62 @@
+.container{
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  @media(max-width: 768px){
+    padding: 0 10px;
+  }
+}
+
+.templates{
+  padding: 100px 0;
+  .raleway500{
+    font-family: $raleway;
+    font-weight: 500;
+  }
+  .raleway600{
+    font-family: $raleway;
+    font-weight: 600;
+  }
+  .raleway700{
+    font-family: $raleway;
+    font-weight: 700;
+  }
+  .forum400{
+    font-family: $forum;
+  }
+}
+
+.text{
+  font-family: $raleway;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 120%;
+	color: $dark;
+}
+
+.slider-nav{
+  display: inline-flex;
+  gap: 12px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(40px);
+  .swiper-pagination-bullet{
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    background: $white;
+    transition: all 0.3s;
+    cursor: pointer;
+    &-active{
+      border-color: $white;
+      background: $orange;
+    }
+  }
+}
+
+.catalog-preview{
+  position: relative;
+  width: 100%;
+  height: 445px;
+}
