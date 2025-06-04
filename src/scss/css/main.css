@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 0. Шрифты
 1. Общие стили для всего сайта
@@ -10,14 +11,11 @@
 Мобильная версия начинается с 992пх
 
 */
-
-@import 'blocks/vars';
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ШРИФТЫ 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@import 'blocks/fonts';
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Forum&display=swap");
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -29,157 +27,205 @@ h3,
 h4,
 h5,
 h6 {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	line-height: normal;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html {
-	overflow-x: hidden;
-
-	&.fixed {
-		overflow: hidden;
-	}
+  overflow-x: hidden;
+}
+html.fixed {
+  overflow: hidden;
 }
 
 body {
-	font-family: $raleway;
-	font-size: 16px;
-	font-weight: 600;
-	line-height: 120%;
-	color: $dark;
-	background: $white-grey;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #222;
+  background: #F8F8F8;
 }
 
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 a {
-	text-decoration: none;
-	color: initial;
-
-	&:hover {
-		text-decoration: none;
-	}
+  text-decoration: none;
+  color: initial;
+}
+a:hover {
+  text-decoration: none;
 }
 
 button {
-	display: block;
-	background: transparent;
-	border: none;
-	outline: none;
-	cursor: pointer;
-
-	&:focus {
-		outline: none;
-	}
-
-	&:disabled {
-		pointer-events: none;
-		opacity: 0.5;
-	}
+  display: block;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 input,
 textarea {
-	outline: none;
-
-	&:focus-visible {
-		outline: none;
-	}
-
-	&:disabled {
-		pointer-events: none;
-		opacity: 0.5;
-	}
+  outline: none;
+}
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+input:disabled,
+textarea:disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .mobile {
-	display: none;
-
-	@media screen and (max-width: 992px) {
-		display: block;
-	}
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .mobile {
+    display: block;
+  }
 }
 
-.desktop {
-	@media screen and (max-width: 992px) {
-		display: none;
-	}
+@media screen and (max-width: 992px) {
+  .desktop {
+    display: none;
+  }
 }
 
-// ~~~~~~~~~~~~~~~~~~~ Стилизация скроллбара
 * ::-webkit-scrollbar {
-	width: 6px;
-	/* ширина всей полосы прокрутки */
+  width: 6px;
+  /* ширина всей полосы прокрутки */
 }
 
 * ::-webkit-scrollbar-track {
-	background: $white-grey;
-	/* цвет зоны отслеживания */
-	border-radius: 20px;
+  background: #F8F8F8;
+  /* цвет зоны отслеживания */
+  border-radius: 20px;
 }
 
 * ::-webkit-scrollbar-thumb {
-	background-color: $orange;
-	/* цвет бегунка */
-	border-radius: 20px;
-	/* округлось бегунка */
-	border: 3px solid transparent;
+  background-color: #E9711F;
+  /* цвет бегунка */
+  border-radius: 20px;
+  /* округлось бегунка */
+  border: 3px solid transparent;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END ОБЩИЕ СТИЛИ ДЛЯ ВСЕГО САЙТА 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ (нужны там где нет нужды в осмысленном класснейминге)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
-
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END	ВСПОМОГАТЕЛЬНЫЕ КЛАССЫ 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	СТИЛИ ДЛЯ ОДИНАКОВЫХ ЭЛЕМЕНТОВ
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@import 'blocks/templates';
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.templates {
+  padding: 100px 0;
+}
+.templates .raleway500 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.templates .raleway600 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+.templates .raleway700 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.templates .forum400 {
+  font-family: "Forum", serif;
+}
+
+.text {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #222;
+}
+
+.slider-nav {
+  display: inline-flex;
+  gap: 12px;
+  padding: 6px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(40px);
+          backdrop-filter: blur(40px);
+}
+.slider-nav .swiper-pagination-bullet {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  background: #FFF;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.slider-nav .swiper-pagination-bullet-active {
+  border-color: #FFF;
+  background: #E9711F;
+}
+
+.catalog-preview {
+  position: relative;
+  width: 100%;
+  height: 445px;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END СТИЛИ ДЛЯ ОДИНАКОВЫХ ЭЛЕМЕНТОВ 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 	HEADER 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@import 'blocks/header';
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END HEADER  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	FOOTER
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@import 'blocks/footer';
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END FOOTER
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	yura - Стили для верстки Юры
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@import 'blocks/yura';
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	//END yura
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 	СТИЛИ КОТОРЫЕ НЕ ПОВТОРЯЮТСЯ НА ДРУГИХ СТРАНИЦАХ 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
