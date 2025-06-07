@@ -2,7 +2,7 @@
 html(lang="ru")
 	head
 		include ./../sections/_head.pug
-		title Site | Templates
+		title Keklik | UI
 	body
 		include ./../sections/_header.pug
 		.templates
@@ -36,6 +36,19 @@ html(lang="ru")
 				br
 				button.button.button-black 
 					span.text В корзину
+				br
+				br
+				label.checkbox
+					input.checkbox__input(type="checkbox")
+					span.checkbox-area
+						img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+				br
+				br
+				label.checkbox
+					input.checkbox__input(type="checkbox")
+					span.checkbox-area
+						img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+					span.text Ювелирный сплав
 				br
 				br
 				.slider-nav 
@@ -167,7 +180,38 @@ html(lang="ru")
 						.slider-nav.js-previewVideoNav
 				br
 				br
-			
+				.create 
+					.create-info 
+						h6.create-info__title KEKLIK. Персональные украшения
+						.create-info__textbox
+							p.create-info__text Мы создали более 20 000 браслетов по личному методу Шахрай
+							p.create-info__text Но мы продолжаем радоваться каждый раз, когда наши украшения исполняют желания и к нам возвращаются с новыми мечтами и целями
+							p.create-info__text За 20 лет у бренда KEKLIK появилось много друзей. Среди них люди, которых знают многие
+					.create-scheme
+						img.create-scheme__bgfoto(src="img/create-bg.webp", alt="@")
+						p.create-scheme__name Четыре науки в действии
+						.create-scheme__box 
+							.create-scheme__cat.create-scheme__cat--astro.text Астрология
+							.create-scheme__cat.create-scheme__cat--taro.text Тарология
+							.create-scheme__cat.create-scheme__cat--numero.text Нумерология
+							.create-scheme__cat.create-scheme__cat--pcyho.text Психология
+				br
+				br
+				.feedback 
+					.feedback__textbox
+						h6.feedback__title Напишите нам и мы поможем вам создать свое украшение талисман
+						p.feedback__text Украшения KEKLIK не просто аксессуары, это мощные инструменты для реализации ваших мечт. Благодаря методу Шахрай выполучаете украшение, которое становится вашим личным куратором, сопровождающим вас на пути к успеху и безопасности
+					form.feedback-form.form
+						.feedback-form__fields
+							input.form__input(type="text")
+							button.button.button-black.form__button 
+								span.text Создать свое украшение-талисман
+						.agree 
+							label.checkbox
+								input.checkbox__input(type="checkbox")
+								span.checkbox-area
+									img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+							span.agree__text.text Согласен с #[a(href="") политикой конфиденциальности] и #[a(href="") публичной офертой]
 
 		include ./../sections/_footer.pug
 		

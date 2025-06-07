@@ -25,6 +25,16 @@
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE
+const clickToggle = (wrap) => {
+    document.querySelector(wrap).addEventListener('click', function(e){
+        const clickElem = e.target.closest('.js-clickElem')
+        const parentElem = clickElem.closest('.js-clickParent')
+        if(clickElem){
+            parentElem.classList.toggle('is-active')
+        }
+    })
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
@@ -74,11 +84,11 @@ const sliders = () => {
             }
         }
     });
-
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 sliders()
+clickToggle('.footer')
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
