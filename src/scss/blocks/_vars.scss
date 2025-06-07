@@ -1,5 +1,7 @@
-$raleway: "Raleway", sans-serif;
-$forum: "Forum", serif;
+$raleway: "Raleway",
+sans-serif;
+$forum: "Forum",
+serif;
 
 $dark: #222;
 $orange: #E9711F;
@@ -8,5 +10,35 @@ $white: #FFF;
 $white-grey: #F8F8F8;
 $light-grey: #EDEDED;
 
+:root {
+	--gr-a: #f8f8f8;
+	--gr-b: #ededed;
+	--bl: #000;
+	--wh: #fff;
+	--gr-d: #333;
+	--gr-c: #8f8f8f;
+	--gr-e: #222;
+	--op100: rgba(255, 255, 255, 0);
+	--br-a: #b45c20;
+	--bl-br: #373330;
+	--op50: rgba(255, 255, 255, 0.5);
+	--op10: rgba(255, 255, 255, 0.1);
+	--br-b: #e9711f;
+	--gr-e-80: rgba(34, 34, 34, 0.8);
+
+	--font-family: "Raleway",
+		sans-serif;
+	--second-family: "Inter",
+		sans-serif;
+	--third-family: "Onest",
+		sans-serif;
+	--font3: "Arial",
+		sans-serif;
+	--font4: "Segoe UI",
+		sans-serif;
+	--font5: "Forum",
+		sans-serif;
+}
+
 // MIXINS
-	// @mixin NAMEMIXIN
+// @mixin NAMEMIXIN
