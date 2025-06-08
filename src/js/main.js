@@ -71,6 +71,10 @@ const sliders = () => {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 20,
+        navigation: {
+          nextEl: '.video-arrows .js-next',
+          prevEl: '.video-arrows .js-prev',
+        },
         pagination: {
             el: '.js-previewVideoNav',
             clickable: true
@@ -84,6 +88,26 @@ const sliders = () => {
             }
         }
     });
+    let sliderSelector = '.js-sliderPresent'
+    let sliderSelectorOptions = {
+        loop: false,
+        speed:1000,
+        parallax:true,
+        // autoplay:{
+        //   delay:5000
+        // },
+        grabCursor: true,
+        navigation: {
+          nextEl: '.js-presentNext',
+          prevEl: '.js-presentPrev',
+        },
+        pagination: {
+            el: '.js-presentNav',
+            clickable: true
+        }
+    };
+    let sliderEvents = new Swiper(sliderSelector, sliderSelectorOptions);
+
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT

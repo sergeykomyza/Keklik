@@ -1,0 +1,7 @@
+section.present-category 
+  .container 
+    .present-category__box 
+      each item, i in ['Браслеты','Кулоны','Серьги']
+        a.present-category__item(href="#")
+          img.present-category__foto(src=`img/present-category-${i+1}.webp`, alt="foto")
+          h6.present-category__name= item 
