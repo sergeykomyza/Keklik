@@ -317,3 +317,25 @@ END .product-page
 /* ========================
 END .photo-gallery
 ======================== */
+
+/* ========================
+.gallery-page__products
+======================== */
+
+.gallery-page__products {
+	padding-top: 40px;
+}
+
+.gallery-page__products .container {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+
+	& > * {
+		margin: 0;
+	}
+}
+
+/* ========================
+END .gallery-page__products
+======================== */
