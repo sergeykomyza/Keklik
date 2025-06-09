@@ -339,3 +339,191 @@ END .photo-gallery
 /* ========================
 END .gallery-page__products
 ======================== */
+
+/* ========================
+.bibliya-kamnei
+======================== */
+
+.bibliya-kamnei {}
+
+.template-book__box {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.template-book__grid {
+	padding-bottom: 80px;
+	display: grid;
+	grid-template-columns: 370px 1fr;
+	gap: 20px;
+
+	@media screen and (max-width: 1600px) {
+		grid-template-columns: 25% 1fr;
+	}
+}
+
+.template-book__aside {
+	padding-left: 40px;
+
+	@media screen and (max-width: 768px) {
+		padding-left: 10px;
+	}
+}
+
+.template-book__main-wrapper {
+	.page-title {
+		margin-bottom: 20px;
+	}
+
+	.template-book__subtitle {
+		margin-bottom: 30px;
+	}
+}
+
+.template-book__main {
+	padding: 150px 80px 80px;
+	color: var(--gr-a);
+	background-color: #0b0b0b;
+	overflow: hidden;
+
+	.page-title {
+		color: var(--gr-a);
+	}
+}
+
+.template-book__subgrid {}
+
+.tb-subgrid {
+	display: grid;
+	grid-template-columns: 240px 1fr;
+	gap: 40px;
+
+	@media screen and (max-width: 768px) {
+		gap: 60px;
+	}
+}
+
+.tb-subgrid__img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.tb-subgrid__main {
+	max-width: 515px;
+
+	h2 {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+	}
+
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+
+	.block {
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@media screen and (max-width: 768px) {
+			margin-bottom: 60px;
+		}
+	}
+
+	.block-descr {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		line-height: 1.2;
+
+		& > * {
+			margin: 0;
+		}
+	}
+
+	.list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 4px;
+
+		@media screen and (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.list-item {
+		padding: 20px;
+		min-height: 139px;
+
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		line-height: 1.2;
+
+		border: 1px solid var(--wh);
+		border-radius: 20px;
+
+		@media screen and (max-width: 768px) {
+			min-height: 130px;
+		}
+	}
+}
+
+.template-book__subtitle {}
+
+/* ========================
+END .bibliya-kamnei
+======================== */
+
+/* ========================
+.aside-nav
+======================== */
+
+.aside-nav {
+	padding-top: 150px;
+}
+
+.aside-nav__list {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.aside-nav__item {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+
+	&.active {
+		.aside-nav__link {
+			color: var(--br-b);
+		}
+	}
+}
+
+.aside-nav__link {
+	color: var(--gr-e);
+	text-decoration: none;
+	transition: all 0.25s;
+
+	&:hover {
+		color: var(--br-b);
+	}
+}
+
+/* ========================
+END .aside-nav
+======================== */
