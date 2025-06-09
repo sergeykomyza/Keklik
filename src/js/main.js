@@ -36,14 +36,71 @@ const clickToggle = (wrap) => {
     })
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ TABS
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+  const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector);
+  function hideContent(){
+    content.forEach(item => {
+      item.style.display = 'none';
+    });
+    tab.forEach(item => {
+      item.classList.remove(activeClass);
+    });
+  }
+  function showContent(i){
+    content[i].style.display = 'block';
+    tab[i].classList.add(activeClass);
+  }
+  header.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target;
+    if( target &&
+            (target.classList.contains(tabSelector.replace(/\./,"")) ||  target.parentNode.classList.contains(tabSelector.replace(/\./,"")))){
+            tab.forEach((item, i) => {
+                if(target == item || target.parentNode == item){
+                    hideContent();
+                    showContent(i);
+                }
+            });
+        }
+  });
+  hideContent();
+  showContent(0); 
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
-    const swiper = new Swiper('.js-slider', {
+    for(let i = 1; i <= 4; i++){
+        const swiper = new Swiper(`.js-slider${i}`, {
+            loop: false,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            pagination: {
+                el: `.js-catalogNav${i}`,
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.products-arrows .js-next',
+                prevEl: '.products-arrows .js-prev',
+            },
+            breakpoints: {
+                993: {
+                    slidesPerView: 4
+                },
+                769: {
+                    slidesPerView: 3
+                }
+            }
+        });
+    }
+    const swiper = new Swiper(`.js-slider`, {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 20,
         pagination: {
-            el: '.js-catalogNav',
+            el: `.js-catalogNav`,
             clickable: true
         },
         navigation: {
@@ -113,6 +170,7 @@ const sliders = () => {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 sliders()
 clickToggle('.footer')
+tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);

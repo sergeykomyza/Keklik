@@ -1,0 +1,20 @@
+section.stones-categories 
+	.container 
+		h2.section-title.stones-categories__title Украшения из вашего любимого камня
+		.stones-categories__box 
+			each item, i in ['Авантюрин','Азурит','Берилл','Вулканит','Горный хрусталь','Обсидиан','Коралл','Лазурит', 9, 10]
+				if (i <= 7)
+					a(class=`${i <= 5 ? 'stone-category small' : 'stone-category big'}` href="#")
+						img(src=`img/stones-category-${i+1}.webp`, alt="foto")
+						span.stone-category__name.text= item
+			a.stone-category.stone-learn.big(href="#")
+				<svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7.78125 0.891602H23.2188L30.3438 9.2041L15.5 25.8291L0.65625 9.2041L7.78125 0.891602Z" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				span.stone-category__name.stone-category__name--info.stone-category__name--black.text Узнать мой камень
+			a.stone-category.stone-more.big(href="#")
+				<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 10.3604H10.5M10.5 10.3604H20M10.5 10.3604V0.860352M10.5 10.3604V19.8604" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+				span.stone-category__name.stone-category__name--info.stone-category__name--white.text Все камни
+
