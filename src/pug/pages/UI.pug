@@ -31,7 +31,7 @@ html(lang="ru")
 				h2.forum400 Элементы
 				br
 				br
-				h2.title
+				h2.section-title Залоголовок 24px, на мобилке 22px
 				br
 				br
 				button.button.button-white
@@ -121,7 +121,7 @@ html(lang="ru")
 								.swiper-slide
 									.preview.preview-big
 										.preview__fotobox
-											img.preview-big__foto(src="img/foto-1.webp", alt="foto")
+											img.preview-big__foto(src="img/product-foto-1.webp", alt="foto")
 											.preview-tags
 												span.preview-tags__item.text Агат
 												span.preview-tags__item.text Родонит
@@ -148,7 +148,7 @@ html(lang="ru")
 								.swiper-wrapper 
 									each elem in [1, 2, 3, 4]
 										.swiper-slide
-											img.preview-small__foto(src="img/foto-1.webp", alt="foto")
+											img.preview-small__foto(src="img/product-foto-1.webp", alt="foto")
 								.slider-nav.previewslider-nav.js-previewSmallNav
 								.preview-tags
 									span.preview-tags__item.text Агат
@@ -184,20 +184,21 @@ html(lang="ru")
 				br
 				br
 				.create 
-					.create-info 
-						h6.create-info__title KEKLIK. Персональные украшения
-						.create-info__textbox
-							p.create-info__text Мы создали более 20 000 браслетов по личному методу Шахрай
-							p.create-info__text Но мы продолжаем радоваться каждый раз, когда наши украшения исполняют желания и к нам возвращаются с новыми мечтами и целями
-							p.create-info__text За 20 лет у бренда KEKLIK появилось много друзей. Среди них люди, которых знают многие
-					.create-scheme
-						img.create-scheme__bgfoto(src="img/create-bg.webp", alt="@")
-						p.create-scheme__name Четыре науки в действии
-						.create-scheme__box 
-							.create-scheme__cat.create-scheme__cat--astro.text Астрология
-							.create-scheme__cat.create-scheme__cat--taro.text Тарология
-							.create-scheme__cat.create-scheme__cat--numero.text Нумерология
-							.create-scheme__cat.create-scheme__cat--pcyho.text Психология
+					.create__box
+						.create-info 
+							h6.create-info__title KEKLIK. Персональные украшения
+							.create-info__textbox
+								p.create-info__text Мы создали более 20 000 браслетов по личному методу Шахрай
+								p.create-info__text Но мы продолжаем радоваться каждый раз, когда наши украшения исполняют желания и к нам возвращаются с новыми мечтами и целями
+								p.create-info__text За 20 лет у бренда KEKLIK появилось много друзей. Среди них люди, которых знают многие
+						.create-scheme
+							img.create-scheme__bgfoto(src="img/create-bg.webp", alt="@")
+							p.create-scheme__name Четыре науки в действии
+							.create-scheme__box 
+								.create-scheme__cat.create-scheme__cat--astro.text Астрология
+								.create-scheme__cat.create-scheme__cat--taro.text Тарология
+								.create-scheme__cat.create-scheme__cat--numero.text Нумерология
+								.create-scheme__cat.create-scheme__cat--pcyho.text Психология
 				br
 				br
 				.feedback 
@@ -215,6 +216,11 @@ html(lang="ru")
 								span.checkbox-area
 									img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
 							span.agree__text.text Согласен с #[a(href="") политикой конфиденциальности] и #[a(href="") публичной офертой]
+				br
+				br
+				
+				
+
 
 		include ./../sections/_footer.pug
 		

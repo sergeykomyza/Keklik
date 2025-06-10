@@ -310,7 +310,6 @@ textarea {
 		letter-spacing: -0.2px;
 	}
 }
-
 .to-down{
 	position: absolute;
 	z-index: 1;
@@ -329,7 +328,6 @@ textarea {
 		display: none;
 	}
 }
-
 .present-category{
 	margin-bottom: 160px;
 	@media(max-width: 768px){
@@ -389,28 +387,33 @@ textarea {
 		backdrop-filter: blur(40px);
 	}
 }
-
 .products-previews{
 	margin-bottom: 80px;
 	&__title{
 		margin-bottom: 26px;
 	}
 }
-
 .popular-previews{
 	margin-bottom: 80px;
 	&__title{
 		margin-bottom: 36px;
 	}
 }
-
+.blog-previews{
+	margin-bottom: 80px;
+	@media(max-width: 768px){
+		margin-bottom: 50px;
+	}
+	&__title{
+		margin-bottom: 26px;
+	}
+}
 .stones-categories__title{
 	margin-bottom: 120px;
 	&__title{
 		margin-bottom: 36px;
 	}
 }
-
 .decoration-task{
 	&__head{
 		display: flex;
@@ -440,8 +443,8 @@ textarea {
 		}
 	}
 }
-
 .stones-categories{
+	margin-bottom: 120px;
 	&__title{
 		margin-bottom: 36px;
 	}
@@ -463,7 +466,6 @@ textarea {
 		}
 	}
 }
-
 .stone-category{
 	position: relative;
 	display: flex;

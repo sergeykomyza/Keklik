@@ -164,7 +164,27 @@ const sliders = () => {
         }
     };
     let sliderEvents = new Swiper(sliderSelector, sliderSelectorOptions);
-
+    const swiper4 = new Swiper(`.js-slider`, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: `.js-blogNav`,
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.blog-arrows .js-next',
+            prevEl: '.blog-arrows .js-prev',
+        },
+        breakpoints: {
+            993: {
+                slidesPerView: 4
+            },
+            769: {
+                slidesPerView: 3
+            }
+        }
+    });
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
