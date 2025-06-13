@@ -156,6 +156,9 @@
 .develop{
   display: block;
   color: $middle-grey;
+  a{
+    color: $middle-grey;
+  }
 }
 .footer-socials{
   display: flex;

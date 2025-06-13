@@ -12,12 +12,8 @@
     <header class="header">
       <nav class="header-overnav"> 
         <div class="container">
-          <div class="header__box">
-            <button class="header__burger js-openMobileMenu">
-               <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1 13.2498H13.75M1 6.99976H19M1 0.749756H13.75" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-            </button>
+          <div class="header__box header__box--overnav">
+            <button class="header__burger js-burger js-openMobileMenu"><span></span></button>
             <div class="language"> <a class="language__item text is-active" href="#">Ru</a><a class="language__item text" href="#">En </a></div>
             <div class="header-socials"> <a class="header-socials__item" href="#"><svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.2661 2.42944L14.7615 14.2328C14.5768 15.0697 14.0784 15.2728 13.383 14.8789L9.5675 12.0666L7.72746 13.8389C7.52438 14.042 7.35206 14.2143 6.95821 14.2143L7.22898 10.3312L14.2999 3.94332C14.6076 3.67255 14.2322 3.5187 13.826 3.78947L5.0874 9.29113L1.32116 8.11572C0.502684 7.85725 0.484222 7.29724 1.49347 6.90339L16.2076 1.22942C16.8907 0.983257 17.4877 1.39557 17.2661 2.42944Z" stroke="#222222"/>
@@ -33,9 +29,11 @@
               <li class="page-menu__item"> <a class="page-menu__link text" href="#">Связаться с нами</a></li>
             </ul>
             <div class="search">
-               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button class="search__iconzoom js-openSearchInputBox">
+                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.75 11.75L14.75 14.75M1.25 7.25C1.25 8.8413 1.88214 10.3674 3.00736 11.4926C4.13258 12.6179 5.6587 13.25 7.25 13.25C8.8413 13.25 10.3674 12.6179 11.4926 11.4926C12.6179 10.3674 13.25 8.8413 13.25 7.25C13.25 5.6587 12.6179 4.13258 11.4926 3.00736C10.3674 1.88214 8.8413 1.25 7.25 1.25C5.6587 1.25 4.13258 1.88214 3.00736 3.00736C1.88214 4.13258 1.25 5.6587 1.25 7.25Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
+              </button>
               <div class="search__inputbox">
                 <input class="search__input" type="text" placeholder="Найти украшение"/>
                 <button class="search__close js-closeSearchInputBox">
@@ -61,7 +59,9 @@
       <nav class="header-nav">
         <div class="container"> 
           <div class="header__box"><img class="header-nav__logo" src="img/svg/logo.svg" alt="logo"/>
-            <button class="catalog-btn"> <span class="catalog-btn__name text">Каталог</span></button>
+            <button class="catalog-btn js-toggleCatalog">
+              <div class="burger js-burger"><span></span></div><span class="catalog-btn__name text">Каталог</span>
+            </button>
             <ul class="header-nav__menu"> 
               <li class="header-nav__item"> <a class="header-nav__link text" href="#">Индивидуальные украшения</a></li>
               <li class="header-nav__item"> <a class="header-nav__link text" href="#">Коллекции</a></li>
@@ -72,6 +72,744 @@
               <li class="header-nav__item"> <a class="header-nav__link text" href="#">Контакты</a></li>
             </ul>
           </div>
+        </div>
+      </nav>
+      <nav class="header-catalog">
+        <div class="header-catalog__mobile">
+          <div class="mobile-menu"> 
+            <div class="mobile-menu__head"> 
+              <button class="mobile-menu__close js-closeMobileMenu"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+              </button>
+              <div class="mobile-search">
+                <input class="mobile-search__input" type="text" placeholder="Найти"/>
+                <button class="mobile-search__btn">
+                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 15L19 19M1 9C1 11.1217 1.84285 13.1566 3.34315 14.6569C4.84344 16.1571 6.87827 17 9 17C11.1217 17 13.1566 16.1571 14.6569 14.6569C16.1571 13.1566 17 11.1217 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </button>
+              </div>
+            </div>
+            <div class="mobile-connect"> <span class="mobile-connect__text text">Связаться с нами</span>
+              <div class="mobile-connect__socials"> <a class="mobile-connect__link" href="#"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.1197 15.1793L16.5463 14.7056L18.833 15.5841V17.7109C18.833 18.4191 18.224 18.9593 17.538 18.8076C15.7612 18.4179 12.533 17.4379 10.2907 15.1793C8.15568 13.0291 7.42651 10.0343 7.17801 8.38109C7.07884 7.71959 7.60268 7.16659 8.26651 7.16659H10.4762L11.3337 9.46375L10.8798 11.9149M24.6663 12.9999C24.6663 19.4434 19.4432 24.6666 12.9997 24.6666C10.9516 24.6694 8.93925 24.1309 7.16634 23.1056L1.33301 24.0833L2.30368 17.6666C1.66241 16.1944 1.33196 14.6057 1.33301 12.9999C1.33301 6.55642 6.55618 1.33325 12.9997 1.33325C19.4432 1.33325 24.6663 6.55642 24.6663 12.9999Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a><a class="mobile-connect__link" href="#"><svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.8584 3.3348L22.9623 21.6955C22.6751 22.9974 21.8997 23.3134 20.8179 22.7007L14.8828 18.3259L12.0205 21.0829C11.7046 21.3988 11.4365 21.6668 10.8239 21.6668L11.2451 15.6263L22.2443 5.68972C22.7229 5.26851 22.139 5.02919 21.5072 5.4504L7.91373 14.0085L2.05514 12.1801C0.781953 11.7781 0.753234 10.9069 2.32318 10.2943L25.2119 1.46809C26.2745 1.08517 27.203 1.72656 26.8584 3.3348Z" stroke="#222222"/>
+</svg></a></div>
+            </div>
+            <div class="mobile-catalog js-clickParent"><a class="mobile-catalog__name" href="#">Каталог</a>
+              <button class="mobile-catalog__btn js-clickElem">
+                 <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.5 8L5.5 4L0.5 4.76837e-07L0.5 8Z" fill="#222222"/>
+</svg>
+              </button>
+              <div class="mobile-catalog__menubox">
+                <ul class="mobile-catalog__menu"> 
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Браслеты</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Серьги</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Чокеры</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Подвески</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Кулоны</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Колье</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Кольца</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Перстни</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Брелоки</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Булавки</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Четки</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Подвески в авто/дом</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Шары из камня</a></li>
+                  <li class="mobile-catalog__item"> <a class="mobile-catalog__link text" href="#">Свечи</a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="mobile-mainmenu"> 
+              <li class="mobile-mainmenu__item"> <a class="mobile-mainmenu__link" href="#">Коллекции</a></li>
+              <li class="mobile-mainmenu__item"> <a class="mobile-mainmenu__link" href="#">Акции</a></li>
+              <li class="mobile-mainmenu__item"> <a class="mobile-mainmenu__link" href="#">Сертификаты</a></li>
+              <li class="mobile-mainmenu__item"> <a class="mobile-mainmenu__link" href="#">Браслеты</a></li>
+            </ul>
+            <ul class="mobile-categories"> 
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Серьги</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Чокеры</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Подвески</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Кулоны</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Колье</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Кольца</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Перстни</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Брелоки</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Булавки</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Четки</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Подвески в авто/домой</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Шары из камня</a></li>
+              <li class="mobile-categories__item"> <a class="mobile-categories__link" href="#">Свечи</a></li>
+            </ul>
+            <ul class="mobile-pagemenu">
+              <li class="mobile-pagemenu__item js-clickParent"><a class="mobile-pagemenu__link" href="#">Клиентам</a>
+                <button class="mobile-pagemenu__btn js-clickElem">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+</svg>
+                </button>
+                <div class="mobile-pagesubmenubox">
+                  <ul class="mobile-pagesubmenu"> 
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Доставка</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Оплата</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Гарантия на товар</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Возврат товара</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Услуги по ремонту</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Библия камней</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Курсы</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Сертификат</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Вопрос-ответ</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Реквизиты и документы</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-pagemenu__item js-clickParent"><a class="mobile-pagemenu__link" href="#">О Keklik</a>
+                <button class="mobile-pagemenu__btn js-clickElem">
+                   <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+</svg>
+                </button>
+                <div class="mobile-pagesubmenubox">
+                  <ul class="mobile-pagesubmenu"> 
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Создание браслеты-талисмана</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">О Светлане Шахрай</a></li>
+                    <li class="mobile-pagesubmenu__item"> <a class="mobile-pagesubmenu__link" href="#">Мастерская</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-pagemenu__item js-clickParent"><a class="mobile-pagemenu__link" href="#">Блог</a>
+              </li>
+              <li class="mobile-pagemenu__item js-clickParent"><a class="mobile-pagemenu__link" href="#">Отзывы</a>
+              </li>
+              <li class="mobile-pagemenu__item js-clickParent"><a class="mobile-pagemenu__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="mobile-info"> 
+              <div class="mobile-info__links"> <a class="mobile-info__link text" href="#">Политика конфиденциальности</a><a class="mobile-info__link text" href="#">Оферта</a></div>
+              <div class="pay-icons mobile-info__pays">
+                 <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.0013 1.87681C13.9457 2.61852 14.7091 3.56521 15.2338 4.64531C15.7585 5.72542 16.0307 6.91068 16.03 8.11148C16.0302 9.31199 15.7576 10.4968 15.2327 11.5765C14.7078 12.6562 13.9444 13.6025 13.0002 14.3438C12.056 13.6022 11.2927 12.6557 10.768 11.5758C10.2433 10.4959 9.97096 9.31092 9.97151 8.11031C9.97078 6.90951 10.2431 5.72425 10.7677 4.64415C11.2924 3.56404 12.0558 2.61735 13.0002 1.87565M11.9852 1.19665C10.9854 2.05034 10.183 3.11104 9.63344 4.30536C9.08392 5.49969 8.80041 6.79913 8.80251 8.11381C8.80091 9.4279 9.08467 10.7267 9.63418 11.9204C10.1837 13.114 10.9858 14.1742 11.9852 15.0275C10.7781 15.7051 9.41475 16.055 8.03057 16.0423C6.64639 16.0297 5.28962 15.655 4.09512 14.9555C2.90063 14.2561 1.91001 13.2561 1.22174 12.0551C0.533474 10.8541 0.171525 9.49389 0.171875 8.10966C0.172226 6.72542 0.534863 5.36538 1.22374 4.16473C1.91262 2.96409 2.90374 1.96464 4.09859 1.26576C5.29344 0.566869 6.6504 0.192878 8.03458 0.180958C9.41877 0.169039 10.782 0.519607 11.9887 1.19781M14.021 15.0275C15.0201 14.1741 15.8221 13.1139 16.3714 11.9202C16.9207 10.7265 17.2042 9.42781 17.2025 8.11381C17.2042 6.79915 16.9202 5.49982 16.3703 4.30569C15.8203 3.11157 15.0176 2.05116 14.0175 1.19781C15.2242 0.519607 16.5874 0.169039 17.9716 0.180958C19.3558 0.192878 20.7127 0.566869 21.9076 1.26576C23.1024 1.96464 24.0936 2.96409 24.7824 4.16473C25.4713 5.36538 25.834 6.72542 25.8343 8.10966C25.8347 9.49389 25.4727 10.8541 24.7844 12.0551C24.0962 13.2561 23.1056 14.2561 21.9111 14.9555C20.7166 15.655 19.3598 16.0297 17.9756 16.0423C16.5914 16.055 15.2281 15.7051 14.021 15.0275Z" fill="#222222"/>
+</svg>
+<svg width="30" height="10" viewBox="0 0 30 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5405 0.253906C17.4105 0.253906 15.5055 1.35791 15.5055 3.3979C15.5055 5.7379 18.882 5.8984 18.882 7.0729C18.882 7.5679 18.315 8.0119 17.3475 8.0119C16.5077 8.0064 15.6823 7.7936 14.9445 7.3924L14.505 9.4504C14.505 9.4504 15.69 9.9739 17.2605 9.9739C19.5885 9.9739 21.4215 8.8159 21.4215 6.7414C21.4215 4.2694 18.0315 4.1119 18.0315 3.0214C18.0315 2.6329 18.4965 2.2084 19.4625 2.2084C20.553 2.2084 21.4425 2.65841 21.4425 2.65841L21.8715 0.670906C21.8715 0.670906 20.904 0.253906 19.5405 0.253906ZM0.0509999 0.403905L0 0.703906C0 0.703906 0.8955 0.868906 1.704 1.19441C2.742 1.56941 2.817 1.7884 2.991 2.4664L4.899 9.8194H7.455L11.394 0.403905H8.844L6.312 6.8059L5.28 1.37891C5.1855 0.757906 4.7055 0.403905 4.1175 0.403905H0.0509999ZM12.42 0.403905L10.419 9.8194H12.852L14.8455 0.403905H12.42ZM25.986 0.403905C25.401 0.403905 25.089 0.718906 24.861 1.26641L21.297 9.8194H23.847L24.342 8.3944H27.4485L27.7485 9.8194H30L28.0365 0.403905H25.986ZM26.3175 2.9479L27.0735 6.4804H25.05L26.3175 2.9479Z" fill="#222222"/>
+</svg>
+<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2729_3786)">
+<path d="M10 20.1138C4.47688 20.1138 0 15.6369 0 10.1138C0 4.59064 4.47688 0.11377 10 0.11377C15.5231 0.11377 20 4.59064 20 10.1138C20 15.6369 15.5231 20.1138 10 20.1138ZM14.1756 4.71877L7.30875 8.62439L4.03625 6.76377L3.69875 7.43439L7.30875 9.51252L14.7662 5.25502L14.1756 4.71877ZM12.6744 3.86377L7.30875 6.93127L4.93 5.57377L4.44125 6.16002L7.30875 7.78627L13.4669 4.26627L12.675 3.86377H12.6744ZM15.2894 5.80814L7.30875 10.3675L3.42875 8.15502L3.24312 8.89252L7.30875 11.2056L15.7275 6.39502L15.2894 5.80814ZM16.5037 7.97064L16.1325 7.03189L7.30875 12.0606L3.125 9.69689V10.1494C3.125 11.065 3.30813 11.9713 3.665 12.815C4.00384 13.6319 4.50281 14.3728 5.1325 14.9938C5.76201 15.6055 6.50004 16.0944 7.30875 16.4356C8.16375 16.8044 9.05813 16.9888 9.99188 16.9888C10.9144 16.9888 11.8085 16.8044 12.6744 16.4356C13.492 16.1017 14.2368 15.612 14.8675 14.9938C15.491 14.3676 15.989 13.6281 16.335 12.815L16.5037 12.3625C16.7512 11.6471 16.875 10.9096 16.875 10.15C16.875 9.3896 16.7512 8.66315 16.5037 7.97064Z" fill="#222222"/>
+</g>
+<defs>
+<clipPath id="clip0_2729_3786">
+<rect width="20" height="20" fill="white" transform="translate(0 0.11377)"/>
+</clipPath>
+</defs>
+</svg>
+<svg width="14" height="19" viewBox="0 0 14 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.75 17.447H13.25M3.875 9.11367H10.125M1.79167 14.322L5.03854 5.23242C5.85625 2.94076 6.26562 1.79492 7 1.79492C7.73437 1.79492 8.14375 2.94076 8.96146 5.23242L12.2083 14.322" stroke="#222222" stroke-width="2"/>
+</svg>
+              </div>
+              <div class="mobile-info__doc"> <span class="text">ИП Шахрай Светлана Михайловна </span><span class="text">ИНН 263500194811</span><span class="text">ОГРНИП 305263515900181</span></div>
+              <div class="mobile-info__develop">Разработка сайта <a href="https://webelement.ru/" target="_blank">WEBELEMENT</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-catalog__desktop">
+          <ul class="header-catalog__list"> 
+            <li class="header-catalog__item is-active"><a class="header-catalog__link text" href="#">Браслеты</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Браслеты</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Серьги</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Серьги</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Чокеры</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Чокеры</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Подвески</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Подвески</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Кулоны</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Кулоны</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Колье</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Колье</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Кольца</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Кольца</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Перстни</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Перстни</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Брелоки</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Брелоки</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Булавки</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Булавки</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Четки</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Четки</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Подвески в авто/дом</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Подвески в авто/дом</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Шары из камня</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Шары из камня</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Свечи</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Свечи</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Коллекции</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Коллекции</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="header-catalog__item"><a class="header-catalog__link text" href="#">Акции</a>
+              <div class="header-categories">
+                <h6 class="header-categories__title text">Подборки товаров: Акции</h6>
+                <div class="header-categories__box"> 
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">По камню:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Авантюрин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Агат</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Абдуляр (Лунный камень)</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Беломорит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Берилл</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бирюза</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бронзит</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Бычий глаз</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Для кого:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для мужчин</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Для женщин</a></li>
+                    </ul>
+                  </div>
+                  <div class="heder-categories__item">
+                    <h6 class="header-categories__subtitle text">Сила камней:</h6>
+                    <ul class="header-categories__list"> 
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Баланс</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Гармония</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Духовность</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Женская энергия</a></li>
+                      <li class="header-categories__item"> <a class="header-categories__link text" href="#">Заземление</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -394,7 +1132,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -404,7 +1142,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -414,7 +1152,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -424,7 +1162,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -434,7 +1172,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -444,7 +1182,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -454,7 +1192,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -464,7 +1202,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -474,7 +1212,7 @@
                   <div class="preview-video__fotobox">
                      <svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
-</svg><img class="preview-video__foto" src="img/video-preview-1.png" alt="foto"/>
+</svg><img class="preview-video__foto" src="img/video-preview-1.webp" alt="foto"/>
                   </div>
                   <h6 class="preview-video__name text">Новинка</h6>
                 </div>
@@ -617,7 +1355,7 @@
 <path d="M0.75 17.447H13.25M3.875 9.11367H10.125M1.79167 14.322L5.03854 5.23242C5.85625 2.94076 6.26562 1.79492 7 1.79492C7.73437 1.79492 8.14375 2.94076 8.96146 5.23242L12.2083 14.322" stroke="#222222" stroke-width="2"/>
 </svg>
             </div><span class="footer-slogan text">KEKLIK — Украшения из натуральных камней</span>
-            <p class="footer-infotext text">Все украшения носят символический смысл и не имеют целительных или иных магических свойств</p><span class="doc-info text">ИП Шахрай Светлана Михайловна </span><span class="doc-info text">ИНН 263500194811</span><span class="doc-info text">ОГРНИП 305263515900181</span><span class="copyright text">© 2025</span><a class="develop text" href="#" target="_blank">Разработка сайта WEBELEMENT</a>
+            <p class="footer-infotext text">Все украшения носят символический смысл и не имеют целительных или иных магических свойств</p><span class="doc-info text">ИП Шахрай Светлана Михайловна </span><span class="doc-info text">ИНН 263500194811</span><span class="doc-info text">ОГРНИП 305263515900181</span><span class="copyright text">© 2025</span><span class="develop text">Разработка сайта <a href="https://webelement.ru/" target="_blank">WEBELEMENT</a></span>
           </nav>
         </div>
         <div class="footer-socials"> <a class="footer-socials__item" href="#">

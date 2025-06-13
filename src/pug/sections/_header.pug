@@ -3,11 +3,9 @@ include ./../mixins/_mixin.pug
 header.header
   nav.header-overnav 
     .container
-      .header__box
-        button.header__burger.js-openMobileMenu 
-          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 13.2498H13.75M1 6.99976H19M1 0.749756H13.75" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      .header__box.header__box--overnav
+        button.header__burger.js-burger.js-openMobileMenu
+          span
         .language 
           a.language__item.text.is-active(href="#") Ru
           a.language__item.text(href="#") En 
@@ -25,10 +23,11 @@ header.header
           each item in ['Для клиентов','Оплата','Доставка','Блог','Связаться с нами']
             li.page-menu__item 
               a.page-menu__link.text(href="#")= item 
-        .search 
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11.75 11.75L14.75 14.75M1.25 7.25C1.25 8.8413 1.88214 10.3674 3.00736 11.4926C4.13258 12.6179 5.6587 13.25 7.25 13.25C8.8413 13.25 10.3674 12.6179 11.4926 11.4926C12.6179 10.3674 13.25 8.8413 13.25 7.25C13.25 5.6587 12.6179 4.13258 11.4926 3.00736C10.3674 1.88214 8.8413 1.25 7.25 1.25C5.6587 1.25 4.13258 1.88214 3.00736 3.00736C1.88214 4.13258 1.25 5.6587 1.25 7.25Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        .search
+          button.search__iconzoom.js-openSearchInputBox 
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.75 11.75L14.75 14.75M1.25 7.25C1.25 8.8413 1.88214 10.3674 3.00736 11.4926C4.13258 12.6179 5.6587 13.25 7.25 13.25C8.8413 13.25 10.3674 12.6179 11.4926 11.4926C12.6179 10.3674 13.25 8.8413 13.25 7.25C13.25 5.6587 12.6179 4.13258 11.4926 3.00736C10.3674 1.88214 8.8413 1.25 7.25 1.25C5.6587 1.25 4.13258 1.88214 3.00736 3.00736C1.88214 4.13258 1.25 5.6587 1.25 7.25Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           .search__inputbox
             input.search__input(type="text" placeholder="Найти украшение")
             button.search__close.js-closeSearchInputBox 
@@ -54,9 +53,12 @@ header.header
     .container 
       .header__box
         img.header-nav__logo(src="img/svg/logo.svg", alt="logo")
-        button.catalog-btn 
+        button.catalog-btn.js-toggleCatalog
+          .burger.js-burger
+            span
           span.catalog-btn__name.text Каталог
         ul.header-nav__menu 
           each item in ['Индивидуальные украшения','Коллекции','О нас','О камнях','Акции','Отзывы','Контакты']
             li.header-nav__item 
               a.header-nav__link.text(href="#")= item 
+  include ./../sections/_catalog-nav.pug

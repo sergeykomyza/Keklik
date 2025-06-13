@@ -1,0 +1,26 @@
+.header-catalog__desktop
+  ul.header-catalog__list 
+    each item, i in catalogMenu
+      li.header-catalog__item(class=`${i === 0 ? 'is-active' : ''}`)
+        a.header-catalog__link.text(href="#")= item.item 
+        .header-categories
+          h6.header-categories__title.text Подборки товаров: !{item.item}
+          .header-categories__box 
+            .heder-categories__item
+              h6.header-categories__subtitle.text По камню:
+              ul.header-categories__list 
+                each elem in ['Авантюрин','Агат','Абдуляр (Лунный камень)','Беломорит','Берилл','Бирюза','Бронзит','Бычий глаз']
+                  li.header-categories__item 
+                    a.header-categories__link.text(href="#")= elem 
+            .heder-categories__item
+              h6.header-categories__subtitle.text Для кого:
+              ul.header-categories__list 
+                each elem in ['Для мужчин','Для женщин']
+                  li.header-categories__item 
+                    a.header-categories__link.text(href="#")= elem 
+            .heder-categories__item
+              h6.header-categories__subtitle.text Сила камней:
+              ul.header-categories__list 
+                each elem in ['Баланс','Гармония','Духовность','Женская энергия','Заземление']
+                  li.header-categories__item 
+                    a.header-categories__link.text(href="#")= elem 

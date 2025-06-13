@@ -23,16 +23,62 @@
 //     window.addEventListener('scroll', headerActiveToggle) // ПРИ СКРОЛЛЕ
 // });
 
+const burger = (wrap) => {
+    const menuToggle = document.querySelector(wrap)
+    menuToggle.addEventListener('click', function(){
+        this.closest('.js-burger').classList.toggle('is-active')
+    })
+}
+const catalogMenu = () => {
+    const desktopCatalogBtnOpen = document.querySelector('.js-toggleCatalog')
+    desktopCatalogBtnOpen.addEventListener('click', function(){
+        document.querySelector('.header-catalog').classList.toggle('is-active')
+        this.querySelector('.js-burger').classList.toggle('is-active')
+    })
+
+    const desktopCatalogItem = document.querySelectorAll('.header-catalog__item')
+    desktopCatalogItem.forEach(item => {
+        item.addEventListener('mouseover', function(){
+            desktopCatalogItem.forEach(elem => {
+                elem.classList.remove('is-active')
+            })
+            this.classList.add('is-active')
+        })
+    })
+    const openMobileMenuBtn = document.querySelector('.js-openMobileMenu')
+    openMobileMenuBtn.addEventListener('click', function(){
+        document.querySelector('.header-catalog').classList.add('is-active')
+    })
+    const closeMobileMenuBtn = document.querySelector('.js-closeMobileMenu')
+    closeMobileMenuBtn.addEventListener('click', function(){
+        document.querySelector('.header-catalog').classList.remove('is-active')
+    })
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE
 const clickToggle = (wrap) => {
     document.querySelector(wrap).addEventListener('click', function(e){
         const clickElem = e.target.closest('.js-clickElem')
-        const parentElem = clickElem.closest('.js-clickParent')
         if(clickElem){
-            parentElem.classList.toggle('is-active')
-        }
+            const parentElem = clickElem.closest('.js-clickParent')
+            if(parentElem){
+                parentElem.classList.toggle('is-active')
+            }
+        } 
+    })
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SEARCH
+const search = () => {
+    const open = document.querySelector('.js-openSearchInputBox')
+    const close = document.querySelector('.js-closeSearchInputBox')
+    open.addEventListener('click', function(){
+        document.querySelector('.search__inputbox').classList.add('is-active')
+    })
+    close.addEventListener('click', function(){
+        document.querySelector('.search__inputbox').classList.remove('is-active')
     })
 }
 
@@ -188,8 +234,16 @@ const sliders = () => {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
+if(document.documentElement.clientWidth > 768){
+    burger('.js-openMobileMenu')
+}
+burger('.js-toggleCatalog')
+catalogMenu()
 sliders()
 clickToggle('.footer')
+clickToggle('.mobile-pagemenu')
+clickToggle('.mobile-catalog')
+search()
 tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
