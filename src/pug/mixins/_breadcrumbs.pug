@@ -8,7 +8,7 @@ mixin breadcrumbs(items)
 				each item in items
 					li.breadcrumbs__item
 						if item.url
-							a.breadcrumbs__link(href=item.url)= item.title
+							a.breadcrumbs__link(href=item.url) !{item.title}
 						else
-							span.breadcrumbs__title= item.title
+							span.breadcrumbs__title !{item.title}
 	

@@ -1,0 +1,70 @@
+.filters
+  .filter.filter-sort.js-clickParent
+    button.filter__btn.js-clickElem 
+      span.filter__name.text Сначала популярные
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+      </svg>
+    .filter__body
+      .filter__parameters
+        each item in ['Сначала популярные','Сначала дорогие','Снала дешевые']
+          label.checkbox
+            input.checkbox__input(type="checkbox")
+            span.checkbox-area
+              img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+            span.filter__parameter.text= item
+      button.filter__fixbtn.text Применить
+  .filter.filter-par.js-clickParent
+    button.filter__btn.js-clickElem 
+      span.filter__name.text Длина/Размер
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+      </svg>
+    .filter__body
+      .filter__parameters
+        each item in ['16','17','17.5','18.5','2.0мм','3.0мм','4.0мм']
+          label.checkbox
+            input.checkbox__input(type="checkbox")
+            span.checkbox-area
+              img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+            span.filter__parameter.text= item
+      button.filter__fixbtn.text Применить
+  .filter.filter-stone.js-clickParent
+    button.filter__btn.js-clickElem 
+      span.filter__name.text Камень
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+      </svg>
+    .filter__body
+      .filter__parameters
+        each item in ['Камень 1','Камень 2','Камень 3']
+          label.checkbox
+            input.checkbox__input(type="checkbox")
+            span.checkbox-area
+              img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+            span.filter__parameter.text= item
+      button.filter__fixbtn.text Применить
+  .filter.filter-price.js-clickParent
+    button.filter__btn.js-clickElem 
+      span.filter__name.text Цена
+      <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+      </svg>
+    .filter__body
+      .range-price
+        .range-price__inputs
+          input.range-price__input#min-value(value='1 200')
+          input.range-price__input#max-value(value='22 500')
+        .range-price__thumbs
+          input#min-price.range.min(type='range' min='1200' max='30000' value='1200')
+          input#max-price.range.max(type='range' min='0' max='30000' value='22500')
+        .range-trackbox
+          .range-track
+      button.filter__fixbtn.text Применить
+  .filters-selected 
+    span.filters-selected__text.text Выбрано
+    span.filters-selected__countbox
+      output.filters-selected__count.text 2
+  .filter
+    button.filter__btn 
+      span.filter__name.text Очистить фильтр

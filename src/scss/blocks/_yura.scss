@@ -18,15 +18,18 @@
 ======================== */
 
 .breadcrumbs {
-	margin-bottom: 27px;
+	padding-top: 55px;
+	padding-bottom: 35px;
+	@media(max-width: 565px){
+		padding-top: 28px;
+		padding-bottom: 34px;
+	}
 }
 
 .breadcrumbs__list {
-	padding: 8px 0;
 }
 
 .breadcrumbs__item {
-	padding: 8px 0;
 	display: inline;
 
 	&:not(:last-child) {

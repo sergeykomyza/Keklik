@@ -233,6 +233,74 @@ const sliders = () => {
     });
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RANGE PRICE
+const rangePrice = () => {
+    const minSlider = document.querySelector(".range.min");
+    const maxSlider = document.querySelector(".range.max");
+    const minValueInput = document.getElementById("min-value");
+    const maxValueInput = document.getElementById("max-value");
+    const minInput = document.getElementById("min-price");
+    const maxInput = document.getElementById("max-price");
+    minInput.value = minSlider.value;
+    maxInput.value = maxSlider.value;
+    function updateValues() {
+        minValueInput.value = minSlider.value;
+        maxValueInput.value = maxSlider.value;
+        if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+            maxSlider.value = minSlider.value;
+        }
+        if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+            minSlider.value = maxSlider.value;
+        }
+    }
+    function dinamicRangeTrack(){
+        const trackLine = document.querySelector('.range-track')
+        const sliderLeft = minSlider.offsetLeft
+        const container = minSlider.parentElement
+        const containerWidth = container.offsetWidth
+        const minLeft = parseInt(minSlider.min)
+        const maxLeft = parseInt(minSlider.max)
+        const valueLeft = parseInt(minSlider.value)
+        const percentLeft = (valueLeft - minLeft) / (maxLeft - minLeft)
+        const thumbPositionLeft = sliderLeft + percentLeft * minSlider.offsetWidth
+        // console.log('от левого ползунка: ', thumbPositionLeft + 'px')
+        const sliderRight = maxSlider.offsetLeft
+        const minRight = parseInt(maxSlider.min)
+        const maxRight = parseInt(maxSlider.max)
+        const valueRight = parseInt(maxSlider.value)
+        const percentRight = (valueRight - minRight) / (maxRight - minRight)
+        const thumbPositionRight = sliderRight + percentRight * maxSlider.offsetWidth
+        // console.log('от правого ползунка: ', thumbPositionRight + 'px')
+        // console.log(containerWidth)
+        trackLine.style.left = thumbPositionLeft + 'px'
+        trackLine.style.width = thumbPositionRight - thumbPositionLeft + 'px'
+    }
+    minValueInput.addEventListener('input', () => {
+        minSlider.value = minValueInput.value
+        dinamicRangeTrack()
+    })
+    maxValueInput.addEventListener('input', () => {
+        maxSlider.value = maxValueInput.value
+        dinamicRangeTrack()
+    })
+    minSlider.addEventListener("input", () => {
+        dinamicRangeTrack()
+        if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+            maxSlider.value = minSlider.value;
+        }
+        updateValues();
+    });
+    maxSlider.addEventListener("input", () => {
+        dinamicRangeTrack()
+        if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+            minSlider.value = maxSlider.value;
+        }
+        updateValues();
+    });
+    dinamicRangeTrack()
+    updateValues();
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
     burger('.js-openMobileMenu')
@@ -240,11 +308,20 @@ if(document.documentElement.clientWidth > 768){
 burger('.js-toggleCatalog')
 catalogMenu()
 sliders()
-clickToggle('.footer')
-clickToggle('.mobile-pagemenu')
-clickToggle('.mobile-catalog')
 search()
-tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
+if(document.querySelector('.js-clickParent')){
+    clickToggle('.footer')
+    clickToggle('.mobile-pagemenu')
+    clickToggle('.mobile-catalog')
+    clickToggle('.tags')
+    clickToggle('.filters')
+}
+if(document.querySelector('.js-tabs')){
+    tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
+}
+if(document.querySelector('.range-price')){
+    rangePrice()
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
