@@ -59,14 +59,26 @@ const catalogMenu = () => {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE
 const clickToggle = (wrap) => {
-    document.querySelector(wrap).addEventListener('click', function(e){
-        const clickElem = e.target.closest('.js-clickElem')
-        if(clickElem){
-            const parentElem = clickElem.closest('.js-clickParent')
-            if(parentElem){
-                parentElem.classList.toggle('is-active')
-            }
-        } 
+    if(document.querySelector(wrap)){
+        document.querySelector(wrap).addEventListener('click', function(e){
+            const clickElem = e.target.closest('.js-clickElem')
+            if(clickElem){
+                const parentElem = clickElem.closest('.js-clickParent')
+                if(parentElem){
+                    parentElem.classList.toggle('is-active')
+                }
+            } 
+        })
+    }
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CART BUTTON
+const inCartBtn = () => {
+    document.querySelectorAll('.js-incartToggle').forEach(item => {
+        console.log(item)
+        item.addEventListener('click', function(e){
+            e.target.closest('.js-incartToggle').classList.toggle('is-active')
+        })
     })
 }
 
@@ -309,7 +321,7 @@ burger('.js-toggleCatalog')
 catalogMenu()
 sliders()
 search()
-if(document.querySelector('.js-clickParent')){
+if(document.querySelector('.js-clickElem')){
     clickToggle('.footer')
     clickToggle('.mobile-pagemenu')
     clickToggle('.mobile-catalog')
@@ -321,6 +333,9 @@ if(document.querySelector('.js-tabs')){
 }
 if(document.querySelector('.range-price')){
     rangePrice()
+}
+if(document.querySelector('.js-incartToggle')){
+    inCartBtn()
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)

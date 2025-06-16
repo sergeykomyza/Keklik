@@ -310,6 +310,13 @@
   margin-right: auto;
   border-radius: 8px;
   background: $orange;
+  transition: background 0.3s;
+  &:hover{
+    background: $orange-dark;
+  }
+  &:has(.burger.is-active){
+    background: $orange-dark;
+  }
   @media(max-width: 992px){
     display: none;
   }
@@ -390,8 +397,7 @@
   background: $white;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
-  transition-duration: 0.5s;
+  // transition: opacity 0.3s;
   @media(max-width: 992px){
     left: 220px;
     padding: 20px 20px;

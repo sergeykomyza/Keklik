@@ -78,6 +78,19 @@
       margin-left: auto;
       background: $light-grey;
       border-radius: 8px;
+      transition: background 0.3s;
+      &:hover{
+        background: $light-grey;
+      }
+      &.is-active{
+        background: $orange;
+        path{
+          stroke: $white;
+        }
+      }
+    }
+    path{
+      transition: stroke 0.3s;
     }
     span{
       @media(max-width: 768px){
@@ -227,8 +240,11 @@
   &-big{
     &__foto{
       width: 100%;
-      height: 23.18vw;
+      height: 445px;
       object-fit: cover;
+      @media(max-width: 1920px){
+        	height: 23.18vw;
+      }
       @media(max-width: 1460px){
         	height: 22.61vw;
       }
@@ -249,8 +265,11 @@
   &-small{
     &__foto{
       width: 100%;
-      height: 18.6vw;
+      height: 357px;
       object-fit: cover;
+      @media(max-width: 1920px){
+        height: 18.6vw;
+      }
       @media(max-width: 880px){
         height: 30.1vw;
       }
@@ -307,6 +326,22 @@
     margin-left: auto;
     background: $light-grey;
     border-radius: 8px;
+    transition: background 0.3s;
+    path{
+      transition: stroke 0.3s;
+    }
+    &:hover{
+      background: $dark;
+      path{
+        stroke: $white;
+      }
+    }
+    &.is-active{
+      background: $orange;
+      path{
+        stroke: $white;
+      }
+    }
   }
   &-video{
     width: 100%;
@@ -319,8 +354,11 @@
     }
     &__foto{
       width: 100%;
-      height: 32.5vw;
+      height: 625px;
       object-fit: cover;
+      @media(max-width: 1920px){
+      height: 32.5vw;
+      }
       @media(max-width: 1460px){
         height: 31.65vw;
       }

@@ -360,13 +360,16 @@ textarea {
 	&__item{
 		position: relative;
 		width: 100%;
-		height: 39.07vw;
+		height: 750px;
 		border-radius: 70px;
 		overflow: hidden;
 		&:hover{
 			.present-category__foto{
 				transform: scale(1.1);
 			}
+		}
+		@media(max-width: 1920px){
+			height: 39.07vw;
 		}
 		@media(max-width: 1460px){
 			height: 37.87vw;
@@ -553,7 +556,6 @@ textarea {
 .stone-more{
 	background: $light-dark;
 }
-
 .sidebar{
 	@media(max-width: 768px){
 		display: none;
@@ -580,7 +582,6 @@ textarea {
 		}
 	}
 }
-
 .catalog{
 	display: flex;
 	flex-direction: column;
@@ -591,9 +592,17 @@ textarea {
 		margin-bottom: 20px ;
 	}
 	&__info{
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
 		max-width: 1170px;
 		width: 100%;
-		margin-bottom: 40px;
+		@media(max-width: 1460px){
+			max-width: 710px;
+		}
+		&--mb{
+			margin-bottom: 40px;
+		}
 		&--nomobile{
 			@media(max-width: 768px){
 				display: none;
@@ -605,11 +614,13 @@ textarea {
 			display: grid;
 			grid-template-columns: 330px 1fr;
 			gap: 20px;
+			padding-bottom: 80px;
 			@media(max-width: 1300px){
 				grid-template-columns: 230px 1fr;
 			}
 			@media(max-width: 768px){
 				grid-template-columns: 1fr;
+				padding-bottom: 40px;
 			}
 		}
 	}
@@ -617,6 +628,7 @@ textarea {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 20px;
+		margin-bottom: 58px;
 		@media(max-width: 992px){
 			grid-template-columns: repeat(3, 1fr);
 		}
@@ -631,8 +643,14 @@ textarea {
 			gap: 10px;
 		}
 	}
+	&__more{
+		max-width: 167px;
+		margin: 0 auto 90px auto;
+		@media(max-width: 768px){
+			margin: 0 auto 40px auto;
+		}
+	}
 }
-
 .tags{
 	display: flex;
 	margin-bottom: 30px;
@@ -653,7 +671,7 @@ textarea {
 			padding-top: 15px;
 		}
 	}
-	&__morebtn{
+	&-morebtn{
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -661,6 +679,12 @@ textarea {
 		width: 30px;
 		height: 30px;
 		transform: translateY(6px);
+		&__text{
+			display: none;
+			@media(max-width: 768px){
+				display: flex;
+			}
+		}
 		svg{
 			transition: all .3s;
 		}
@@ -687,7 +711,7 @@ textarea {
 		}
 		&.is-active{
 			max-height: 350px;
-			.tags__morebtn{
+			.tags-morebtn{
 				svg{
 					transform: rotate(180deg);
 				}
@@ -695,7 +719,6 @@ textarea {
 		}		
 	}
 }
-
 .tag{
 	display: flex;
 	padding: 10px;
@@ -703,12 +726,15 @@ textarea {
 	border-radius: 8px;
 	color: $dark;
 	transition: background 0.3s, color 0.3s;
+	&:hover{
+		color: $white;
+		background: $light-dark;
+	}
 	&.is-active{
 		color: $white;
 		background: $light-dark;
 	}
 }
-
 .filters{
 	display: flex;
 	align-items: center;
@@ -735,7 +761,6 @@ textarea {
 		}
 	}
 }
-
 .filter{
 	position: relative;
 	&__btn{
@@ -808,8 +833,18 @@ textarea {
 		border: 1px solid $light-grey;
 		border-radius: 8px;
 	}
+	&-mobilehidden{
+		@media(max-width: 768px){
+			display: none;
+		}
+	}
+	&-mobilevisible{
+		display: none;
+		@media(max-width: 768px){
+			display: flex;
+		}
+	}
 }
-
 .range-price {
   position: relative;
   width: 100%;

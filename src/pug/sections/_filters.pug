@@ -1,4 +1,7 @@
 .filters
+  .filter.filter-mobilevisible.js-openMobileFilter
+    button.filter__btn 
+      span.filter__name.text Фильтр
   .filter.filter-sort.js-clickParent
     button.filter__btn.js-clickElem 
       span.filter__name.text Сначала популярные
@@ -14,7 +17,7 @@
               img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
             span.filter__parameter.text= item
       button.filter__fixbtn.text Применить
-  .filter.filter-par.js-clickParent
+  .filter.filter-par.filter-mobilehidden.js-clickParent
     button.filter__btn.js-clickElem 
       span.filter__name.text Длина/Размер
       <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +32,7 @@
               img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
             span.filter__parameter.text= item
       button.filter__fixbtn.text Применить
-  .filter.filter-stone.js-clickParent
+  .filter.filter-stone.filter-mobilehidden.js-clickParent
     button.filter__btn.js-clickElem 
       span.filter__name.text Камень
       <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +47,7 @@
               img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
             span.filter__parameter.text= item
       button.filter__fixbtn.text Применить
-  .filter.filter-price.js-clickParent
+  .filter.filter-price.filter-mobilehidden.js-clickParent
     button.filter__btn.js-clickElem 
       span.filter__name.text Цена
       <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,10 +64,10 @@
         .range-trackbox
           .range-track
       button.filter__fixbtn.text Применить
-  .filters-selected 
+  .filters-selected.filter-mobilehidden 
     span.filters-selected__text.text Выбрано
     span.filters-selected__countbox
       output.filters-selected__count.text 2
-  .filter
+  .filter.filter-mobilehidden
     button.filter__btn 
       span.filter__name.text Очистить фильтр

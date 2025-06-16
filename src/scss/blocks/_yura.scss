@@ -27,20 +27,20 @@
 }
 
 .breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
 }
 
 .breadcrumbs__item {
-	display: inline;
-
+	display: flex;
+	align-items: center;
 	&:not(:last-child) {
-		position: relative;
-		padding-right: 10px;
 
 		&::after {
 			position: relative;
-			top: -7px;
 			content: '';
-			display: inline-flex;
+			display: flex;
 			border-top: 5px solid transparent;
 			border-left: 6px solid var(--gr-e);
 			border-bottom: 5px solid transparent;
@@ -61,10 +61,8 @@
 
 .breadcrumbs__home {
 	position: relative;
-	display: inline-flex;
-	height: 18px;
+	display: flex;
 	width: auto;
-	top: 2px;
 }
 
 .breadcrumbs__link {
