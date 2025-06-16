@@ -1,0 +1,94 @@
+//- mixin photoGalleryItem(src)
+//- 	a.photo-gallery__item(href=""+src data-fslightbox="gallery")
+//- 		img(src=""+src, alt="Фотография товара").photo-gallery__img
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title «Библия камней» — тысячелетние сакральные знания на человеческом языке
+
+	body.template-metod
+		include ./../sections/_header.pug
+		+breadcrumbs([
+			{ title: 'О Светлане Шахрай', url: '' }
+		])
+
+		.template-book__box
+
+			.full-container
+				.template-book__grid
+
+					.template-book__aside
+
+						nav.aside-nav
+							ul.aside-nav__list
+								li.aside-nav__item
+									a.aside-nav__link(href="#") Создание личного украшения-талисмана
+								li.aside-nav__item.active
+									a.aside-nav__link(href="#") О Светлане Шахрай
+								li.aside-nav__item
+									a.aside-nav__link(href="#") Патент
+
+
+					.template-book__main-wrapper
+						//- .template-book__top
+							h1.page-title «Библия камней» — тысячелетние сакральные знания на человеческом языке
+							p.template-book__subtitle Единственная книга, которая мгновенно отвечает на ваши вопросы о камнях и их энергиях
+
+						main.template-book__main
+							picture.template-book__bg
+								source(media="(max-width: 768px)", srcset="img/metod/metod-bg_mob.webp")
+								img(src="img/metod/metod-bg.webp", alt="alt")
+
+							//- .template-book__subgrid.tb-subgrid
+
+								//- img.tb-subgrid__img(src="img/metod/book.webp", alt="")
+
+							.tb-subgrid__main
+								.block
+									h1.page-title Метод Светланы Шахрай
+									.block-descr
+										p Суть метода заключается в индивидуальном подборе камней под ваши задачи на основании аспектов:
+										ul.list-circle
+											li.list-circle__item Индивидуальные данные
+											li.list-circle__item Психотип человека
+											li.list-circle__item Тарологический расчет
+											li.list-circle__item Астрологический аспект
+											li.list-circle__item Нумерологический расчет
+											li.list-circle__item Происхождение камня и его история
+										.btns
+											a.button(href="#") Создать украшение
+											a.button.dark(href="#") Перейти в каталог готовых товаров
+
+								.block
+									h2 Светлана Шахрай легенда каменных браслетов со смыслом №1
+									.img-box
+										img(src="img/metod/01.webp", alt="").full-w
+									.block-descr
+										p Основатель бренда KEKLIK
+										p Предприниматель, с 30-ти летним стажем, за 3 года преобразовала хобби в красивый и востребованный бизнес с оборотом более 60 млн ₽ в год
+										p Создала более более 20 000 браслетов под цели и желания довольных клиентов, в том числе звезд шоу-бизнеса, бизнесменов из списка форбс, жен шейхов и известных блогеров
+										p Разработала первую уникальную программу по персональному подбору натуральных камней, индивидуально для каждого человека
+
+								.block
+									p Светлана разработала 2-х месячный практический курс по созданию браслетов
+									.img-box
+										img(src="img/metod/02.webp", alt="")
+									.block-descr
+										p Программа, на которой вы научитесь правильно создавать каменные браслеты, которые качественно работают с любыми задачами и сможете дополнительно зарабатывать на своих знаниях от 50 000 ₽/месяц
+										a.button(href="#") Про курс
+
+
+
+
+
+
+
+
+
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

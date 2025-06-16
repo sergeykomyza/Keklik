@@ -10,7 +10,9 @@ html(lang="ru")
 
 	body.template-book
 		include ./../sections/_header.pug
-		include ./../sections/_breadcrumbs.pug
+		+breadcrumbs([
+			{ title: 'Библия камней', url: '' }
+		])
 
 		.template-book__box
 

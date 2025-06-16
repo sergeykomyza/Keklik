@@ -20,14 +20,14 @@
 .breadcrumbs {
 	padding-top: 55px;
 	padding-bottom: 35px;
-	@media(max-width: 565px){
+
+	@media(max-width: 565px) {
 		padding-top: 28px;
 		padding-bottom: 34px;
 	}
 }
 
-.breadcrumbs__list {
-}
+.breadcrumbs__list {}
 
 .breadcrumbs__item {
 	display: inline;
@@ -255,18 +255,18 @@ END .to-client
 }
 
 .gallery-page__info {
-	padding: 160px 40px 80px;
+	padding: 160px 40px 0;
 
 	display: flex;
 	flex-direction: column;
 	gap: 11px;
 
 	@media screen and (max-width: 992px) {
-		padding: 80px 20px 80px;
+		padding: 80px 20px 0;
 	}
 
 	@media screen and (max-width: 768px) {
-		padding: 40px 10px 80px;
+		padding: 40px 10px 0;
 	}
 
 	h2 {
@@ -481,6 +481,8 @@ END .gallery-page__products
 }
 
 .tb-subgrid__main {
+	position: relative;
+	z-index: 2;
 	max-width: 515px;
 	font-size: 18px;
 
@@ -513,6 +515,10 @@ END .gallery-page__products
 
 		@media screen and (max-width: 768px) {
 			margin-bottom: 60px;
+		}
+
+		.page-title {
+			margin-bottom: 0;
 		}
 	}
 
@@ -580,6 +586,58 @@ END .gallery-page__products
 		}
 	}
 
+	.list-circle {
+		padding: 0 7px;
+
+		display: grid;
+		// grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 50% 50%;
+		max-width: 100%;
+		width: 100%;
+		box-sizing: border-box
+	}
+
+	.list-circle__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		aspect-ratio: 1/1;
+		width: calc((515px - 7px*2)/2);
+		text-align: center;
+
+		border: 1px solid var(--wh);
+		border-radius: 50%;
+		padding: 20px;
+		background-color: transparent;
+
+		transition: all .25s;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+
+		@media screen and (max-width: 535px) {
+			width: calc((100vw - 7px*2 - 10px*2)/2);
+
+		}
+	}
+
+	.img-box {
+		padding: 10px 0;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.full-w {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
 	.about-author {
 		position: relative;
 	}
@@ -612,6 +670,12 @@ END .gallery-page__products
 		}
 	}
 
+	.btns {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
 	.button {
 		padding: 10px 24px;
 
@@ -630,6 +694,13 @@ END .gallery-page__products
 
 		transition: all 0.25s;
 
+		&.dark {
+			color: var(--wh);
+			background-color: var(--gr-e);
+		}
+
+		&.small {}
+
 		&:hover {
 			transform: translateY(-2px);
 		}
@@ -647,10 +718,14 @@ END .bibliya-kamnei
 ======================== */
 
 .aside-nav {
+	position: sticky;
+	// top: 150px;
+	top: 0;
 	padding-top: 150px;
 
 	@media screen and (max-width: 1200px) {
 		padding-top: 80px;
+		top: 80px;
 	}
 
 	@media screen and (max-width: 992px) {
