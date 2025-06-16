@@ -210,6 +210,7 @@
   z-index: 1;
   @media(max-width: 565px){
     background: transparent;
+    backdrop-filter: none;
   }
 }
 .slider-btn{
@@ -269,6 +270,12 @@
       object-fit: cover;
       @media(max-width: 1920px){
         height: 18.6vw;
+      }
+      @media(max-width: 1460px){
+        height: 17.1vw;
+      }
+      @media(max-width: 992px){
+        height: 21.6vw;
       }
       @media(max-width: 880px){
         height: 30.1vw;
