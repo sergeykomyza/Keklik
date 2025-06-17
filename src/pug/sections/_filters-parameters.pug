@@ -1,0 +1,23 @@
+-
+  const parameters = [
+    {title: 'Фурнитура',             list: ['Ювелирный сплав','Серебро','Золото','Белое золото','Экокожа','Серебро']},
+    {title: 'Вид подвесок и шармов', list: ['Руны','Птицы','Животные','Цветы','Лотос','Деревья']},
+    {title: 'Пол',                   list: ['Мужской','Женский','Унисекс']},
+    {title: 'Задача камня',          list: ['Баланс','Гармония','Духовность','Женская энергия','Заземление']},
+    {title: 'Прозрачность',          list: ['Руны','Птицы','Животные','Цветы','Лотос','Деревья']},
+    {title: 'Тип самоцвета',         list: ['Минералы и горные породы','Драгоценные']},
+    {title: 'Тип замка',             list: ['Мужской','Женский']},
+    {title: 'Тип плетения',          list: ['Спираль','Переплетенные нити','Фенечки']}
+  ]
+
+.filters-parameters 
+  each item in parameters 
+    .filters-parameter 
+      h6.filters-parameter__title.text= item.title 
+      ul.filters-parameter__list 
+        each elem in item.list 
+          label.checkbox
+            input.checkbox__input(type="checkbox")
+            span.checkbox-area
+              img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+            span.text= elem

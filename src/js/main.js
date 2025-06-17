@@ -26,7 +26,7 @@
 const burger = (wrap) => {
     const menuToggle = document.querySelector(wrap)
     menuToggle.addEventListener('click', function(){
-        this.closest('.js-burger').classList.toggle('is-active')
+        this.closest(wrap).classList.toggle('is-active')
     })
 }
 const catalogMenu = () => {
@@ -47,7 +47,7 @@ const catalogMenu = () => {
     })
     const openMobileMenuBtn = document.querySelector('.js-openMobileMenu')
     openMobileMenuBtn.addEventListener('click', function(){
-        document.querySelector('.header-catalog').classList.add('is-active')
+        document.querySelector('.header-catalog').classList.toggle('is-active')
     })
     const closeMobileMenuBtn = document.querySelector('.js-closeMobileMenu')
     closeMobileMenuBtn.addEventListener('click', function(){
@@ -91,6 +91,19 @@ const search = () => {
     })
     close.addEventListener('click', function(){
         document.querySelector('.search__inputbox').classList.remove('is-active')
+    })
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ MOBILE FILTER
+const mobileFilter = () => {
+    const btnOpen = document.querySelector('.js-mobileFilterOpen')
+    const btnClose = document.querySelector('.js-mobileFilterClose')
+    const mobileFilter = document.querySelector('.mobile-filters')
+    btnOpen?.addEventListener('click', function(){
+        mobileFilter?.classList.add('is-active')
+    })
+    btnClose?.addEventListener('click', function(){
+        mobileFilter?.classList.remove('is-active')
     })
 }
 
@@ -247,70 +260,72 @@ const sliders = () => {
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RANGE PRICE
 const rangePrice = () => {
-    const minSlider = document.querySelector(".range.min");
-    const maxSlider = document.querySelector(".range.max");
-    const minValueInput = document.getElementById("min-value");
-    const maxValueInput = document.getElementById("max-value");
-    const minInput = document.getElementById("min-price");
-    const maxInput = document.getElementById("max-price");
-    minInput.value = minSlider.value;
-    maxInput.value = maxSlider.value;
-    function updateValues() {
-        minValueInput.value = minSlider.value;
-        maxValueInput.value = maxSlider.value;
-        if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
-            maxSlider.value = minSlider.value;
+    document.querySelectorAll('.js-price').forEach( item => {
+        const minSlider = item.querySelector(".range.min");
+        const maxSlider = item.querySelector(".range.max");
+        const minValueInput = item.querySelector("#min-value");
+        const maxValueInput = item.querySelector("#max-value");
+        const minInput = item.querySelector("#min-price");
+        const maxInput = item.querySelector("#max-price");
+        minInput.value = minSlider.value;
+        maxInput.value = maxSlider.value;
+        function updateValues() {
+            minValueInput.value = minSlider.value;
+            maxValueInput.value = maxSlider.value;
+            if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+                maxSlider.value = minSlider.value;
+            }
+            if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+                minSlider.value = maxSlider.value;
+            }
         }
-        if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
-            minSlider.value = maxSlider.value;
+        function dinamicRangeTrack(){
+            const trackLine = item.querySelector('.range-track')
+            const sliderLeft = minSlider.offsetLeft
+            const container = minSlider.parentElement
+            const containerWidth = container.offsetWidth
+            const minLeft = parseInt(minSlider.min)
+            const maxLeft = parseInt(minSlider.max)
+            const valueLeft = parseInt(minSlider.value)
+            const percentLeft = (valueLeft - minLeft) / (maxLeft - minLeft)
+            const thumbPositionLeft = sliderLeft + percentLeft * minSlider.offsetWidth
+            // console.log('от левого ползунка: ', thumbPositionLeft + 'px')
+            const sliderRight = maxSlider.offsetLeft
+            const minRight = parseInt(maxSlider.min)
+            const maxRight = parseInt(maxSlider.max)
+            const valueRight = parseInt(maxSlider.value)
+            const percentRight = (valueRight - minRight) / (maxRight - minRight)
+            const thumbPositionRight = sliderRight + percentRight * maxSlider.offsetWidth
+            // console.log('от правого ползунка: ', thumbPositionRight + 'px')
+            // console.log(containerWidth)
+            trackLine.style.left = thumbPositionLeft + 'px'
+            trackLine.style.width = thumbPositionRight - thumbPositionLeft + 'px'
         }
-    }
-    function dinamicRangeTrack(){
-        const trackLine = document.querySelector('.range-track')
-        const sliderLeft = minSlider.offsetLeft
-        const container = minSlider.parentElement
-        const containerWidth = container.offsetWidth
-        const minLeft = parseInt(minSlider.min)
-        const maxLeft = parseInt(minSlider.max)
-        const valueLeft = parseInt(minSlider.value)
-        const percentLeft = (valueLeft - minLeft) / (maxLeft - minLeft)
-        const thumbPositionLeft = sliderLeft + percentLeft * minSlider.offsetWidth
-        // console.log('от левого ползунка: ', thumbPositionLeft + 'px')
-        const sliderRight = maxSlider.offsetLeft
-        const minRight = parseInt(maxSlider.min)
-        const maxRight = parseInt(maxSlider.max)
-        const valueRight = parseInt(maxSlider.value)
-        const percentRight = (valueRight - minRight) / (maxRight - minRight)
-        const thumbPositionRight = sliderRight + percentRight * maxSlider.offsetWidth
-        // console.log('от правого ползунка: ', thumbPositionRight + 'px')
-        // console.log(containerWidth)
-        trackLine.style.left = thumbPositionLeft + 'px'
-        trackLine.style.width = thumbPositionRight - thumbPositionLeft + 'px'
-    }
-    minValueInput.addEventListener('input', () => {
-        minSlider.value = minValueInput.value
+        minValueInput.addEventListener('input', () => {
+            minSlider.value = minValueInput.value
+            dinamicRangeTrack()
+        })
+        maxValueInput.addEventListener('input', () => {
+            maxSlider.value = maxValueInput.value
+            dinamicRangeTrack()
+        })
+        minSlider.addEventListener("input", () => {
+            dinamicRangeTrack()
+            if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+                maxSlider.value = minSlider.value;
+            }
+            updateValues();
+        });
+        maxSlider.addEventListener("input", () => {
+            dinamicRangeTrack()
+            if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+                minSlider.value = maxSlider.value;
+            }
+            updateValues();
+        });
         dinamicRangeTrack()
-    })
-    maxValueInput.addEventListener('input', () => {
-        maxSlider.value = maxValueInput.value
-        dinamicRangeTrack()
-    })
-    minSlider.addEventListener("input", () => {
-        dinamicRangeTrack()
-        if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
-            maxSlider.value = minSlider.value;
-        }
         updateValues();
-    });
-    maxSlider.addEventListener("input", () => {
-        dinamicRangeTrack()
-        if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
-            minSlider.value = maxSlider.value;
-        }
-        updateValues();
-    });
-    dinamicRangeTrack()
-    updateValues();
+    })
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
@@ -327,6 +342,7 @@ if(document.querySelector('.js-clickElem')){
     clickToggle('.mobile-catalog')
     clickToggle('.tags')
     clickToggle('.filters')
+    clickToggle('.mobile-filters')
 }
 if(document.querySelector('.js-tabs')){
     tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
@@ -337,6 +353,7 @@ if(document.querySelector('.range-price')){
 if(document.querySelector('.js-incartToggle')){
     inCartBtn()
 }
+mobileFilter()
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);

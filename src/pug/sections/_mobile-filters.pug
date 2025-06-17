@@ -1,0 +1,79 @@
+.mobile-filters 
+  button.mobile-filters__close.js-mobileFilterClose
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="black" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  h6.mobile-filters__title.text Фильтр
+  .mobile-filters__items 
+    .mobile-filter.js-clickParent
+      button.mobile-filter__toggle.js-clickElem 
+        span.mobile-filter__name.text Цена
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"></path>
+        </svg>
+      .mobile-filter__body
+        .mobile-filter__bodybox.mobile-filter__bodybox--pb
+          .range-price.js-price
+            .range-price__inputs
+              input.range-price__input#min-value(value='1 200')
+              input.range-price__input#max-value(value='22 500')
+            .range-price__thumbs
+              input#min-price.range.min(type='range' min='1200' max='30000' value='1200')
+              input#max-price.range.max(type='range' min='0' max='30000' value='22500')
+            .range-trackbox
+              .range-track
+    .mobile-filter.js-clickParent
+      button.mobile-filter__toggle.js-clickElem
+        span.mobile-filter__name.text Бренд
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"></path>
+        </svg>
+      .mobile-filter__body
+        .mobile-filter__bodybox
+          ul.mobile-filter__params
+            each item in [1, 2, 3, 4]
+              li.mobile-filter__param 
+                label.checkbox
+                  input.checkbox__input(type="checkbox")
+                  span.checkbox-area
+                    img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+                  span.text Бренд !{item}
+    .mobile-filter.mobile-filter--nooffset
+      label.checkbox
+        input.checkbox__input(type="checkbox" checked)
+        span.checkbox-area
+          img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+        span.text В наличии (4)
+    .mobile-filter.js-clickParent
+      button.mobile-filter__toggle.js-clickElem 
+        span.mobile-filter__name.text Материал
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"></path>
+        </svg>
+      .mobile-filter__body
+        .mobile-filter__bodybox
+          ul.mobile-filter__params
+            each item in [1, 2, 3, 4]
+              li.mobile-filter__param 
+                label.checkbox
+                  input.checkbox__input(type="checkbox")
+                  span.checkbox-area
+                    img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+                  span.text Материал !{item}
+    .mobile-filter.js-clickParent
+      button.mobile-filter__toggle.js-clickElem 
+        span.mobile-filter__name.text Длина / Размер
+        <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0L4 5L8 0L0 0Z" fill="#222222"></path>
+        </svg>
+      .mobile-filter__body
+        .mobile-filter__bodybox
+          ul.mobile-filter__params
+            each item in ['16','17','17,5','18,5','2.0мм','3.0мм','4.0мм']
+              li.mobile-filter__param 
+                label.checkbox
+                  input.checkbox__input(type="checkbox")
+                  span.checkbox-area
+                    img.checkbox-area__icon(src="img/svg/check.svg", alt="checkbox-icon")
+                  span.text !{item}
+  button.filter__fixbtn.text Применить

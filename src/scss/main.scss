@@ -246,14 +246,6 @@ textarea {
 			backdrop-filter: none;
 		}
 	}
-	&-arrows{
-		top: 335px;
-		left: 40px;
-		right: 40px;
-		@media(max-width: 565px){
-			display: none;
-		}
-	}
 	&__infobox{
 		position: relative;
 		z-index: 1;
@@ -919,5 +911,106 @@ textarea {
 	&-values {
 		font-size: 14px;
 		color: #333;
+	}
+}
+.mobile-filters{
+	position: fixed;
+	z-index: 12;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	padding: 30px 20px 20px;
+	background: $white;
+	overflow: auto;
+	transition: left 0.3s;
+	&.is-active{
+		left: 0;
+	}
+	&__close{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 24px;
+		height: 24px;
+	}
+	&__title{
+		margin-bottom: 20px;
+	}
+	&__items{
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
+.mobile-filter{
+	padding: 2.5px 10px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.04);
+	border-radius: 6px;
+	&__toggle{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&__body{
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s;
+	}
+	&__bodybox{
+		padding-top: 13px;
+		&--pb{
+			padding-bottom: 13px;
+		}
+	}
+	&__params{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+	&--nooffset{
+		box-shadow: none;
+	}
+	&.is-active{
+		box-shadow: 0px -10px 30px 0px rgba(0, 0, 0, 0.04);
+		.mobile-filter{
+			&__body{
+				max-height: 300px;
+			}
+			&__toggle{
+				svg{
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+	}
+}
+.filters-parameters{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px 10px;
+	margin-bottom: 40px;
+	@media(max-width: 992px){
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media(max-width: 565px){
+		grid-template-columns: repeat(1, 1fr);
+		gap: 10px;
+	}
+}
+.filters-parameter{
+	&__title{
+		margin-bottom: 10px;
+	}
+	&__list{
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 10px;
 	}
 }
