@@ -18,26 +18,26 @@
 ======================== */
 
 .breadcrumbs {
-	padding-top: 55px;
-	padding-bottom: 35px;
-
-	@media(max-width: 565px) {
-		padding-top: 28px;
-		padding-bottom: 34px;
-	}
+	margin-bottom: 27px;
 }
 
-.breadcrumbs__list {}
+.breadcrumbs__list {
+	padding: 8px 0;
+}
 
 .breadcrumbs__item {
-	display: flex;
-	align-items: center;
+	padding: 8px 0;
+	display: inline;
+
 	&:not(:last-child) {
+		position: relative;
+		padding-right: 10px;
 
 		&::after {
 			position: relative;
+			top: -7px;
 			content: '';
-			display: flex;
+			display: inline-flex;
 			border-top: 5px solid transparent;
 			border-left: 6px solid var(--gr-e);
 			border-bottom: 5px solid transparent;
@@ -58,8 +58,10 @@
 
 .breadcrumbs__home {
 	position: relative;
-	display: flex;
+	display: inline-flex;
+	height: 18px;
 	width: auto;
+	top: 2px;
 }
 
 .breadcrumbs__link {
