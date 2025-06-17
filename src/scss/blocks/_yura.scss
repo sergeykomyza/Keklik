@@ -348,18 +348,19 @@ END .gallery-page__products
 .bibliya-kamnei
 ======================== */
 
-.template-book {
+.dark-page {
 	.page-title {}
 }
 
-.template-book__box {
+.dark-page__box {
+	min-width: 0;
 	display: flex;
 	flex-direction: column;
 	gap: 27px;
 	background-color: var(--gr-a);
 }
 
-.template-book__grid {
+.dark-page__grid {
 	padding-bottom: 80px;
 	display: grid;
 	grid-template-columns: 370px 1fr;
@@ -370,11 +371,24 @@ END .gallery-page__products
 	}
 
 	@media screen and (max-width: 768px) {
+		padding-bottom: 0;
 		grid-template-columns: 1fr;
+	}
+
+	&.one-col {
+		.dark-page__main {
+			@media screen and (max-width: 992px) {
+				padding: 40px 10px;
+			}
+
+			@media screen and (max-width: 460px) {
+				padding-top: 340px;
+			}
+		}
 	}
 }
 
-.template-book__aside {
+.dark-page__aside {
 	padding-left: 40px;
 
 	@media screen and (max-width: 768px) {
@@ -383,7 +397,9 @@ END .gallery-page__products
 	}
 }
 
-.template-book__main-wrapper {
+.dark-page__main-wrapper {
+	min-width: 0;
+
 	.page-title {
 		margin-bottom: 20px;
 		font-size: 24px;
@@ -393,7 +409,7 @@ END .gallery-page__products
 		}
 	}
 
-	.template-book__subtitle {
+	.dark-page__subtitle {
 		margin-bottom: 30px;
 		font-weight: 600;
 		color: rgba(143, 143, 143, 0.6);
@@ -405,15 +421,15 @@ END .gallery-page__products
 	}
 }
 
-.template-book__top {
+.dark-page__top {
 	@media screen and (max-width: 768px) {
 		padding: 0 10px;
 	}
 }
 
-.template-book__main {
+.dark-page__main {
 	position: relative;
-	padding: 150px 80px 80px;
+	padding: 150px 40px 80px 80px;
 	color: var(--gr-a);
 	background-color: #0b0b0b;
 	overflow: hidden;
@@ -431,12 +447,12 @@ END .gallery-page__products
 	}
 }
 
-.template-book__subgrid {
+.dark-page__subgrid {
 	position: relative;
 	z-index: 2;
 }
 
-.template-book__bg {
+.dark-page__bg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -676,38 +692,65 @@ END .gallery-page__products
 		gap: 4px;
 	}
 
-	.button {
+}
+.btn {
+	padding: 10px 30px;
+	display: inline-block;
+
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	color: var(--gr-e);
+	text-decoration: none;
+	text-align: center;
+
+	border-radius: 8px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
+	background: var(--wh);
+
+	transition: all 0.25s;
+
+	@media screen and (max-width: 768px) {
 		padding: 10px 24px;
+	}
 
-		font-family: var(--font-family);
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 1.2;
-		letter-spacing: -0.04em;
-		color: var(--gr-e);
-		text-decoration: none;
-		text-align: center;
+	&.dark {
+		color: var(--wh);
+		background-color: var(--gr-e);
+	}
 
-		border-radius: 8px;
-		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
-		background: var(--wh);
+	&.small {}
 
-		transition: all 0.25s;
-
-		&.dark {
-			color: var(--wh);
-			background-color: var(--gr-e);
-		}
-
-		&.small {}
-
-		&:hover {
-			transform: translateY(-2px);
-		}
+	&:hover {
+		transform: translateY(-2px);
 	}
 }
 
-.template-book__subtitle {}
+.dark-page__main .video-box {
+	margin-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 60px;
+	}
+
+	.text {
+		color: #fff;
+	}
+
+	.slider-nav {
+		background-color: transparent;
+	}
+}
+
+.dark-page__subtitle {}
 
 /* ========================
 END .bibliya-kamnei
@@ -765,3 +808,57 @@ END .bibliya-kamnei
 /* ========================
 END .aside-nav
 ======================== */
+
+.template-sozdanie .feedback {
+	margin-bottom: 40px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 10px;
+	}
+}
+
+.template-sozdanie .products-previews {
+	margin-bottom: 40px;
+}
+
+.play-video {
+	padding: 10px 0;
+}
+
+.play-video__box {
+	position: relative;
+	aspect-ratio: 515/272;
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover {
+		.play-video__icon {
+			transform: translate(-50%, -50%) scale(1.2);
+		}
+	} 
+}
+
+.play-video__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.play-video__icon {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .25s;
+}
+
+.text-center {
+	text-align: center;
+}
+.mb70 {
+	margin-bottom: 70px;
+}
