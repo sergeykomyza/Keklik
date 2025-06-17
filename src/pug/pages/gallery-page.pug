@@ -30,7 +30,11 @@ html(lang="ru")
 
 	body.gallery-page
 		include ./../sections/_header.pug
-		include ./../sections/_breadcrumbs.pug
+		+breadcrumbs([
+			{ title: 'Каталог', url: '/' },
+			{ title: 'Украшения', url: '#' },
+			{ title: 'Авантюрин', url: '' }
+		])
 
 		main.gallery-page__box
 			.container
