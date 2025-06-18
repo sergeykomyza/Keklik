@@ -28,7 +28,7 @@ html(lang="ru")
 		include ./../sections/_head.pug
 		title Страница товара
 
-	body.gallery-page
+	body
 		include ./../sections/_header.pug
 		+breadcrumbs([
 			{ title: 'Каталог', url: '/' },
@@ -36,7 +36,7 @@ html(lang="ru")
 			{ title: 'Авантюрин', url: '' }
 		])
 
-		main.gallery-page__box
+		main.gallery-page
 			.container
 				h1.page-title Авантюрин
 

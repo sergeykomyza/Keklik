@@ -8,7 +8,7 @@ html(lang="ru")
 		include ./../sections/_head.pug
 		title «Библия камней» — тысячелетние сакральные знания на человеческом языке
 
-	body.dark-page
+	body
 		include ./../sections/_header.pug
 		+breadcrumbs([
 			{ title: 'Библия камней', url: '' }
@@ -179,7 +179,9 @@ html(lang="ru")
 													|
 													| (экономия 800 ₽)
 
-										a.btn(href="#") Купить книгу
+										//- a.btn(href="#") Купить книгу
+										a.button.button-white.hover-white(href="#") 
+											span Купить книгу
 
 										p P.S. Это не просто книга — это ваш проводник в мир энергий, который останется с вами на всю жизнь
 

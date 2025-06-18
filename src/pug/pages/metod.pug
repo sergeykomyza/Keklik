@@ -8,7 +8,7 @@ html(lang="ru")
 		include ./../sections/_head.pug
 		title Метод Светланы Шахрай
 
-	body.template-metod
+	body
 		include ./../sections/_header.pug
 		+breadcrumbs([
 			{ title: 'О Светлане Шахрай', url: '' }
@@ -38,9 +38,6 @@ html(lang="ru")
 								source(media="(max-width: 768px)", srcset="img/metod/metod-bg_mob.webp")
 								img(src="img/metod/metod-bg.webp", alt="alt")
 
-							//- .dark-page__subgrid.tb-subgrid
-
-								//- img.tb-subgrid__img(src="img/metod/book.webp", alt="")
 
 							.tb-subgrid__main
 								.block
@@ -55,8 +52,10 @@ html(lang="ru")
 											li.list-circle__item Нумерологический расчет
 											li.list-circle__item Происхождение камня и его история
 										.btns
-											a.btn(href="#") Создать украшение
-											a.btn.dark(href="#") Перейти в каталог готовых товаров
+											a.button.button-white.hover-white(href="#") 
+												span Создать украшение
+											a.button.button-black(href="#") 
+												span Перейти в каталог готовых товаров
 
 								.block
 									h2 Светлана Шахрай легенда каменных браслетов со смыслом №1
@@ -67,13 +66,6 @@ html(lang="ru")
 										p Предприниматель, с 30-ти летним стажем, за 3 года преобразовала хобби в красивый и востребованный бизнес с оборотом более 60 млн ₽ в год
 										p Создала более более 20 000 браслетов под цели и желания довольных клиентов, в том числе звезд шоу-бизнеса, бизнесменов из списка форбс, жен шейхов и известных блогеров
 										p Разработала первую уникальную программу по персональному подбору натуральных камней, индивидуально для каждого человека
-							
-							//- include ./../sections/_video-slider.pug
-
-
-
-
-
 
 							.video-box
 								h2 Друзья бренда
@@ -103,21 +95,6 @@ html(lang="ru")
 									.slider-navbox
 										.slider-nav.js-previewVideoNav
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 							
 							.tb-subgrid__main
 								.block
@@ -126,16 +103,8 @@ html(lang="ru")
 										img(src="img/metod/02.webp", alt="")
 									.block-descr
 										p Программа, на которой вы научитесь правильно создавать каменные браслеты, которые качественно работают с любыми задачами и сможете дополнительно зарабатывать на своих знаниях от 50 000 ₽/месяц
-										a.btn(href="#") Про курс
-
-
-
-
-
-
-
-
-
+										a.button.button-white.hover-white(href="#")
+											span Про курс
 
 
 		include ./../sections/_footer.pug
