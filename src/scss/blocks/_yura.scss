@@ -18,29 +18,26 @@
 ======================== */
 
 .breadcrumbs {
-	padding-top: 55px;
-	padding-bottom: 35px;
-	@media(max-width: 565px){
-		padding-top: 28px;
-		padding-bottom: 34px;
-	}
+	margin-bottom: 27px;
 }
 
 .breadcrumbs__list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 16px;
+	padding: 8px 0;
 }
 
 .breadcrumbs__item {
-	display: flex;
-	align-items: center;
+	padding: 8px 0;
+	display: inline;
+
 	&:not(:last-child) {
+		position: relative;
+		padding-right: 10px;
 
 		&::after {
 			position: relative;
+			top: -7px;
 			content: '';
-			display: flex;
+			display: inline-flex;
 			border-top: 5px solid transparent;
 			border-left: 6px solid var(--gr-e);
 			border-bottom: 5px solid transparent;
@@ -61,8 +58,10 @@
 
 .breadcrumbs__home {
 	position: relative;
-	display: flex;
+	display: inline-flex;
+	height: 18px;
 	width: auto;
+	top: 2px;
 }
 
 .breadcrumbs__link {
@@ -253,18 +252,18 @@ END .to-client
 }
 
 .gallery-page__info {
-	padding: 160px 40px 80px;
+	padding: 160px 40px 0;
 
 	display: flex;
 	flex-direction: column;
 	gap: 11px;
 
 	@media screen and (max-width: 992px) {
-		padding: 80px 20px 80px;
+		padding: 80px 20px 0;
 	}
 
 	@media screen and (max-width: 768px) {
-		padding: 40px 10px 80px;
+		padding: 40px 10px 0;
 	}
 
 	h2 {
@@ -346,18 +345,19 @@ END .gallery-page__products
 .bibliya-kamnei
 ======================== */
 
-.template-book {
+.dark-page {
 	.page-title {}
 }
 
-.template-book__box {
+.dark-page__box {
+	min-width: 0;
 	display: flex;
 	flex-direction: column;
 	gap: 27px;
 	background-color: var(--gr-a);
 }
 
-.template-book__grid {
+.dark-page__grid {
 	padding-bottom: 80px;
 	display: grid;
 	grid-template-columns: 370px 1fr;
@@ -368,11 +368,24 @@ END .gallery-page__products
 	}
 
 	@media screen and (max-width: 768px) {
+		padding-bottom: 0;
 		grid-template-columns: 1fr;
+	}
+
+	&.one-col {
+		.dark-page__main {
+			@media screen and (max-width: 992px) {
+				padding: 40px 10px;
+			}
+
+			@media screen and (max-width: 460px) {
+				padding-top: 340px;
+			}
+		}
 	}
 }
 
-.template-book__aside {
+.dark-page__aside {
 	padding-left: 40px;
 
 	@media screen and (max-width: 768px) {
@@ -381,7 +394,9 @@ END .gallery-page__products
 	}
 }
 
-.template-book__main-wrapper {
+.dark-page__main-wrapper {
+	min-width: 0;
+
 	.page-title {
 		margin-bottom: 20px;
 		font-size: 24px;
@@ -391,7 +406,7 @@ END .gallery-page__products
 		}
 	}
 
-	.template-book__subtitle {
+	.dark-page__subtitle {
 		margin-bottom: 30px;
 		font-weight: 600;
 		color: rgba(143, 143, 143, 0.6);
@@ -403,15 +418,15 @@ END .gallery-page__products
 	}
 }
 
-.template-book__top {
+.dark-page__top {
 	@media screen and (max-width: 768px) {
 		padding: 0 10px;
 	}
 }
 
-.template-book__main {
+.dark-page__main {
 	position: relative;
-	padding: 150px 80px 80px;
+	padding: 150px 40px 80px 80px;
 	color: var(--gr-a);
 	background-color: #0b0b0b;
 	overflow: hidden;
@@ -429,12 +444,12 @@ END .gallery-page__products
 	}
 }
 
-.template-book__subgrid {
+.dark-page__subgrid {
 	position: relative;
 	z-index: 2;
 }
 
-.template-book__bg {
+.dark-page__bg {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -479,6 +494,8 @@ END .gallery-page__products
 }
 
 .tb-subgrid__main {
+	position: relative;
+	z-index: 2;
 	max-width: 515px;
 	font-size: 18px;
 
@@ -511,6 +528,10 @@ END .gallery-page__products
 
 		@media screen and (max-width: 768px) {
 			margin-bottom: 60px;
+		}
+
+		.page-title {
+			margin-bottom: 0;
 		}
 	}
 
@@ -578,6 +599,58 @@ END .gallery-page__products
 		}
 	}
 
+	.list-circle {
+		padding: 0 7px;
+
+		display: grid;
+		// grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 50% 50%;
+		max-width: 100%;
+		width: 100%;
+		box-sizing: border-box
+	}
+
+	.list-circle__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		aspect-ratio: 1/1;
+		width: calc((515px - 7px*2)/2);
+		text-align: center;
+
+		border: 1px solid var(--wh);
+		border-radius: 50%;
+		padding: 20px;
+		background-color: transparent;
+
+		transition: all .25s;
+
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+
+		@media screen and (max-width: 535px) {
+			width: calc((100vw - 7px*2 - 10px*2)/2);
+
+		}
+	}
+
+	.img-box {
+		padding: 10px 0;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.full-w {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
 	.about-author {
 		position: relative;
 	}
@@ -610,31 +683,71 @@ END .gallery-page__products
 		}
 	}
 
-	.button {
+	.btns {
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+}
+.btn {
+	padding: 10px 30px;
+	display: inline-block;
+
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	color: var(--gr-e);
+	text-decoration: none;
+	text-align: center;
+
+	border-radius: 8px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
+	background: var(--wh);
+
+	transition: all 0.25s;
+
+	@media screen and (max-width: 768px) {
 		padding: 10px 24px;
+	}
 
-		font-family: var(--font-family);
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 1.2;
-		letter-spacing: -0.04em;
-		color: var(--gr-e);
-		text-decoration: none;
-		text-align: center;
+	&.dark {
+		color: var(--wh);
+		background-color: var(--gr-e);
+	}
 
-		border-radius: 8px;
-		box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
-		background: var(--wh);
+	&.small {}
 
-		transition: all 0.25s;
-
-		&:hover {
-			transform: translateY(-2px);
-		}
+	&:hover {
+		transform: translateY(-2px);
 	}
 }
 
-.template-book__subtitle {}
+.dark-page__main .video-box {
+	margin-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 60px;
+	}
+
+	.text {
+		color: #fff;
+	}
+
+	.slider-nav {
+		background-color: transparent;
+	}
+}
+
+.dark-page__subtitle {}
 
 /* ========================
 END .bibliya-kamnei
@@ -645,10 +758,14 @@ END .bibliya-kamnei
 ======================== */
 
 .aside-nav {
+	position: sticky;
+	// top: 150px;
+	top: 0;
 	padding-top: 150px;
 
 	@media screen and (max-width: 1200px) {
 		padding-top: 80px;
+		top: 80px;
 	}
 
 	@media screen and (max-width: 992px) {
@@ -688,3 +805,57 @@ END .bibliya-kamnei
 /* ========================
 END .aside-nav
 ======================== */
+
+.template-sozdanie .feedback {
+	margin-bottom: 40px;
+
+	@media screen and (max-width: 768px) {
+		margin-bottom: 10px;
+	}
+}
+
+.template-sozdanie .products-previews {
+	margin-bottom: 40px;
+}
+
+.play-video {
+	padding: 10px 0;
+}
+
+.play-video__box {
+	position: relative;
+	aspect-ratio: 515/272;
+	cursor: pointer;
+	overflow: hidden;
+
+	&:hover {
+		.play-video__icon {
+			transform: translate(-50%, -50%) scale(1.2);
+		}
+	} 
+}
+
+.play-video__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.play-video__icon {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all .25s;
+}
+
+.text-center {
+	text-align: center;
+}
+.mb70 {
+	margin-bottom: 70px;
+}

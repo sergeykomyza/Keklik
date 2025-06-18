@@ -1,0 +1,143 @@
+//- mixin photoGalleryItem(src)
+//- 	a.photo-gallery__item(href=""+src data-fslightbox="gallery")
+//- 		img(src=""+src, alt="Фотография товара").photo-gallery__img
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Метод Светланы Шахрай
+
+	body.template-metod
+		include ./../sections/_header.pug
+		+breadcrumbs([
+			{ title: 'О Светлане Шахрай', url: '' }
+		])
+
+		.dark-page__box
+
+			.full-container
+				.dark-page__grid.one-col
+
+					.dark-page__aside
+
+						nav.aside-nav
+							ul.aside-nav__list
+								li.aside-nav__item
+									a.aside-nav__link(href="#") Создание личного украшения-талисмана
+								li.aside-nav__item.active
+									a.aside-nav__link(href="#") О Светлане Шахрай
+								li.aside-nav__item
+									a.aside-nav__link(href="#") Патент
+
+
+					.dark-page__main-wrapper
+
+						main.dark-page__main
+							picture.dark-page__bg
+								source(media="(max-width: 768px)", srcset="img/metod/metod-bg_mob.webp")
+								img(src="img/metod/metod-bg.webp", alt="alt")
+
+							//- .dark-page__subgrid.tb-subgrid
+
+								//- img.tb-subgrid__img(src="img/metod/book.webp", alt="")
+
+							.tb-subgrid__main
+								.block
+									h1.page-title Метод Светланы Шахрай
+									.block-descr
+										p Суть метода заключается в индивидуальном подборе камней под ваши задачи на основании аспектов:
+										ul.list-circle
+											li.list-circle__item Индивидуальные данные
+											li.list-circle__item Психотип человека
+											li.list-circle__item Тарологический расчет
+											li.list-circle__item Астрологический аспект
+											li.list-circle__item Нумерологический расчет
+											li.list-circle__item Происхождение камня и его история
+										.btns
+											a.btn(href="#") Создать украшение
+											a.btn.dark(href="#") Перейти в каталог готовых товаров
+
+								.block
+									h2 Светлана Шахрай легенда каменных браслетов со смыслом №1
+									.img-box
+										img(src="img/metod/01.webp", alt="").full-w
+									.block-descr
+										p Основатель бренда KEKLIK
+										p Предприниматель, с 30-ти летним стажем, за 3 года преобразовала хобби в красивый и востребованный бизнес с оборотом более 60 млн ₽ в год
+										p Создала более более 20 000 браслетов под цели и желания довольных клиентов, в том числе звезд шоу-бизнеса, бизнесменов из списка форбс, жен шейхов и известных блогеров
+										p Разработала первую уникальную программу по персональному подбору натуральных камней, индивидуально для каждого человека
+							
+							//- include ./../sections/_video-slider.pug
+
+
+
+
+
+
+							.video-box
+								h2 Друзья бренда
+								.sliderbox.sliderbox-mobile 
+									.slider-arrows.video-arrows
+										button.slider-btn.slider-btnrev.js-prev
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z" fill="black"/>
+												<path d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z" fill="black"/>
+											</svg>
+										button.slider-btn.js-next
+											<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z" fill="black"/>
+												<path d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z" fill="black"/>
+											</svg>
+									.video-slider.swiper.js-sliderVideo 
+										.swiper-wrapper
+											each item in [1, 2, 3, 4, 5, 6]
+												.swiper-slide
+													.preview-video
+														.preview-video__fotobox 
+															<svg class="preview-video__icon" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/>
+															</svg>
+															img.preview-video__foto(src=`img/video-preview-${item}.webp`, alt="foto")
+														h6.preview-video__name.text Новинка
+									.slider-navbox
+										.slider-nav.js-previewVideoNav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							
+							.tb-subgrid__main
+								.block
+									p Светлана разработала 2-х месячный практический курс по созданию браслетов
+									.img-box
+										img(src="img/metod/02.webp", alt="")
+									.block-descr
+										p Программа, на которой вы научитесь правильно создавать каменные браслеты, которые качественно работают с любыми задачами и сможете дополнительно зарабатывать на своих знаниях от 50 000 ₽/месяц
+										a.btn(href="#") Про курс
+
+
+
+
+
+
+
+
+
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

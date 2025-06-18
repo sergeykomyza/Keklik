@@ -8,16 +8,18 @@ html(lang="ru")
 		include ./../sections/_head.pug
 		title «Библия камней» — тысячелетние сакральные знания на человеческом языке
 
-	body.template-book
+	body.dark-page
 		include ./../sections/_header.pug
-		include ./../sections/_breadcrumbs.pug
+		+breadcrumbs([
+			{ title: 'Библия камней', url: '' }
+		])
 
-		.template-book__box
+		.dark-page__box
 
 			.full-container
-				.template-book__grid
+				.dark-page__grid
 
-					.template-book__aside
+					.dark-page__aside
 
 						nav.aside-nav
 							ul.aside-nav__list
@@ -42,17 +44,17 @@ html(lang="ru")
 								li.aside-nav__item
 									a.aside-nav__link(href="#") Реквизиты и документы
 
-					.template-book__main-wrapper
-						.template-book__top
+					.dark-page__main-wrapper
+						.dark-page__top
 							h1.page-title «Библия камней» — тысячелетние сакральные знания на человеческом языке
-							p.template-book__subtitle Единственная книга, которая мгновенно отвечает на ваши вопросы о камнях и их энергиях
+							p.dark-page__subtitle Единственная книга, которая мгновенно отвечает на ваши вопросы о камнях и их энергиях
 
-						main.template-book__main
-							picture.template-book__bg
+						main.dark-page__main
+							picture.dark-page__bg
 								source(media="(max-width: 768px)", srcset="img/bibliya-kamnei/book-bg_mob.webp")
 								img(src="img/bibliya-kamnei/book-bg.webp", alt="alt")
 
-							.template-book__subgrid.tb-subgrid
+							.dark-page__subgrid.tb-subgrid
 
 								img.tb-subgrid__img(src="img/bibliya-kamnei/book.webp", alt="")
 
@@ -177,7 +179,7 @@ html(lang="ru")
 													|
 													| (экономия 800 ₽)
 
-										a.button(href="#") Купить книгу
+										a.btn(href="#") Купить книгу
 
 										p P.S. Это не просто книга — это ваш проводник в мир энергий, который останется с вами на всю жизнь
 
