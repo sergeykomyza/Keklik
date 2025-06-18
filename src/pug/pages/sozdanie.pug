@@ -23,158 +23,148 @@ html(lang="ru")
 		include ./../sections/_head.pug
 		title Создание личного украшения-талисмана
 
-	body.template-sozdanie
+	body
 		include ./../sections/_header.pug
 		+breadcrumbs([
 			{ title: 'О Светлане Шахрай', url: '' }
 		])
+		
+		.template-creating
 
-		.dark-page__box
+			.dark-page__box
 
-			.full-container
-				.dark-page__grid.one-col
+				.full-container
+					.dark-page__grid.one-col
 
-					.dark-page__aside
+						.dark-page__aside
 
-						nav.aside-nav
-							ul.aside-nav__list
-								li.aside-nav__item.active
-									a.aside-nav__link(href="#") Создание личного украшения-талисмана
-								li.aside-nav__item
-									a.aside-nav__link(href="#") О Светлане Шахрай
-								li.aside-nav__item
-									a.aside-nav__link(href="#") Патент
-
-
-					.dark-page__main-wrapper
-
-						main.dark-page__main
-							picture.dark-page__bg
-								source(media="(max-width: 768px)", srcset="img/sozdanie/sozdanie-bg_mob.webp")
-								img(src="img/sozdanie/sozdanie-bg.webp", alt="alt")
+							nav.aside-nav
+								ul.aside-nav__list
+									li.aside-nav__item.active
+										a.aside-nav__link(href="#") Создание личного украшения-талисмана
+									li.aside-nav__item
+										a.aside-nav__link(href="#") О Светлане Шахрай
+									li.aside-nav__item
+										a.aside-nav__link(href="#") Патент
 
 
-							.tb-subgrid__main
-								.block
-									h1.page-title Создание личного украшения-талисмана
-									.block-descr
-										p Найдем ваш личный камень и создадим украшение, которое поможет в исполнении вашей мечты и целей
-										p У каждого камня от природы, как и учеловека, своя энергетика. Мы подбираем подходящие под вашу энергетику камни и в случе, когда энергетика камня и человека совпадают, то камни начинают работать
-								.block
-									h2 Как мы подбираем камни для амулетов-хранителей
-									.block-descr
-										ul.list-circle
-											li.list-circle__item Индивидуальные данные
-											li.list-circle__item Психотип человека
-											li.list-circle__item Тарологический расчет
-											li.list-circle__item Астрологический аспект
-											li.list-circle__item Нумерологический расчет
-											li.list-circle__item Происхождение камня и его история
+						.dark-page__main-wrapper
+
+							main.dark-page__main
+								picture.dark-page__bg
+									source(media="(max-width: 768px)", srcset="img/sozdanie/sozdanie-bg_mob.webp")
+									img(src="img/sozdanie/sozdanie-bg.webp", alt="alt")
 
 
-								.block
-									h2 Видео о том, как мы подбираем индивидуальные браслеты
-									
-									.block-descr
-										.play-video
-											.play-video__box
-												img.play-video__img(src="img/sozdanie/video.webp", alt="")
-												svg.play-video__icon(width="34", height="36", viewBox="0 0 34 36", fill="none", xmlns="http://www.w3.org/2000/svg")
-													path(d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z", stroke="white", stroke-width="2")
-							
+								.tb-subgrid__main
+									.block
+										h1.page-title Создание личного украшения-талисмана
+										.block-descr
+											p Найдем ваш личный камень и создадим украшение, которое поможет в исполнении вашей мечты и целей
+											p У каждого камня от природы, как и учеловека, своя энергетика. Мы подбираем подходящие под вашу энергетику камни и в случе, когда энергетика камня и человека совпадают, то камни начинают работать
+									.block
+										h2 Как мы подбираем камни для амулетов-хранителей
+										.block-descr
+											ul.list-circle
+												li.list-circle__item Индивидуальные данные
+												li.list-circle__item Психотип человека
+												li.list-circle__item Тарологический расчет
+												li.list-circle__item Астрологический аспект
+												li.list-circle__item Нумерологический расчет
+												li.list-circle__item Происхождение камня и его история
+
+
+									.block
+										h2 Видео о том, как мы подбираем индивидуальные браслеты
+										
+										.block-descr
+											.play-video
+												.play-video__box
+													img.play-video__img(src="img/sozdanie/video.webp", alt="")
+													svg.play-video__icon(width="34", height="36", viewBox="0 0 34 36", fill="none", xmlns="http://www.w3.org/2000/svg")
+														path(d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z", stroke="white", stroke-width="2")
+								
 
 
 
 
-		section.products-previews.gallery-page__products
-			.container 
-				h2.section-title.products-previews__title Примеры индивидуальных браслетов
-				.decoration-task 
-					.decoration-task__sliders
-						.sliderbox.sliderbox-mobile
-							.slider-arrows.products-arrows
-								button.slider-btn.slider-btnrev.js-prev
-									svg(width="14", height="12", viewBox="0 0 14 12", fill="none", xmlns="http://www.w3.org/2000/svg")
-										path(d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z", fill="black")
-										path(d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z", fill="black")
-								button.slider-btn.js-next
-									svg(width="14", height="12", viewBox="0 0 14 12", fill="none", xmlns="http://www.w3.org/2000/svg")
-										path(d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z", fill="black")
-										path(d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z", fill="black")
-							.products-slider.swiper.js-slider 
-								.swiper-wrapper
-									+galleryPageProduct(
-										'img/gallery-page/products/01.webp',
-										'Брелок из Агата и Аквакварца',
-										'3 600',
-										'1 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/02.webp',
-										'Подвеска из Агата',
-										'15 000',
-										'5 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/03.webp',
-										'Комплект из Раухтопаза',
-										'9 000',
-										'3 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/04.webp',
-										'Браслет женский «Внутренний свет»',
-										'20 000',
-										'5 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/01.webp',
-										'Брелок из Агата и Аквакварца',
-										'3 600',
-										'1 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/02.webp',
-										'Подвеска из Агата',
-										'15 000',
-										'5 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/03.webp',
-										'Комплект из Раухтопаза',
-										'9 000',
-										'3 000'
-									)
-									+galleryPageProduct(
-										'img/gallery-page/products/04.webp',
-										'Браслет женский «Внутренний свет»',
-										'20 000',
-										'5 000'
-									)
+			section.products-previews.gallery-page__products
+				.container 
+					h2.section-title.products-previews__title Примеры индивидуальных браслетов
+					.decoration-task 
+						.decoration-task__sliders
+							.sliderbox.sliderbox-mobile
+								.slider-arrows.products-arrows
+									button.slider-btn.slider-btnrev.js-prev
+										svg(width="14", height="12", viewBox="0 0 14 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+											path(d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z", fill="black")
+											path(d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z", fill="black")
+									button.slider-btn.js-next
+										svg(width="14", height="12", viewBox="0 0 14 12", fill="none", xmlns="http://www.w3.org/2000/svg")
+											path(d="M12.0799 6.40431L0.635786 6.40431C0.279746 6.40431 -7.63309e-09 6.10256 -7.13606e-09 5.71853C-6.63902e-09 5.33449 0.279746 5.03274 0.635786 5.03274L12.0799 5.03274C12.436 5.03274 12.7157 5.33449 12.7157 5.71853C12.7157 6.10256 12.436 6.40431 12.0799 6.40431Z", fill="black")
+											path(d="M8.901 11.2048C8.81762 11.2059 8.73494 11.1881 8.65829 11.1527C8.58164 11.1173 8.51272 11.0649 8.45595 10.9991C8.20163 10.7247 8.20163 10.2996 8.45595 10.0252L12.4614 5.70481L8.45595 1.38438C8.20163 1.11007 8.20163 0.684882 8.45595 0.410569C8.71026 0.136256 9.10445 0.136256 9.35876 0.410569L13.8093 5.21105C14.0636 5.48536 14.0636 5.91054 13.8093 6.18486L9.35876 10.9853C9.23161 11.1225 9.0663 11.1911 8.91372 11.1911L8.901 11.2048Z", fill="black")
+								.products-slider.swiper.js-slider 
+									.swiper-wrapper
+										+galleryPageProduct(
+											'img/gallery-page/products/01.webp',
+											'Брелок из Агата и Аквакварца',
+											'3 600',
+											'1 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/02.webp',
+											'Подвеска из Агата',
+											'15 000',
+											'5 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/03.webp',
+											'Комплект из Раухтопаза',
+											'9 000',
+											'3 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/04.webp',
+											'Браслет женский «Внутренний свет»',
+											'20 000',
+											'5 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/01.webp',
+											'Брелок из Агата и Аквакварца',
+											'3 600',
+											'1 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/02.webp',
+											'Подвеска из Агата',
+											'15 000',
+											'5 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/03.webp',
+											'Комплект из Раухтопаза',
+											'9 000',
+											'3 000'
+										)
+										+galleryPageProduct(
+											'img/gallery-page/products/04.webp',
+											'Браслет женский «Внутренний свет»',
+											'20 000',
+											'5 000'
+										)
 
-							.slider-navbox
-								.slider-nav.js-catalogNav
+								.slider-navbox
+									.slider-nav.js-catalogNav
 
-		.container.text-center.mb70
-			a.btn.dark(href="#") Каталог изделий из камней
+			.container.text-center.mb70
+				a.button.button-black.inline-flex(href="#") 
+					span Перейти в каталог готовых товаров
+				//- a.btn.dark(href="#") Каталог изделий из камней
 
-		include ./../sections/_create.pug
+			include ./../sections/_create.pug
 
-		.container
 			include ./../sections/_feedback.pug
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		include ./../sections/_footer.pug
 

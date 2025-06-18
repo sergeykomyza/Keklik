@@ -3,7 +3,7 @@ html(lang="ru")
 	head
 		include ./../sections/_head.pug
 		title Страница Клиентам
-	body.to-client
+	body
 
 		include ./../sections/_header.pug
 
@@ -11,11 +11,11 @@ html(lang="ru")
 			{ title: 'Клиентам', url: '' }
 
 		])
-
-		.container
-			.to-client__box
-				h1.page-title Клиентам
-				include ./../sections/_clients-info.pug
+		main.to-client
+			.container
+				.to-client__box
+					h1.page-title Клиентам
+					include ./../sections/_clients-info.pug
 
 		include ./../sections/_footer.pug
 
