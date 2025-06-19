@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title О семье KEKLIK
+	body
+
+		include ./../sections/_header.pug
+
+		main.about
+			.about-hero
+				.container
+					.about-hero__top
+						
+						+breadcrumbs([
+							{ title: 'О семье KEKLIK', url: '' }
+						])
+
+						h1.page-title О семье KEKLIK
+
+						p Keklik Braslet — украшения из натуральных камней Цените роскошь и индивидуальность? Браслеты KEKLIK для вас!
+
+					ul.about-list
+						li.about-list__item
+							img.about-list__icon(src="img/about/01.svg", alt="")
+							p.about-list__title Семейный Бренд украшений только из натуральных камней
+						li.about-list__item
+							img.about-list__icon(src="img/about/02.svg", alt="")
+							p.about-list__title Хранители Энергии
+						li.about-list__item
+							img.about-list__icon(src="img/about/03.svg", alt="")
+							p.about-list__title Создаем индивидуальные браслеты под Ваш запрос
+						li.about-list__item
+							img.about-list__icon(src="img/about/04.svg", alt="")
+							p.about-list__title Доставка по России и в другие страны
+
+
+				
+			.container
+				ul.special-offer-category.so-category
+					li.so-category__item
+						a.so-category__link(href="#")
+							.so-category__img-box
+								img.so-category__img(src="img/special-offer/01.webp", alt="")
+							.so-category__title Подойдет ли индивидуальный браслет по стилю?
+					li.so-category__item
+						a.so-category__link(href="#")
+							.so-category__img-box
+								img.so-category__img(src="img/special-offer/02.webp", alt="")
+							.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+					li.so-category__item
+						a.so-category__link(href="#")
+							.so-category__img-box
+								img.so-category__img(src="img/special-offer/03.webp", alt="")
+							.so-category__title Патент
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug
