@@ -56,7 +56,13 @@ const catalogMenu = () => {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-
+const input = document.querySelector("#phone");
+window.intlTelInput(input, {
+    initialCountry: "ru",
+    nationalMode: true,
+    strictMode: true,
+    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+});
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE
 const clickToggle = (wrap) => {
     if(document.querySelector(wrap)){

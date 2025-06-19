@@ -2,12 +2,19 @@
 html(lang="ru")
 	head
 		include ./../sections/_head.pug
-		title Site | Page 4
+		title Keklik | Товар
 	body
 
 		include ./../sections/_header.pug
 
-		
+		+breadcrumbs([
+			{ title: 'Каталог', url: '/' },
+			{ title: 'Украшения' }
+		])
+
+		.product 
+			.full-container
+
 
 		include ./../sections/_footer.pug
 

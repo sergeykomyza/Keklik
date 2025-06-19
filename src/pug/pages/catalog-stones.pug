@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Keklik | Каталог камней
+	body
+
+		include ./../sections/_header.pug
+
+		+breadcrumbs([
+			{ title: 'Каталог камней'}
+		])
+
+		.catalog-stones
+			.container
+				h1.page-title.catalog-stones__title Каталог камней
+				.alphabet 
+					each item, i in ['a','б','в','г','д','е','ж','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','я']
+						a.alphabet__item.text(href="#" class=`${i === 0 ? 'is-active' : ''}`)= item
+				.catalog-stones__box
+					each item, i in ['Авантюрин','Азурит','Берилл','Лазурит','Вулканит','Обсидиан','Коралл','Горный хрусталь']
+						a.categories-preview(href="#")
+							img.categories-preview__foto(src=`img/stone-${i+1}.webp`, alt="foto") 
+							h6.categories-preview__name= item
+				button.button.button-white.catalog-more 
+					span.text Загрузить еще
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

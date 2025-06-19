@@ -45,6 +45,9 @@ html {
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding-top: 105px;
 	font-family: $raleway;
 	font-size: 16px;
@@ -378,15 +381,16 @@ textarea {
 		z-index: 1;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		display: flex;
+		padding: 6px 12px;
 		font-size: 22px;
 		line-height: 110%;
 		font-weight: 700;
-		display: flex;
-		padding: 6px 12px;
+		white-space: nowrap;
 		border-radius: 30px;
 		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(40px);
+		transform: translate(-50%, -50%);
 	}
 }
 .products-previews{
@@ -833,6 +837,14 @@ textarea {
 		margin-top: 30px;
 		border: 1px solid $light-grey;
 		border-radius: 8px;
+		background: $white;
+		transition: background 0.3s, color 0.3s;
+		@media(hover: hover){
+			&:hover{
+				color: $white;
+				background: $dark;
+			}
+		}
 	}
 	&-mobilehidden{
 		@media(max-width: 768px){
@@ -1060,6 +1072,7 @@ textarea {
 		}
 		&__name{
 			@extend .present-category__name;
+
 			@media(max-width: 768px){
 				font-family: $raleway;
 				font-size: 16px;
@@ -1076,5 +1089,34 @@ textarea {
 		gap: 15px;
 		max-width: 1060px;
 		width: 100%;
+	}
+}
+.catalog-stones{
+	&__title{
+		margin-bottom: 27px;
+	}
+	&__box{
+		@extend .categories__box;
+	}
+}
+.alphabet{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+	margin-bottom: 30px;
+	&__item{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		text-transform: uppercase;
+		border-radius: 8px;
+		background: $white;
+		transition: background 0.3s, color 0.3s;
+		&:hover,
+		&.is-active{
+			background: $dark;
+			color: $white;
+		}
 	}
 }
