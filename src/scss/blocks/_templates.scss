@@ -184,6 +184,9 @@
     display: none;
   }
 }
+.popular-arrows{
+  @extend .products-arrows;
+}
 .video-arrows{
   top: 350px;
   @media(max-width: 1920px){

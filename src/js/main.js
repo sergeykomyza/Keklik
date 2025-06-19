@@ -56,13 +56,17 @@ const catalogMenu = () => {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-const input = document.querySelector("#phone");
-window.intlTelInput(input, {
-    initialCountry: "ru",
-    nationalMode: true,
-    strictMode: true,
-    loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
-});
+if(document.querySelector('.js-phone')){
+    const input = document.querySelectorAll(".js-phone");
+    input.forEach(item => {
+        window.intlTelInput(item, {
+            initialCountry: "ru",
+            nationalMode: true,
+            strictMode: true,
+            loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+        });
+    })
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE
 const clickToggle = (wrap) => {
     if(document.querySelector(wrap)){
@@ -172,7 +176,7 @@ const sliders = () => {
             }
         });
     }
-    const swiper = new Swiper(`.js-slider`, {
+    const swiper5 = new Swiper(`.js-sliderPopular`, {
         loop: false,
         slidesPerView: 1,
         spaceBetween: 20,
@@ -181,8 +185,8 @@ const sliders = () => {
             clickable: true
         },
         navigation: {
-            nextEl: '.products-arrows .js-next',
-            prevEl: '.products-arrows .js-prev',
+            nextEl: '.popular-arrows .js-next',
+            prevEl: '.popular-arrows .js-prev',
         },
         breakpoints: {
             993: {
