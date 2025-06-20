@@ -793,6 +793,10 @@ END .bibliya-kamnei
 	@media screen and (max-width: 992px) {
 		padding-top: 0;
 	}
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
 }
 
 .aside-nav__list {
@@ -826,6 +830,85 @@ END .bibliya-kamnei
 
 /* ========================
 END .aside-nav
+======================== */
+
+/* ========================
+.aside-nav-mob
+======================== */
+
+.aside-nav-mob {
+	position: relative;
+	z-index: 3;
+}
+
+.aside-nav-mob__btn {
+	position: relative;
+	display: block;
+	padding: 10px 30px 10px 10px;
+
+	min-height: 38px;
+
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	color: var(--gr-e);
+
+	border-radius: 6px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
+	background: var(--wh);
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+
+		display: flex;
+		border-top: 5px solid transparent;
+		border-left: 6px solid var(--gr-e);
+		border-bottom: 5px solid transparent;
+	}
+
+	&.toggle {
+		&::after {
+			transform: translateY(-50%) rotate(270deg);
+		}
+	}
+}
+
+.aside-nav-mob__list {
+	transform: translateY(4px);
+	opacity: 0;
+	pointer-events: none;
+
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: calc(100% + 2px);
+	width: 100%;
+	padding: 16px 10px;
+	border-radius: 6px;
+	background: #FFF;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+	transition: transform .5s, opacity .3s;
+
+	&.toggle {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: all;
+	}
+}
+
+.aside-nav__link {}
+
+/* ========================
+END .aside-nav-mob
 ======================== */
 
 .template-creating .feedback {
@@ -1292,10 +1375,10 @@ END .blog
 	gap: 40px 20px;
 
 	max-width: 1460px;
-	
+
 	@media screen and (max-width: 768px) {
 		max-width: 520px;
-		
+
 	}
 }
 
