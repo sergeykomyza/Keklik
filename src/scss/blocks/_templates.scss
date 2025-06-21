@@ -253,6 +253,18 @@
     backdrop-filter: none;
   }
 }
+.product-nav{
+  display: none;
+  position: absolute;
+  left: 50% !important;
+  transform: translateX(-50%);
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(40px);
+  @media(max-width: 565px){
+    display: flex;
+  }
+}
 .slider-btn{
   display: flex;
   align-items: center;
@@ -436,6 +448,11 @@
   justify-content: center;
   width: 50px;
   height: 50px;
+  &.is-active{
+    svg{
+      fill: $orange;
+    }
+  }
 }
 .grid-4{
   display: grid;

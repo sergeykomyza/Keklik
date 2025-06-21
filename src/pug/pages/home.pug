@@ -15,7 +15,10 @@ html(lang="ru")
 
 		include ./../sections/_products-category-slider.pug
 
-		include ./../sections/_products-popular-slider.pug
+		section.popular-previews 
+			.container 
+				h2.section-title.popular-previews__title Популярные украшения
+				include ./../sections/_products-popular-slider.pug
 		
 		include ./../sections/_stones-categories.pug
 

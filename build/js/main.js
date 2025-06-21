@@ -163,8 +163,8 @@ const sliders = () => {
                 clickable: true
             },
             navigation: {
-                nextEl: '.products-arrows .js-next',
-                prevEl: '.products-arrows .js-prev',
+                nextEl: `.products-arrows .js-next${i}`,
+                prevEl: `.products-arrows .js-prev${i}`,
             },
             breakpoints: {
                 993: {
@@ -266,6 +266,21 @@ const sliders = () => {
             }
         }
     });
+    const swiper6 = new Swiper(`.js-sliderProducts`, {
+        enabled: true,
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: `.js-previewProductNav`,
+            clickable: true
+        },
+        breakpoints: {
+            566: {
+                enabled: false
+            },
+        }
+    });
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RANGE PRICE
@@ -338,6 +353,18 @@ const rangePrice = () => {
     })
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK THIS TOGGLE
+const clickThisToggle = (elem) => {
+    const elems = document.querySelectorAll(elem)
+    elems.forEach(item => {
+        item.addEventListener('click', function(e){
+            if(item.closest(elem)){
+                item.classList.toggle('is-active')
+            }
+        })
+    })
+}
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
     burger('.js-openMobileMenu')
@@ -364,6 +391,7 @@ if(document.querySelector('.js-incartToggle')){
     inCartBtn()
 }
 mobileFilter()
+clickThisToggle('.infavor')
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
