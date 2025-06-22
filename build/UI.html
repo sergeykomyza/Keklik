@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
     <link rel="stylesheet" href="css/swiper@11.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
     <title>Keklik | UI</title>
@@ -1269,23 +1270,55 @@
             </div>
           </div>
         </div><br/><br/>
-        <div class="feedback"> 
-          <div class="feedback__textbox">
-            <h6 class="feedback__title">Напишите нам и мы поможем вам создать свое украшение талисман</h6>
-            <p class="feedback__text">Украшения KEKLIK не просто аксессуары, это мощные инструменты для реализации ваших мечт. Благодаря методу Шахрай выполучаете украшение, которое становится вашим личным куратором, сопровождающим вас на пути к успеху и безопасности</p>
+        <div class="container">
+          <div class="feedback"> 
+            <div class="feedback__textbox">
+              <h6 class="feedback__title">Напишите нам и мы поможем вам создать свое украшение талисман</h6>
+              <p class="feedback__text">Украшения KEKLIK не просто аксессуары, это мощные инструменты для реализации ваших мечт. Благодаря методу Шахрай выполучаете украшение, которое становится вашим личным куратором, сопровождающим вас на пути к успеху и безопасности</p>
+            </div>
+            <form class="feedback-form">
+              <div class="feedback-form__fields">
+                <input class="feedback-form__input js-phone" type="text"/>
+                <button class="button button-black feedback-form__button"> <span class="text">Создать свое украшение-талисман</span></button>
+              </div>
+              <div class="agree"> 
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Согласен с <a href="">политикой конфиденциальности</a> и <a href="">публичной офертой</a></span>
+                </label>
+              </div>
+            </form>
           </div>
-          <form class="feedback-form form">
-            <div class="feedback-form__fields">
-              <input class="form__input" type="text"/>
-              <button class="button button-black form__button"> <span class="text">Создать свое украшение-талисман</span></button>
-            </div>
-            <div class="agree"> 
-              <label class="checkbox">
-                <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span>
-              </label><span class="agree__text text">Согласен с <a href="">политикой конфиденциальности</a> и <a href="">публичной офертой</a></span>
-            </div>
-          </form>
         </div><br/><br/>
+        <h1 class="forum400">Модальные окна</h1><br/><br/>
+        <button class="button button-black" data-popup="popup" data-src="#oneclick"> <span class="text">Купить в один клик</span></button>
+        <div class="popup" id="oneclick">
+          <div class="popup__body popup-oneclick animate__animated">
+            <button class="popup__close js-popupClose">
+               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </button>
+            <h6 class="popup-oneclick__title page-title">Купить в 1 клик</h6>
+            <form class="form popup-oneclick__form" action="">
+              <input class="form__input" name="fio" type="text" placeholder="Ф.И.О. *"/>
+              <input class="form__input form__input--phone js-phone" name="phone" type="text"/>
+              <input class="form__input" name="email" type="text" placeholder="Email *"/>
+              <textarea class="form__input form__input--comment" name="comment" placeholder="Комментарий к заказу"> </textarea>
+              <select class="form__input form__input--select">
+                <option value="Стоимость доставки" disabled="disabled" selected="selected">Стоимость длоставки  </option>
+                <option value="Значение 1">Значение 1  </option>
+                <option value="Значение 2">Значение 2</option>
+                <option value="Значение 3">Значение 3  </option>
+              </select>
+              <button class="button button-black"> <span class="text">Отправить</span></button>
+              <div class="agree"> 
+                <label class="checkbox">
+                  <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Согласен с <a href="">политикой конфиденциальности</a> и <a href="">публичной офертой</a></span>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <footer class="footer">

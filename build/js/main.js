@@ -266,18 +266,41 @@ const sliders = () => {
             }
         }
     });
-    const swiper6 = new Swiper(`.js-sliderProducts`, {
+    const swiper6 = new Swiper(`.js-sliderProduct`, {
         enabled: true,
         loop: false,
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 10,
         pagination: {
             el: `.js-previewProductNav`,
             clickable: true
         },
         breakpoints: {
             566: {
-                enabled: false
+                enabled: false,
+                spaceBetween: 0,
+            },
+        }
+    });
+    const swiper7 = new Swiper(`.js-sliderReviews`, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.reviews-arrows .js-next',
+            prevEl: '.reviews-arrows .js-prev',
+        },
+        pagination: {
+            el: `.js-reviewsNav`,
+            clickable: true
+        },
+        breakpoints: {
+            993: {
+                slidesPerView: 3,
+            },
+            769: {
+                slidesPerView: 2,
+                spaceBetween: 20,
             },
         }
     });
@@ -365,6 +388,37 @@ const clickThisToggle = (elem) => {
     })
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ POPUP
+const popup = ()=> {
+    const popup = document.querySelectorAll('.popup')
+    const popupBtn = document.querySelectorAll("[data-popup='popup']")
+    popup.forEach(item => {
+      item.addEventListener('click', function(e){
+        let itsBody = e.target == item.querySelector('.popup__body') || item.querySelector('.popup__body').contains(e.target)
+        let itsClose = e.target.closest('.js-popupClose')
+        if(!itsBody || itsClose){
+          item.querySelector('.popup__body').classList.remove('animate__zoomIn')
+          item.querySelector('.popup__body').classList.add('animate__zoomOut')
+          setTimeout(()=> {
+            item.classList.remove('is-open')
+          },500)
+        }
+      })
+    })
+    popupBtn.forEach(item => {
+        item.addEventListener('click', function(e){
+            e.preventDefault()
+            const hrefPopupBtn = item.getAttribute('href') || item.getAttribute('data-src')
+            document.documentElement.classList.add('popup-open')
+            popup.forEach(item => {
+                item.classList.remove('is-open')
+            })
+            document.querySelector(hrefPopupBtn).classList.add('is-open')
+            document.querySelector(hrefPopupBtn).querySelector('.popup__body').classList.add('animate__zoomIn')
+            document.querySelector(hrefPopupBtn).querySelector('.popup__body').classList.remove('animate__zoomOut')
+        })
+    })
+}
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
     burger('.js-openMobileMenu')
@@ -392,7 +446,7 @@ if(document.querySelector('.js-incartToggle')){
 }
 mobileFilter()
 clickThisToggle('.infavor')
-
+popup()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
 

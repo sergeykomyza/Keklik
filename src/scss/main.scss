@@ -1120,18 +1120,18 @@ textarea {
 		}
 	}
 }
-.slider-products{
-	.swiper-wrapper{
-		flex-direction: column;
-		@media(max-width: 565px){
-			flex-direction: row;
-		}
-	}
-}
 .product{
 	padding-bottom: 40px;
-	@media(max-width: 565px){
-		padding: 0 10px;
+	&__infavor{
+		display: none;
+		@media(max-width: 565px){
+			display: block;
+		}
+	}
+	&__fotobox{
+		position: relative;
+		display: flex;
+		width: 100%;
 	}
 	&__foto{
 		width: 100%;
@@ -1157,6 +1157,7 @@ textarea {
 		@media(max-width: 565px){
 			grid-template-columns: 1fr;
 			gap: 16px;
+			padding: 0 10px;
 		}
 	}
 	&__info{
@@ -1215,6 +1216,9 @@ textarea {
 		@media(max-width: 565px){
 			max-width: 303px;
 			width: 100%;
+		}
+		&--mb{
+			margin-bottom: 10px;
 		}
 	}
 	&__sizesname{
@@ -1321,6 +1325,20 @@ textarea {
 			text-decoration: underline;
 		}
 	}
+	&__phone{
+		margin-bottom: 35px;
+	}
+}
+.phone-number{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	&__link{
+		font-size: 22px;
+		font-weight: 700;
+		line-height: 110%;
+		color: $dark;
+	}
 }
 .similar-products{
 	margin-bottom: 80px;
@@ -1328,8 +1346,50 @@ textarea {
 		margin-bottom: 60px;
 	}
 }
+.top-products{
+	margin-bottom: 0px;
+}
 .reviews-cards{
+	overflow: hidden;
 	&__title{
 		margin-bottom: 36px;
 	}
 }
+.review-card{
+	padding: 20px 20px 30px;
+	background: $white;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.04);
+	border-radius: 10px;
+	&__head{
+		display: flex;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 22px;
+	}
+	&__foto{
+		width: 72px;
+		height: 72px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+	&__info{
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+	&__rating{
+		display: flex;
+		align-items: center;
+	}
+	&__text{
+		margin-bottom: 30px;
+		-webkit-line-clamp: 4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden; 
+	}
+	&__readmore{
+		text-decoration: underline;
+	}
+}
+
