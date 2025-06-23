@@ -1462,3 +1462,150 @@ END .about
 		margin-top: 10px;
 	}
 }
+
+.button-black {
+	color: var(--wh);
+}
+
+
+/* ========================
+.reviews
+======================== */
+
+.reviews {}
+
+.reviews-top {
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 20px;
+
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+	}
+}
+
+.reviews-top__box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.page-title {}
+
+.reviews-top__btn {
+	width: 100%;
+	max-width: 194px;
+}
+
+.reviews__video-slider {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.reviews__text-slider {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.reviews .reviews-cards {
+	margin-bottom: 40px;
+}
+
+.reviews__form {
+	padding: 60px 0 80px;
+	background: var(--wh);
+}
+
+.reviews__form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.reviews__form-box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.reviews_form__left {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.reviews_form__right {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	.button {
+		margin-top: -10px;
+	}
+}
+
+.form__file-label {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+
+	cursor: pointer;
+}
+
+.form__file-text {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	color: var(--gr-e);
+}
+
+.form__file-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+
+	border: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	padding: 8px 27px;
+
+	@media screen and (max-width: 520px) {
+		flex-grow: 1;
+	}
+
+}
+
+.form__file-btn-text {}
+
+.file-input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.reviews__form .form__input--comment {
+	min-height: 135px;
+
+	@media screen and (max-width: 768px) {
+		min-height: 149px;
+	}
+}
+
+/* ========================
+END .reviews
+======================== */
