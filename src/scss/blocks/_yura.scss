@@ -812,6 +812,8 @@ END .bibliya-kamnei
 	letter-spacing: -0.04em;
 
 	&.active {
+		border-bottom: 1px solid var(--gr-b);
+
 		.aside-nav__link {
 			color: var(--br-b);
 		}
