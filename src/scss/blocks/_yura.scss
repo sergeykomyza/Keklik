@@ -1426,3 +1426,39 @@ END .blog
 /* ========================
 END .about
 ======================== */
+
+.form.bg-white {
+	padding: 40px 20px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
+	background: var(--wh);
+
+	font-family: var(--font-family);
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.2;
+	letter-spacing: -0.04em;
+	color: var(--gr-e);
+
+	@media screen and (max-width: 768px) {
+		padding: 40px 10px;
+		border-radius: 20px;
+	}
+
+	.form-title {
+		margin-bottom: 10px;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+		color: var(--gr-e);
+	}
+
+	.form-descr {
+		margin-bottom: 10px;
+	}
+
+	.agree {
+		margin-top: 10px;
+	}
+}
