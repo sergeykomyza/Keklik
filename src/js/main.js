@@ -304,6 +304,15 @@ const sliders = () => {
             },
         }
     });
+    const swiper8 = new Swiper(`.js-sliderFastview`, {
+        loop: false,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: `.js-previewSmallNav`,
+            clickable: true
+        },
+    });
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ RANGE PRICE

@@ -336,6 +336,31 @@
 .slider-btnrev{
   transform: rotate(180deg);
 }
+.fastview-btn{
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 166px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(110px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  @media(max-width: 370px){
+    width: 140px;
+    height: 30px;
+    span{
+      font-size: 14px;
+    }
+  }
+}
 .preview{
   position: relative;
   width: 100%;
@@ -346,6 +371,12 @@
     margin-bottom: 18px;
     border-radius: 10px;
     overflow: hidden;
+    &:hover{
+      .fastview-btn{
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
   &-big{
     &__foto{
@@ -806,20 +837,52 @@
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.04);
     @media(max-width: 565px){
       top: 0px;
-      height: 100%;
     }
   }
-  &-oneclick{
-    max-width: 600px;
+}
+.popup-oneclick{
+  max-width: 600px;
+  width: 100%;
+  &__title.page-title{
+    margin-bottom: 40px;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.popup-fastview{
+  max-width: 1000px;
+  width: 100%;
+  padding: 60px 0px 40px 20px;
+  background: $white-grey;
+  @media(max-width: 768px){
+    padding: 44px 10px;
+  }
+  &__box{
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+    @media(max-width: 992px){
+      grid-template-columns: 0.9fr 1fr;
+    }
+    @media(max-width: 768px){
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+}
+.fastview-slider{
+  max-width: 100%;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  &__foto{
     width: 100%;
-    &__title.page-title{
-      margin-bottom: 40px;
-    }
-    &__form{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 .form{
@@ -855,3 +918,4 @@
     }
   }
 }
+

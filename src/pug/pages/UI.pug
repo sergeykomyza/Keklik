@@ -209,26 +209,11 @@ html(lang="ru")
 				br
 				button.button.button-black(data-popup="popup" data-src="#oneclick") 
 					span.text Купить в один клик
-				.popup#oneclick
-					.popup__body.popup-oneclick.animate__animated
-						button.popup__close.js-popupClose 
-							<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-							</svg>
-						h6.popup-oneclick__title.page-title Купить в 1 клик
-						form.form.popup-oneclick__form(action="")
-							input.form__input(name="fio" type="text" placeholder="Ф.И.О. *")
-							input.form__input.form__input--phone.js-phone(name="phone" type="text") 
-							input.form__input(name="email" type="text" placeholder="Email *")
-							textarea.form__input.form__input--comment(name="comment" placeholder="Комментарий к заказу") 
-							select.form__input.form__input--select
-								option(value="Стоимость доставки" disabled selected) Стоимость длоставки  
-								option(value="Значение 1") Значение 1  
-								option(value="Значение 2") Значение 2
-								option(value="Значение 3") Значение 3  
-							button.button.button-black 
-								span.text Отправить
-							include ./../layouts/_agree.pug
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#fastview") 
+					span.text Быстрый просмотр
+				
 
 
 		include ./../sections/_footer.pug
