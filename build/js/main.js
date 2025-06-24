@@ -464,57 +464,59 @@ const popup = ()=> {
 //     }
 //     lastScrollY = currentScrollY;
 // });
-
-const rightSide = document.querySelector('.js-scrollSticky');
-if (!rightSide) {
-  console.warn("Элемент .js-scrollSticky не найден");
-  exit;
-}
-
-const rightSideOffsetTop = rightSide.offsetTop;
-const rightSideHeight = rightSide.clientHeight;
-const windowHeight = window.innerHeight;
-const diff = rightSideHeight - windowHeight;
-
-let lastScrollY = window.scrollY;
-let currentTop = 120; // текущее значение top
-
-// Минимальное значение top (-diff), если контент больше окна
-const minTop = rightSideHeight > windowHeight ? -diff : 120;
-
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
-
-  // Обновляем размеры при ресайзе (если нужно)
-  const newWindowHeight = window.innerHeight;
-  const newRightSideHeight = rightSide.clientHeight;
-  const visibleArea = newWindowHeight - 20;
-  const newDiff = newRightSideHeight - visibleArea;
-  const newMinTop = newRightSideHeight > visibleArea ? -newDiff : 120;
-
-  // Только если контент больше высоты экрана
-  if (newRightSideHeight > newWindowHeight) {
-    if (currentScrollY > lastScrollY) {
-      // Скроллим вниз
-      currentTop = Math.max(
-        newMinTop,
-        currentTop - (currentScrollY - lastScrollY)
-      );
-    } else if (currentScrollY < lastScrollY) {
-      // Скроллим вверх
-      currentTop = Math.min(
-        120,
-        currentTop + (lastScrollY - currentScrollY)
-      );
+const scrollSticky = () => {
+    const rightSide = document.querySelector('.js-scrollSticky');
+    if (!rightSide) {
+      console.warn("Элемент .js-scrollSticky не найден");
+      return;
     }
+    
+    const rightSideOffsetTop = rightSide.offsetTop;
+    const rightSideHeight = rightSide.clientHeight;
+    const windowHeight = window.innerHeight;
+    const diff = rightSideHeight - windowHeight;
+    
+    let lastScrollY = window.scrollY;
+    let currentTop = 120; // текущее значение top
+    
+    // Минимальное значение top (-diff), если контент больше окна
+    const minTop = rightSideHeight > windowHeight ? -diff : 120;
+    
+    window.addEventListener("scroll", () => {
+      const currentScrollY = window.scrollY;
+    
+      // Обновляем размеры при ресайзе (если нужно)
+      const newWindowHeight = window.innerHeight;
+      const newRightSideHeight = rightSide.clientHeight;
+      const visibleArea = newWindowHeight - 20;
+      const newDiff = newRightSideHeight - visibleArea;
+      const newMinTop = newRightSideHeight > visibleArea ? -newDiff : 120;
+    
+      // Только если контент больше высоты экрана
+      if (newRightSideHeight > newWindowHeight) {
+        if (currentScrollY > lastScrollY) {
+          // Скроллим вниз
+          currentTop = Math.max(
+            newMinTop,
+            currentTop - (currentScrollY - lastScrollY)
+          );
+        } else if (currentScrollY < lastScrollY) {
+          // Скроллим вверх
+          currentTop = Math.min(
+            120,
+            currentTop + (lastScrollY - currentScrollY)
+          );
+        }
+    
+        // Применяем стили
+        rightSide.style.position = 'sticky';
+        rightSide.style.top = `${currentTop}px`;
+      }
+    
+      lastScrollY = currentScrollY;
+    });
 
-    // Применяем стили
-    rightSide.style.position = 'sticky';
-    rightSide.style.top = `${currentTop}px`;
-  }
-
-  lastScrollY = currentScrollY;
-});
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
@@ -545,6 +547,7 @@ if(document.querySelector('.js-incartToggle')){
 mobileFilter()
 clickThisToggle('.infavor')
 popup()
+scrollSticky()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
 
