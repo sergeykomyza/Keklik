@@ -85,7 +85,6 @@ const clickToggle = (wrap) => {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CART BUTTON
 const inCartBtn = () => {
     document.querySelectorAll('.js-incartToggle').forEach(item => {
-        console.log(item)
         item.addEventListener('click', function(e){
             e.target.closest('.js-incartToggle').classList.toggle('is-active')
         })
@@ -428,6 +427,96 @@ const popup = ()=> {
         })
     })
 }
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SCROLL IN PRODUCT PAGE
+// const rightSide = document.querySelector('.js-scrollSticky')
+// const rightSideOffsetTop = rightSide.offsetTop
+// const rightSideHeight = document.querySelector('.js-scrollSticky').clientHeight
+// const windowHeight = document.documentElement.clientHeight
+// const diff = rightSideHeight - windowHeight
+// let lastScrollY = window.scrollY;
+// window.addEventListener("scroll", () => {
+//     const currentScrollY = window.scrollY;
+//     console.log(
+//         `высота правого блока:${rightSideHeight}, 
+//         высота экрана:${windowHeight} , 
+//         разница: ${diff} , 
+//         расстояние от правого блока до верхнего края экрана: ${rightSideOffsetTop} , 
+//         скролл: ${currentScrollY}`
+//     )
+//     if (currentScrollY > lastScrollY) {
+//         console.log(currentScrollY-rightSideOffsetTop);
+//         if(rightSideHeight+100 >= windowHeight){
+//             if((currentScrollY-rightSideOffsetTop) >= diff){
+//                 rightSide.style.cssText = `
+//                     top: -${diff}px`
+//             } else if(currentScrollY >= rightSideOffsetTop){
+//                 rightSide.style.cssText = `
+//                     top: -${currentScrollY-rightSideOffsetTop}px`
+//             }
+//         }  else{
+//             rightSide.style.cssText = `
+//                     top: 100px`
+//         }
+
+//     } else if (currentScrollY < lastScrollY) {
+        
+//     }
+//     lastScrollY = currentScrollY;
+// });
+
+const rightSide = document.querySelector('.js-scrollSticky');
+if (!rightSide) {
+  console.warn("Элемент .js-scrollSticky не найден");
+  exit;
+}
+
+const rightSideOffsetTop = rightSide.offsetTop;
+const rightSideHeight = rightSide.clientHeight;
+const windowHeight = window.innerHeight;
+const diff = rightSideHeight - windowHeight;
+
+let lastScrollY = window.scrollY;
+let currentTop = 120; // текущее значение top
+
+// Минимальное значение top (-diff), если контент больше окна
+const minTop = rightSideHeight > windowHeight ? -diff : 120;
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  // Обновляем размеры при ресайзе (если нужно)
+  const newWindowHeight = window.innerHeight;
+  const newRightSideHeight = rightSide.clientHeight;
+  const visibleArea = newWindowHeight - 20;
+  const newDiff = newRightSideHeight - visibleArea;
+  const newMinTop = newRightSideHeight > visibleArea ? -newDiff : 120;
+
+  // Только если контент больше высоты экрана
+  if (newRightSideHeight > newWindowHeight) {
+    if (currentScrollY > lastScrollY) {
+      // Скроллим вниз
+      currentTop = Math.max(
+        newMinTop,
+        currentTop - (currentScrollY - lastScrollY)
+      );
+    } else if (currentScrollY < lastScrollY) {
+      // Скроллим вверх
+      currentTop = Math.min(
+        120,
+        currentTop + (lastScrollY - currentScrollY)
+      );
+    }
+
+    // Применяем стили
+    rightSide.style.position = 'sticky';
+    rightSide.style.top = `${currentTop}px`;
+  }
+
+  lastScrollY = currentScrollY;
+});
+
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
     burger('.js-openMobileMenu')

@@ -28,7 +28,7 @@ html(lang="ru")
 											img.product__foto(src='img/product-page-foto-' + elem + '.webp', alt="foto")
 						.slider-nav.product-nav.js-previewProductNav
 					aside.product__info 
-						.product__infobox
+						.product__infobox.js-scrollSticky
 							h1.product__title Комплект из Раухтопаза
 							.preview-tags.product-tags
 								span.preview-tags__item.product-tags__item.text Агат
@@ -75,6 +75,16 @@ html(lang="ru")
 									<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M16.4998 5.6465C16.5024 6.80056 16.0578 7.91075 15.2593 8.744C13.4286 10.6422 11.6526 12.6215 9.75431 14.45C9.31856 14.8625 8.62781 14.8475 8.21156 14.4163L2.74031 8.74475C1.08656 7.03025 1.08656 4.26275 2.74031 2.549C3.13117 2.13875 3.60127 1.81214 4.1221 1.58898C4.64294 1.36582 5.20368 1.25075 5.77031 1.25075C6.33695 1.25075 6.89768 1.36582 7.41852 1.58898C7.93936 1.81214 8.40946 2.13875 8.80031 2.549L8.99981 2.7545L9.19856 2.549C9.59021 2.13972 10.0604 1.81371 10.5811 1.5905C11.1017 1.36729 11.6621 1.25148 12.2286 1.25C13.3686 1.25 14.4583 1.718 15.2586 2.549C16.0573 3.38213 16.5022 4.49233 16.4998 5.6465Z" stroke="#222222" stroke-width="1.2" stroke-linejoin="round"/>
 									</svg>
+							.product-char 
+								h6.product-char__title.text Характеристики
+								ul.product-char__list 
+									each item in ['Камень — Раухтопаз','Дополнительно — Подарочная упаковка','Фурнитура — недрагоценный металл','Вес — 35 гр.']
+										li.product-char__item.text= item 
+								h6.product-char__title.text Доставка по России бесплатно
+								ul.product-char__list
+									each item in ['О доставке','Оплата товара','Гарантия и возврат']
+										li.product-char__item 
+											a.product-char__link.text(href="#")= item 
 							.product-char 
 								h6.product-char__title.text Характеристики
 								ul.product-char__list 

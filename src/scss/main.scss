@@ -1167,6 +1167,8 @@ textarea {
 		}
 	}
 	&__infobox{
+		position: sticky;
+		top: 120px;
 	}
 	&__title{
 		margin-bottom: 10px;
