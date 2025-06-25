@@ -86,6 +86,7 @@ const clickToggle = (wrap) => {
 const inCartBtn = () => {
     document.querySelectorAll('.js-incartToggle').forEach(item => {
         item.addEventListener('click', function(e){
+            e.preventDefault()
             e.target.closest('.js-incartToggle').classList.toggle('is-active')
         })
     })
@@ -196,14 +197,24 @@ const sliders = () => {
             }
         }
     });
-    const swiper2 = new Swiper('.js-sliderPreview', {
-        loop: false,
-        slidesPerView: 1,
-        pagination: {
-            el: '.js-previewSmallNav',
-            clickable: true
-        },
-    });
+    document.querySelectorAll('.js-sliderPreview').forEach(item => {
+        const swiper2 = new Swiper(item, {
+            loop: false,
+            autoplay: false,
+            speed: 1000,
+            slidesPerView: 1,
+            pagination: {
+                el: '.js-previewSmallNav',
+                clickable: true
+            },
+        });
+        item.addEventListener('mouseenter', () => {
+            swiper2.autoplay.start();
+        });
+        item.addEventListener('mouseleave', () => {
+            swiper2.autoplay.stop();
+        });
+    })
     const swiper3 = new Swiper('.js-sliderVideo', {
         loop: false,
         slidesPerView: 1,
@@ -389,6 +400,7 @@ const clickThisToggle = (elem) => {
     const elems = document.querySelectorAll(elem)
     elems.forEach(item => {
         item.addEventListener('click', function(e){
+            e.preventDefault()
             if(item.closest(elem)){
                 item.classList.toggle('is-active')
             }

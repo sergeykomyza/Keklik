@@ -4,7 +4,7 @@ section.stones-categories
 		.stones-categories__box 
 			each item, i in ['Авантюрин','Азурит','Берилл','Вулканит','Горный хрусталь','Обсидиан','Коралл','Лазурит', 9, 10]
 				if (i <= 7)
-					a(class=`${i <= 5 ? 'stone-category small' : 'stone-category big'}` href="#")
+					a.stone-category.hover-blur(class=`${i <= 5 ? 'small' : 'big'}` href="#")
 						img(src=`img/stones-category-${i+1}.webp`, alt="foto")
 						span.stone-category__name.text= item
 			a.stone-category.stone-learn.big(href="#")

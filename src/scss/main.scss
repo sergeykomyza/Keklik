@@ -326,6 +326,13 @@ textarea {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(40px);
+	transition: background 0.3s;
+	&:hover{
+    background: $orange;
+    path{
+      fill: $white;
+    }
+  }
 	@media(max-width: 565px){
 		display: none;
 	}
@@ -451,6 +458,9 @@ textarea {
 }
 .stones-categories{
 	margin-bottom: 120px;
+	@media(max-width: 768px){
+		margin-bottom: 60px;
+	}
 	&__title{
 		margin-bottom: 36px;
 	}
@@ -532,6 +542,7 @@ textarea {
 		border-radius: 30px;
 		background: rgba(255, 255, 255, 0.5);
 		backdrop-filter: blur(40px);
+		transition: color 0.3s;
 		&--black{
 		}
 		&--white{
@@ -548,9 +559,27 @@ textarea {
 }
 .stone-learn{
 	border: 1px solid rgba(143, 143, 143, 0.3);
+	background: transparent;
+	transition: background 0.3s;
+	path{
+		transition: stroke 0.3s;
+	}
+	&:hover{
+		background: $orange;
+		.stone-category__name{
+			color: $white;
+		}
+		path{
+			stroke: $white;
+		}
+	}
 }
 .stone-more{
 	background: $light-dark;
+	transition: background 0.3s;
+	&:hover{
+		background: $orange;
+	}
 }
 .sidebar{
 	@media(max-width: 768px){
@@ -565,6 +594,18 @@ textarea {
 		gap: 5px;
 		&__checking{
 			padding-left: 12px;
+			span{
+				transition: color 0.3s;
+				&:hover{
+					color: $orange;
+				}
+			}
+		}
+		&__link{
+			transition: color 0.3s;
+			&:hover{
+				color: $orange;
+			}
 		}
 	}
 	&__path{
@@ -1339,6 +1380,16 @@ textarea {
 		height: 34px;
 		border: 1px solid $light-grey;
 		border-radius: 6px;
+		transition: background 0.3s, color 0.3s;
+		span{
+			transition: color 0.3s;
+		}
+		&:hover{
+			background: $dark;
+			span{
+				color: $white;
+			}
+		}
 	}
 }
 .phone-number{

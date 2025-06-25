@@ -70,11 +70,11 @@ html(lang="ru")
 
 						include ./../sections/_filters.pug
 
-						include ./../sections/_filters-parameters.pug
+						//- include ./../sections/_filters-parameters.pug
 
-						.catalog__box 
+						.catalog__box
 							each item in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-								.preview.preview-small
+								a.preview.preview-small(href="#")
 									.preview__fotobox.preview__slider.swiper.js-sliderPreview 
 										.preview-tags
 											span.preview-tags__item.text Агат

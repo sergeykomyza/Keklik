@@ -3,6 +3,9 @@
   padding-top: 80px;
   padding-bottom: 40px;
   background: $footer-grey;
+  @media(max-width: 565px){
+    padding-top: 40px;
+  }
   &__box{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -26,6 +29,12 @@
     flex-direction: column;
     gap: 4px;
     padding-top: 26px;
+    &__link{
+      transition: color 0.3s;
+      &:hover{
+        color: $orange;
+      }
+    }
   }
   &-nav{
     &__titlebox{
@@ -63,16 +72,19 @@
 }
 .catalog-nav{
   @media(max-width: 565px){
+    display: none;
     padding: 0 10px;
   }
 }
 .client-nav{
   @media(max-width: 565px){
+    display: none;
     padding: 0 10px;
   }
 }
 .about-nav{
   @media(max-width: 565px){
+    display: none;
     padding-top: 20px;
     text-align: center;
     border-top: 1px solid $light-grey;
@@ -181,6 +193,11 @@
     text-align: center;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    &:hover{
+      background: $dark;
+      color: $white;
+    }
     @media(max-width: 370px){
       width: 100%;
     }

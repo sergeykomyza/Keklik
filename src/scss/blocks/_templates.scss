@@ -332,6 +332,13 @@
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(40px);
   pointer-events: all;
+  transition: background 0.3s;
+  &:hover{
+    background: $orange;
+    path{
+      fill: $white;
+    }
+  }
 }
 .slider-btnrev{
   transform: rotate(180deg);
@@ -353,12 +360,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s;
-  @media(max-width: 370px){
-    width: 140px;
-    height: 30px;
-    span{
-      font-size: 14px;
-    }
+  @media(max-width: 768){
+    display: none;
   }
 }
 .preview{
@@ -721,6 +724,11 @@
     line-height: 140%;
     font-weight: 500;
     color: $middle-grey;
+    @media(max-width: 1460px){
+      font-size: 16px;
+      color: $dark;
+      line-height: 120%;
+    }
   }
   &-form{
     &__fields{
@@ -758,7 +766,9 @@
   align-items: center;
   gap: 16px;
   &__text{
+    font-size: 14px;
     a{
+      font-size: 14px;
       text-decoration: underline;
     }
   }
@@ -915,6 +925,17 @@
     }
     &--select{
       cursor: pointer;
+    }
+  }
+}
+.hover-blur{
+  img{
+    filter: blur(0);
+    transition: filter 0.3s;
+  }
+  &:hover{
+    img{
+      filter: blur(10px);
     }
   }
 }

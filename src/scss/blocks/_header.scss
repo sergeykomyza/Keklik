@@ -23,6 +23,7 @@
     padding-top: 6px;
     padding-bottom: 7px;
     border-bottom: 1px solid $light-grey;
+    background: $light-grey;
     @media(max-width: 992px){
       padding-top: 10.5px;
       padding-bottom: 10.5px;
@@ -91,7 +92,10 @@
       }
     }
     &__link{
-
+      transition: color 0.3s;
+      &:hover{
+        color: $orange;
+      }
     }
   }
   &__burger{
@@ -188,7 +192,10 @@
 
   }
   &__link{
-
+    transition: color 0.3s;
+    &:hover{
+      color: $orange;
+    }
   }
 }
 
@@ -226,6 +233,7 @@
     font-weight: 600;
     color: $dark;
     border: none;
+    background: transparent;
     @media(max-width: 1240px){
       width: 100%;
       height: 100%;
@@ -605,7 +613,9 @@
     &__menu{
       display: flex;
       flex-direction: column;
+      flex-wrap: wrap;
       gap: 5px;
+      height: 190px;
       padding-top: 20px;
     }
     &.is-active{

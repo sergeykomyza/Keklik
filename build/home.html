@@ -86,10 +86,6 @@
               </button>
               <div class="mobile-search">
                 <input class="mobile-search__input" type="text" placeholder="Найти"/>
-                <div class="mobile-search__catalog"><span class="mobile-search__catalogname text">Каталог </span><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
-</svg>
-                </div>
                 <button class="mobile-search__btn">
                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 15L19 19M1 9C1 11.1217 1.84285 13.1566 3.34315 14.6569C4.84344 16.1571 6.87827 17 9 17C11.1217 17 13.1566 16.1571 14.6569 14.6569C16.1571 13.1566 17 11.1217 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9Z" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1052,8 +1048,7 @@
               </div>
               <div class="products-slider swiper js-slider1"> 
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-1.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1061,6 +1056,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1069,11 +1065,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-2.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1081,6 +1074,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1089,11 +1083,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-3.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1101,6 +1092,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1109,11 +1101,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-4.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1121,6 +1110,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1129,11 +1119,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-5.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1141,6 +1128,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1149,11 +1137,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-6.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1161,6 +1146,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1169,9 +1155,7 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
+                      </div></a></div>
                 </div>
               </div>
               <div class="slider-navbox">
@@ -1193,8 +1177,7 @@
               </div>
               <div class="products-slider swiper js-slider2"> 
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-1.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1202,6 +1185,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1210,11 +1194,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-2.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1222,6 +1203,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1230,11 +1212,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-3.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1242,6 +1221,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1250,11 +1230,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-4.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1262,6 +1239,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1270,11 +1248,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-5.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1282,6 +1257,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1290,11 +1266,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-6.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1302,6 +1275,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1310,9 +1284,7 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
+                      </div></a></div>
                 </div>
               </div>
               <div class="slider-navbox">
@@ -1334,8 +1306,7 @@
               </div>
               <div class="products-slider swiper js-slider3"> 
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-1.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1343,6 +1314,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1351,11 +1323,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-2.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1363,6 +1332,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1371,11 +1341,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-3.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1383,6 +1350,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1391,11 +1359,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-4.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1403,6 +1368,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1411,11 +1377,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-5.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1423,6 +1386,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1431,11 +1395,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-6.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1443,6 +1404,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1451,9 +1413,7 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
+                      </div></a></div>
                 </div>
               </div>
               <div class="slider-navbox">
@@ -1475,8 +1435,7 @@
               </div>
               <div class="products-slider swiper js-slider4"> 
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-1.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1484,6 +1443,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1492,11 +1452,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-2.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1504,6 +1461,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1512,11 +1470,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-3.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1524,6 +1479,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1532,11 +1488,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-4.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1544,6 +1497,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1552,11 +1506,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-5.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1564,6 +1515,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1572,11 +1524,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="preview preview-big">
+                      </div></a></div>
+                  <div class="swiper-slide"><a class="preview preview-big" href="#">
                       <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-6.webp" alt="foto"/>
                         <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                         <button class="infavor">
@@ -1584,6 +1533,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                         </button>
+                        <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                       </div>
                       <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                       <div class="preview-big__pricing"> <span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1592,9 +1542,7 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                         </button>
-                      </div>
-                    </div>
-                  </div>
+                      </div></a></div>
                 </div>
               </div>
               <div class="slider-navbox">
@@ -1623,8 +1571,7 @@
           </div>
           <div class="products-slider swiper js-sliderPopular"> 
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-1.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1632,6 +1579,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1640,11 +1588,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  </div></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-2.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1652,6 +1597,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1660,11 +1606,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  </div></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-3.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1672,6 +1615,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1680,11 +1624,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  </div></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-4.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1692,6 +1633,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1700,11 +1642,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  </div></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-5.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1712,6 +1651,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1720,11 +1660,8 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  </div></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/product-foto-6.webp" alt="foto"/>
                     <div class="preview-tags"><span class="preview-tags__item text">Агат</span><span class="preview-tags__item text">Родонит</span></div>
                     <button class="infavor">
@@ -1732,6 +1669,7 @@
 <path d="M16.4998 5.0071C16.5024 6.16116 16.0578 7.27134 15.2593 8.1046C13.4286 10.0028 11.6526 11.9821 9.75431 13.8106C9.31856 14.2231 8.62781 14.2081 8.21156 13.7768L2.74031 8.10535C1.08656 6.39085 1.08656 3.62335 2.74031 1.9096C3.13117 1.49934 3.60127 1.17274 4.1221 0.949576C4.64294 0.726414 5.20368 0.611346 5.77031 0.611346C6.33695 0.611346 6.89768 0.726414 7.41852 0.949576C7.93936 1.17274 8.40946 1.49934 8.80031 1.9096L8.99981 2.1151L9.19856 1.9096C9.59021 1.50032 10.0604 1.17431 10.5811 0.951098C11.1017 0.727889 11.6621 0.612076 12.2286 0.610596C13.3686 0.610596 14.4583 1.0786 15.2586 1.9096C16.0573 2.74273 16.5022 3.85293 16.4998 5.0071Z" stroke="#E9711F" stroke-width="1.2" stroke-linejoin="round"/>
 </svg>
                     </button>
+                    <button class="fastview-btn" data-popup="popup" data-src="#fastview"> <span class="text">Быстрый просмотр</span></button>
                   </div>
                   <h6 class="preview__name text">Браслет женский «Внутренний свет»</h6>
                   <div class="preview-big__pricing"><span class="preview__price">20 000  <span class="preview__price--sign">₽</span> </span><span class="preview__planprice text">Долями 5 000 ₽</span>
@@ -1740,9 +1678,7 @@
 <path d="M1.15625 2.6731H15.4063L13.1563 10.1731H3.40625L1.15625 2.6731ZM1.15625 2.6731L0.59375 0.798096M7.15625 12.7981C7.15625 13.0965 7.03772 13.3826 6.82675 13.5936C6.61577 13.8046 6.32962 13.9231 6.03125 13.9231C5.73288 13.9231 5.44673 13.8046 5.23575 13.5936C5.02478 13.3826 4.90625 13.0965 4.90625 12.7981M11.6563 12.7981C11.6563 13.0965 11.5377 13.3826 11.3267 13.5936C11.1158 13.8046 10.8296 13.9231 10.5313 13.9231C10.2329 13.9231 9.94673 13.8046 9.73575 13.5936C9.52478 13.3826 9.40625 13.0965 9.40625 12.7981" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
                     </button>
-                  </div>
-                </div>
-              </div>
+                  </div></a></div>
             </div>
           </div>
           <div class="slider-navbox">
@@ -1754,7 +1690,7 @@
     <section class="stones-categories"> 
       <div class="container"> 
         <h2 class="section-title stones-categories__title">Украшения из вашего любимого камня</h2>
-        <div class="stones-categories__box"> <a class="stone-category small" href="#"><img src="img/stones-category-1.webp" alt="foto"/><span class="stone-category__name text">Авантюрин</span></a><a class="stone-category small" href="#"><img src="img/stones-category-2.webp" alt="foto"/><span class="stone-category__name text">Азурит</span></a><a class="stone-category small" href="#"><img src="img/stones-category-3.webp" alt="foto"/><span class="stone-category__name text">Берилл</span></a><a class="stone-category small" href="#"><img src="img/stones-category-4.webp" alt="foto"/><span class="stone-category__name text">Вулканит</span></a><a class="stone-category small" href="#"><img src="img/stones-category-5.webp" alt="foto"/><span class="stone-category__name text">Горный хрусталь</span></a><a class="stone-category small" href="#"><img src="img/stones-category-6.webp" alt="foto"/><span class="stone-category__name text">Обсидиан</span></a><a class="stone-category big" href="#"><img src="img/stones-category-7.webp" alt="foto"/><span class="stone-category__name text">Коралл</span></a><a class="stone-category big" href="#"><img src="img/stones-category-8.webp" alt="foto"/><span class="stone-category__name text">Лазурит</span></a><a class="stone-category stone-learn big" href="#"><svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="stones-categories__box"> <a class="stone-category hover-blur small" href="#"><img src="img/stones-category-1.webp" alt="foto"/><span class="stone-category__name text">Авантюрин</span></a><a class="stone-category hover-blur small" href="#"><img src="img/stones-category-2.webp" alt="foto"/><span class="stone-category__name text">Азурит</span></a><a class="stone-category hover-blur small" href="#"><img src="img/stones-category-3.webp" alt="foto"/><span class="stone-category__name text">Берилл</span></a><a class="stone-category hover-blur small" href="#"><img src="img/stones-category-4.webp" alt="foto"/><span class="stone-category__name text">Вулканит</span></a><a class="stone-category hover-blur small" href="#"><img src="img/stones-category-5.webp" alt="foto"/><span class="stone-category__name text">Горный хрусталь</span></a><a class="stone-category hover-blur small" href="#"><img src="img/stones-category-6.webp" alt="foto"/><span class="stone-category__name text">Обсидиан</span></a><a class="stone-category hover-blur big" href="#"><img src="img/stones-category-7.webp" alt="foto"/><span class="stone-category__name text">Коралл</span></a><a class="stone-category hover-blur big" href="#"><img src="img/stones-category-8.webp" alt="foto"/><span class="stone-category__name text">Лазурит</span></a><a class="stone-category stone-learn big" href="#"><svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.78125 0.891602H23.2188L30.3438 9.2041L15.5 25.8291L0.65625 9.2041L7.78125 0.891602Z" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg><span class="stone-category__name stone-category__name--info stone-category__name--black text">Узнать мой камень</span></a><a class="stone-category stone-more big" href="#"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1 10.3604H10.5M10.5 10.3604H20M10.5 10.3604V0.860352M10.5 10.3604V19.8604" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1798,7 +1734,7 @@
           </div>
           <div class="agree"> 
             <label class="checkbox">
-              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Согласен с <a href="">политикой конфиденциальности</a> и <a href="">публичной офертой</a></span>
+              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></span>
             </label>
           </div>
         </form>
@@ -1822,42 +1758,24 @@
           </div>
           <div class="blog-slider swiper js-slider"> 
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-1.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-2.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-3.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-4.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-5.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="preview preview-big">
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
+              <div class="swiper-slide"><a class="preview preview-big" href="#">
                   <div class="preview__fotobox"><img class="preview-big__foto" src="img/blog-foto-6.webp" alt="foto"/></div>
-                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6>
-                </div>
-              </div>
+                  <h6 class="preview__name text">Украшения по знаку зодиака: Какие украшения подойдут Козерогам, Львам и Рыбам  </h6></a></div>
             </div>
           </div>
           <div class="slider-navbox">
@@ -1994,7 +1912,7 @@
           <button class="button button-black"> <span class="text">Отправить</span></button>
           <div class="agree"> 
             <label class="checkbox">
-              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Согласен с <a href="">политикой конфиденциальности</a> и <a href="">публичной офертой</a></span>
+              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></span>
             </label>
           </div>
         </form>
