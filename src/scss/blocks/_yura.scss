@@ -1609,3 +1609,164 @@ END .about
 /* ========================
 END .reviews
 ======================== */
+
+/* ========================
+.contacts
+======================== */
+
+.contacts {}
+
+.contacts-box {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.contacts-content {
+	.communications-soc {
+		margin-top: -5px;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+
+		@media screen and (max-width: 600px) {
+			margin-top: 0;
+		}
+	}
+}
+
+.communications {
+	padding-top: 20px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	@media screen and (max-width: 1200px) {
+		flex-wrap: wrap;
+		max-width: 800px;
+	}
+}
+
+.communications-col {
+	width: calc(100% / 4 - 20px * 3 / 4);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+
+	@media screen and (max-width: 1200px) {
+		width: calc(100% / 2 - 20px * 2);
+	}
+
+	@media screen and (max-width: 600px) {
+		width: 100%;
+	}
+}
+
+.contacts__form {
+	padding-top: 60px;
+	padding-bottom: 80px;
+	background-color: #fff;
+
+	@media screen and (max-width: 768px) {
+		padding-bottom: 40px;
+	}
+
+	.form__input--comment {
+		height: 70px;
+	}
+}
+
+.contacts__form-container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.contacts__form-box {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 40px;
+
+	@media screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}
+
+.contacts_form__left {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+	@media screen and (max-width: 768px) {
+		gap: 10px;
+	}
+}
+
+.contacts_form__right {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.faq {
+	padding-top: 60px;
+	padding-bottom: 84px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.faq-box {
+	display: flex;
+	justify-content: space-between;
+	gap: 28px;
+}
+
+.faq-questions {}
+
+.faq-accordion {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.faq-accordion__item {
+	border-radius: 8px;
+	background-color: var(--wh);
+}
+
+.faq-accordion__title {
+	border-radius: 8px;
+	padding: 18px 44px 18px 16px;
+}
+
+.faq-accordion__descr {
+	padding: 22px 16px 40px;
+	max-width: 680px;
+}
+
+.faq-btn {}
+
+.faq-info {
+	border-radius: 10px;
+	padding: 30px 20px;
+	width: 329px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	border-radius: 10px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
+	background: var(--wh);
+
+	@media screen and (max-width: 768px) {
+		padding: 30px 20px;
+	}
+}
+
+/* ========================
+END .contacts
+======================== */
