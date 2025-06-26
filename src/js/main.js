@@ -78,6 +78,11 @@ const clickToggle = (wrap) => {
                     parentElem.classList.toggle('is-active')
                 }
             } 
+            if(clickElem?.innerText === 'Читать полностью'){
+                clickElem.innerText = 'Свернуть'
+            } else if(clickElem?.innerText === 'Свернуть'){
+                clickElem.innerText = 'Читать полностью'
+            }
         })
     }
 }
@@ -88,6 +93,13 @@ const inCartBtn = () => {
         item.addEventListener('click', function(e){
             e.preventDefault()
             e.target.closest('.js-incartToggle').classList.toggle('is-active')
+            const innerBtnText = e.target.closest('.js-incartToggle').querySelector('span')
+            if(innerBtnText?.innerText === 'В корзину'){
+                innerBtnText.innerText = 'В корзине'
+            }
+            else if(innerBtnText?.innerText === 'В корзине'){
+                innerBtnText.innerText = 'В корзину'
+            }
         })
     })
 }
@@ -441,41 +453,6 @@ const popup = ()=> {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SCROLL IN PRODUCT PAGE
-// const rightSide = document.querySelector('.js-scrollSticky')
-// const rightSideOffsetTop = rightSide.offsetTop
-// const rightSideHeight = document.querySelector('.js-scrollSticky').clientHeight
-// const windowHeight = document.documentElement.clientHeight
-// const diff = rightSideHeight - windowHeight
-// let lastScrollY = window.scrollY;
-// window.addEventListener("scroll", () => {
-//     const currentScrollY = window.scrollY;
-//     console.log(
-//         `высота правого блока:${rightSideHeight}, 
-//         высота экрана:${windowHeight} , 
-//         разница: ${diff} , 
-//         расстояние от правого блока до верхнего края экрана: ${rightSideOffsetTop} , 
-//         скролл: ${currentScrollY}`
-//     )
-//     if (currentScrollY > lastScrollY) {
-//         console.log(currentScrollY-rightSideOffsetTop);
-//         if(rightSideHeight+100 >= windowHeight){
-//             if((currentScrollY-rightSideOffsetTop) >= diff){
-//                 rightSide.style.cssText = `
-//                     top: -${diff}px`
-//             } else if(currentScrollY >= rightSideOffsetTop){
-//                 rightSide.style.cssText = `
-//                     top: -${currentScrollY-rightSideOffsetTop}px`
-//             }
-//         }  else{
-//             rightSide.style.cssText = `
-//                     top: 100px`
-//         }
-
-//     } else if (currentScrollY < lastScrollY) {
-        
-//     }
-//     lastScrollY = currentScrollY;
-// });
 const scrollSticky = () => {
     const rightSide = document.querySelector('.js-scrollSticky');
     if (!rightSide) {
@@ -546,6 +523,7 @@ if(document.querySelector('.js-clickElem')){
     clickToggle('.tags')
     clickToggle('.filters')
     clickToggle('.mobile-filters')
+    clickToggle('.reviews-slider')
 }
 if(document.querySelector('.js-tabs')){
     tabs('.js-tabs', '.js-tab', '.js-tabBody', 'is-active')
@@ -558,6 +536,7 @@ if(document.querySelector('.js-incartToggle')){
 }
 mobileFilter()
 clickThisToggle('.infavor')
+clickThisToggle('.product__size')
 popup()
 scrollSticky()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)

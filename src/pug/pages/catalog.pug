@@ -17,7 +17,7 @@ html(lang="ru")
 
 				.categories__box 
 					each item, i in ['Браслеты','Серьги','Кулоны','Чокеры','Колье','Кольца']
-						a.categories-preview(href="#")
+						a.categories-preview.hover-blur(href="#")
 							img.categories-preview__foto(src=`img/catalog-${i+1}.webp`, alt="foto") 
 							h6.categories-preview__name= item
 

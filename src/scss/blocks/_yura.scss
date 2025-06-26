@@ -38,6 +38,10 @@
 .breadcrumbs {
 	padding-top: 55px;
 	padding-bottom: 37px;
+	@media(max-width: 768px){
+		padding-top: 15px;
+		padding-bottom: 25px;
+	}
 
 	&__list {
 		display: flex;
@@ -45,12 +49,18 @@
 		flex-wrap: wrap;
 		gap: 17px;
 		padding: 0;
+		@media(max-width: 768px){
+			gap: 5px;
+		}
 	}
 
 	&__item {
 		display: flex;
 		align-items: center;
 		gap: 17px;
+		@media(max-width: 768px){
+			font-size: 14px;
+		}
 
 		&:not(:last-child) {
 			position: relative;
@@ -73,8 +83,10 @@
 		line-height: 1.2;
 		letter-spacing: -0.6px;
 		color: var(--gr-e);
-
 		transition: all 0.25s;
+		@media(max-width: 768px){
+			font-size: 14px;
+		}
 
 		&:hover {
 			color: var(--br-b);
@@ -153,7 +165,14 @@ END .breadcrumbs
 
 	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.04);
 	background: var(--wh);
+	transition: background 0.3s;
 
+	&:hover{
+		background: $orange;
+		path{
+			stroke: $white;
+		}
+	}
 
 	&:nth-last-child(1) {
 		&:nth-child(3n+1) {
@@ -218,9 +237,9 @@ END .breadcrumbs
 
 	transition: color 0.25s, transform 0.25s;
 
-	// .clients-info__item:hover & {
-	// 	color: var(--br-b);
-	// }
+	.clients-info__item:hover & {
+		color: $white;
+	}
 }
 
 /* ========================
@@ -256,20 +275,28 @@ END .to-client
 	@media screen and (max-width: 768px) {
 		grid-template-columns: 1fr;
 		gap: 40px;
+		padding: 0px 0px 0px 0px;
 	}
 }
 
 .gallery-page__photo {
 	overflow: hidden;
+	@media(max-width: 565px){
+			padding: 0 10px;
+		}
 }
 
 .photo-gallery {
-	display: flex;
-	flex-direction: column;
+	.swiper-wrapper{
+		flex-direction: column;
+		@media(max-width: 565px){
+			flex-direction: row;
+		}
+	}
 }
 
 .gallery-page__info {
-	padding: 160px 40px 0;
+	padding: 0px 40px 0;
 
 	display: flex;
 	flex-direction: column;
@@ -280,7 +307,7 @@ END .to-client
 	}
 
 	@media screen and (max-width: 768px) {
-		padding: 40px 10px 0;
+		padding: 0px 10px 0;
 	}
 
 	h2 {
@@ -317,10 +344,6 @@ END .product-page
 .photo-gallery
 ======================== */
 
-.photo-gallery {
-	display: flex;
-	flex-direction: column;
-}
 
 .photo-gallery__item {
 	width: 100%;
@@ -330,6 +353,11 @@ END .product-page
 	display: block;
 	width: 100%;
 	height: auto;
+	@media(max-width: 565px){
+				height: 355px;
+		object-fit: cover;
+		border-radius: 10px;
+	}
 }
 
 /* ========================

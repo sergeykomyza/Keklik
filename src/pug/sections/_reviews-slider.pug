@@ -22,7 +22,7 @@
 		.swiper-wrapper 
 			each item, i in reviews
 				.swiper-slide 
-					.review-card 
+					.review-card.js-clickParent 
 						.review-card__head 
 							img.review-card__foto(src=`img/${item.foto}`, alt="foto")
 							.review-card__info 
@@ -33,6 +33,6 @@
 								h6.review-card__name.text= item.name 
 								time.review-card__date.text(datetime="2024-06-03") 3 июня 2024 
 						p.review-card__text.text= item.text 
-						a.review-card__readmore.text(href="#") Читать полностью
+						button.review-card__readmore.text.js-clickElem Читать полностью
 	.slider-navbox
 		div(class=`slider-nav js-reviewsNav`)

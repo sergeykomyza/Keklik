@@ -19,7 +19,7 @@ html(lang="ru")
 						a.alphabet__item.text(href="#" class=`${i === 0 ? 'is-active' : ''}`)= item
 				.catalog-stones__box
 					each item, i in ['Авантюрин','Азурит','Берилл','Лазурит','Вулканит','Обсидиан','Коралл','Горный хрусталь']
-						a.categories-preview(href="#")
+						a.categories-preview.hover-blur(href="#")
 							img.categories-preview__foto(src=`img/stone-${i+1}.webp`, alt="foto") 
 							h6.categories-preview__name= item
 				button.button.button-white.catalog-more 

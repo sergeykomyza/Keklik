@@ -27,7 +27,7 @@ html(lang="ru")
 											img.product__foto(src='img/sertificate-' + elem + '.webp', alt="foto")
 						.slider-nav.product-nav.js-previewProductNav
 					aside.product__info 
-						.product__infobox
+						.product__infobox.js-scrollSticky
 							h1.product__title Комплект из Раухтопаза
 							.preview-tags.product-tags
 								span.preview-tags__item.product-tags__item--sale.text Скидка 50%
@@ -65,7 +65,7 @@ html(lang="ru")
 											<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M6 9H9M9 9H12M9 9V6M9 9V12M9 16.5C13.1422 16.5 16.5 13.1422 16.5 9C16.5 4.85775 13.1422 1.5 9 1.5C4.85775 1.5 1.5 4.85775 1.5 9C1.5 13.1422 4.85775 16.5 9 16.5Z" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>
-									button.product-actions__incart.button.button-black 
+									button.product-actions__incart.button.button-black.js-incartToggle
 										span.text В корзину
 									button.product-actions__oneclick.button.button-white 
 										span.text Купить в 1 клик

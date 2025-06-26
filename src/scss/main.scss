@@ -1342,6 +1342,9 @@ textarea {
 		&__incart{
 			flex: 1;
 			width: auto;
+			&.is-active{
+				background: $orange;
+			}
 		}
 		&__infavor{
 			position: static;
@@ -1450,6 +1453,11 @@ textarea {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden; 
+	}
+	&.is-active{
+		.review-card__text{
+			-webkit-line-clamp: initial;
+		}
 	}
 	&__readmore{
 		text-decoration: underline;
