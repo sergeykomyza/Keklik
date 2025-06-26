@@ -97,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// Скрипт аккордеон для вопросов-ответов
 	function accordionFn() {
-		const faqTitle = document.querySelector('.faq-accordion__title');
+		const accordionTitle = document.querySelector('.faq-accordion__title');
 
-		if (faqTitle) {
+		if (accordionTitle) {
 			function accordionItemToggleFn(e) {
 				const element = e.target;
 				if (element.classList.contains('faq-accordion__title')) {
@@ -121,5 +121,22 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 	accordionFn();
+
+	document.querySelectorAll('.adress-block').forEach(n => {
+		const photoSlider = new Swiper(n.querySelector('.js-sliderPhoto'), {
+			loop: false,
+			slidesPerView: 3,
+			spaceBetween: 10,
+			navigation: {
+				nextEl: n.querySelector('.photo-arrows .js-next'),
+				prevEl: n.querySelector('.photo-arrows .js-prev'),
+			},
+			pagination: {
+				el: n.querySelector('.js-previewPhotoNav'),
+				clickable: true
+			},
+		});
+
+	});
 
 });
