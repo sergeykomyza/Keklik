@@ -1,0 +1,115 @@
+mixin galleryPageProduct(src, title)
+	.swiper-slide
+		.preview.preview-big
+			.preview__fotobox
+				img.preview-big__foto(src=""+src, alt="Фотография товара")
+				.preview-tags
+					span.preview-tags__item.text Бессрочная акця
+			h6.preview__name.text #{title}
+
+
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Контакты
+
+	body
+		include ./../sections/_header.pug
+		+breadcrumbs([
+			{ title: 'Контакты', url: '' }
+		])
+
+		main.contacts
+			.container
+				.contacts-box
+					h1.page-title Свяжитесь с нами любым способом
+					.contacts-content
+
+						//- Свяжитесь с нами любым способом
+						.communications
+							.communications-col
+								a(href="tel:+78001012272") 8 (800) 101–22–72
+								a(href="mailto:info@keklik-braslet.ru") info@keklik-braslet.ru
+							.communications-col
+								span Время работы консультантов
+								span с 8:00 до 21:00
+							.communications-col
+								span Мессенджеры
+								.footer-socials.communications-soc
+									a.footer-socials__item(href="#")
+										svg(width="23", height="23", viewBox="0 0 23 23", fill="none", xmlns="http://www.w3.org/2000/svg")
+											path(d="M12.4914 13.0439L14.6407 12.6243L16.666 13.4024V15.2862C16.666 15.9134 16.1266 16.3919 15.519 16.2575C13.9453 15.9124 11.086 15.0444 9.09995 13.0439C7.20895 11.1394 6.56312 8.48687 6.34302 7.02264C6.25518 6.43674 6.71915 5.94694 7.30712 5.94694H9.26425L10.0238 7.98157L9.62178 10.1526M21.8327 11.1136C21.8327 16.8207 17.2065 21.4469 11.4994 21.4469C9.68538 21.4494 7.90297 20.9725 6.33268 20.0643L1.16602 20.9303L2.02575 15.2469C1.45777 13.943 1.16509 12.5359 1.16602 11.1136C1.16602 5.40651 5.79225 0.780273 11.4994 0.780273C17.2065 0.780273 21.8327 5.40651 21.8327 11.1136Z", stroke="#222222", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+									a.footer-socials__item(href="#")
+										svg(width="25", height="20", viewBox="0 0 25 20", fill="none", xmlns="http://www.w3.org/2000/svg")
+											path(d="M23.4377 2.75599L20.1167 18.0273C19.872 19.1101 19.211 19.3729 18.289 18.8633L13.23 15.2246L10.7903 17.5177C10.521 17.7805 10.2926 18.0034 9.77036 18.0034L10.1294 12.9793L19.5048 4.71466C19.9128 4.36433 19.415 4.16528 18.8765 4.51561L7.28984 11.6337L2.29615 10.113C1.21093 9.77855 1.18645 9.054 2.52462 8.54443L22.0343 1.20338C22.94 0.884895 23.7315 1.41836 23.4377 2.75599Z", stroke="#222222", stroke-width="1.5")
+							.communications-col
+								span Мы в соц. сетях
+								.footer-socials.communications-soc
+									a.footer-socials__item(href="#")
+										svg(width="21", height="22", viewBox="0 0 21 22", fill="none", xmlns="http://www.w3.org/2000/svg")
+											path(d="M9.98684 7.00851H11.0132V11.6269M11.0132 11.6269V15.219C8.96053 14.7059 4.85526 12.3453 4.85526 7.00851M11.0132 11.6269C11.5993 11.541 12.1694 11.368 12.7045 11.1138M12.7045 11.1138C14.0593 10.4846 15.5885 9.23356 16.1447 7.00851M12.7045 11.1138C13.8509 11.4555 16.1447 12.7559 16.1447 15.219M0.75 11.1138C0.75 6.51793 0.75 4.21898 2.17761 2.79137C3.60521 1.36377 5.90313 1.36377 10.5 1.36377C15.0958 1.36377 17.3948 1.36377 18.8224 2.79137C20.25 4.21898 20.25 6.5169 20.25 11.1138C20.25 15.7096 20.25 18.0086 18.8224 19.4362C17.3948 20.8638 15.0969 20.8638 10.5 20.8638C5.90416 20.8638 3.60521 20.8638 2.17761 19.4362C0.75 18.0086 0.75 15.7106 0.75 11.1138Z", stroke="#222222", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+									a.footer-socials__item(href="#")
+										svg(width="22", height="22", viewBox="0 0 22 22", fill="none", xmlns="http://www.w3.org/2000/svg")
+											g(clip-path="url(#a)")
+												path(d="M7 13.5c-3-4.5 1.462-8 4.5-8 3.038 0 5.5 1.654 5.5 5.5 0 3.038-2 5-4 5s-3-2-2.5-5m.5-2L8 20.5m3 .5c5.523 0 10-4.477 10-10S16.523 1 11 1 1 5.477 1 11s4.477 10 10 10Z", stroke="#222", stroke-width="1.5", stroke-linecap="round", stroke-linejoin="round")
+											defs
+												clipPath#a
+													path(fill="#fff", d="M0 0h22v22H0z")
+										|  
+									a.footer-socials__all.text(href="#") Прочие социальные сети
+
+						//- FAQ
+						.faq
+							h2.page-title F.A.Q.
+							.faq-box
+								.faq-questions
+									.faq-accordion
+										.faq-accordion__item
+											.faq-accordion__title Как выбрать подходящий именно мне камень или украшение?
+											.faq-accordion__descr
+												p На сайте есть фильтры по назначению (защита, любовь, деньги), камням и коллекциям. Если сомневаетесь — напишите нам в чат, и мы поможем!
+										.faq-accordion__item
+											.faq-accordion__title Как заказать персональный браслет?
+											.faq-accordion__descr
+												p На сайте есть фильтры по назначению (защита, любовь, деньги), камням и коллекциям. Если сомневаетесь — напишите нам в чат, и мы поможем!
+										.faq-accordion__item
+											.faq-accordion__title Какие способы оплаты доступны?
+											.faq-accordion__descr
+												p На сайте есть фильтры по назначению (защита, любовь, деньги), камням и коллекциям. Если сомневаетесь — напишите нам в чат, и мы поможем!
+										.faq-accordion__item
+											.faq-accordion__title Как происходит доставка?
+											.faq-accordion__descr
+												p На сайте есть фильтры по назначению (защита, любовь, деньги), камням и коллекциям. Если сомневаетесь — напишите нам в чат, и мы поможем!
+									a.button.button-white.faq-btn(href="#") 
+										span.text Другие вопросы
+								.faq-info
+									h2.page-title Остались вопросы? Задайте их в чате
+									p Напишите нам в Telegram или WhatsApp. Наш менеджер ответит вам в течении нескольких минут в рабочее время
+									p Либо оставьте свой вопрос на сайте и мы свяжемся с вами чуть позже
+									a.button.button-black(href="#") 
+										span.text Задать вопрос на сайте
+
+
+			//- Задать нам вопрос
+			.form.contacts__form
+				.container.contacts__form-container
+					h2.page-title Задать нам вопрос
+					.contacts__form-box
+						.contacts_form__left
+							input.form__input(name="fio" type="text" placeholder="Ф.И.О. *")
+							input.form__input(name="email" type="email" placeholder="Email")
+							input.form__input.form__input--phone.js-phone(name="phone" type="text")
+						.contacts_form__right
+							textarea.form__input.form__input--comment(name="comment" placeholder="Ваше сообщение") 
+
+
+							button.button.button-black 
+								span.text Отправить
+
+							include ./../layouts/_agree.pug
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug
