@@ -1038,6 +1038,103 @@
 </svg> </a><a class="footer-socials__all text" href="#">Прочие социальные сети</a></div>
       </div>
     </footer>
+    <div class="popup" id="done">
+      <div class="popup__body popup-personal animate__animated">
+        <button class="popup__close js-popupClose">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <h6 class="popup-personal__title page-title">Вы успешно зарегистрировались!</h6>
+        <p class="done-info text">Перейдите в каталог товаров или на главную страницу</p>
+      </div>
+    </div>
+    <div class="popup" id="recovery">
+      <div class="popup__body popup-personal animate__animated">
+        <button class="popup__close js-popupClose">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <h6 class="popup-personal__title page-title">Восстановление пароля</h6>
+        <form class="popup-personal__form">
+          <input class="form__input" name="email" type="text" placeholder="Ваш email *"/>
+          <p class="recovery-info text">Введите ваш Email мы отправим на него ссылку на восстановление пароля</p>
+          <button class="button button-black"> <span class="text">Восстановить</span></button>
+          <div class="agree"> 
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="register">
+      <div class="popup__body popup-personal animate__animated">
+        <button class="popup__close js-popupClose">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <h6 class="popup-personal__title popup-personal__title--mb20 page-title">Вход в личный кабинет</h6>
+        <p class="popup-personal__subtitle text">Регистрация даст вам доступ к вашим заказам и бонусным программам</p>
+        <form class="popup-personal__form">
+          <input class="form__input" name="name" type="text" placeholder="Ваше имя *"/>
+          <input class="form__input" name="email" type="text" placeholder="Ваш email *"/>
+          <input class="form__input form__input--phone js-phone" name="phone" type="text"/>
+          <input class="form__input" name="password" type="password" placeholder="Ваш пароль *"/>
+          <input class="form__input" name="allowPassword" type="password" placeholder="Подтвердите пароль *"/>
+          <button class="button button-black"> <span class="text">Зарегистрироваться</span></button>
+          <div class="agree"> 
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="personal">
+      <div class="popup__body popup-personal animate__animated">
+        <button class="popup__close js-popupClose">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <h6 class="popup-personal__title page-title">Вход в личный кабинет</h6>
+        <form class="popup-personal__form">
+          <input class="form__input" name="login" type="text" placeholder="Логин *"/>
+          <input class="form__input" name="password" type="password" placeholder="Пароль *"/>
+          <button class="password-recovery text" data-popup="popup" data-src="#recovery">Забыли пароль?</button>
+          <button class="button button-black"> <span class="text">Войти</span></button>
+          <button class="button button-transparent"> <span class="text">Регистрация</span></button>
+          <div class="agree"> 
+            <label class="checkbox">
+              <input class="checkbox__input" type="checkbox"/><span class="checkbox-area"><img class="checkbox-area__icon" src="img/svg/check.svg" alt="checkbox-icon"/></span><span class="agree__text text">Я даю согласие на обработку моих персональных данных в соответствии с <a href="#">Политикой конфиденциальности</a> и <a href="#">Пользовательским соглашением</a></span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup" id="delivery">
+      <div class="popup__body popup-delivery animate__animated">
+        <button class="popup__close js-popupClose">
+           <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.757812 11.2433L6.00081 6.00032L11.2438 11.2433M11.2438 0.757324L5.99981 6.00032L0.757812 0.757324" stroke="#222222" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        </button>
+        <h6 class="popup-delivery__title page-title">Доставка по России, Беларуси и Казахстану</h6>
+        <p class="popup-delivery__text text">5.2.1. Доставка товаров, заказанных и оплаченных Покупателем, осуществляется Продавцом или Перевозчиком. Покупатель имеет право забрать товар самостоятельно (самовывоз). Адреса, контакты и режим работы пунктов указаны на сайте Продавца. Покупателю при оформлении заказа предоставляется право выбора способа доставки.</p>
+        <h6 class="popup-delivery__title page-title">Доставка по миру</h6>
+        <p class="popup-delivery__text text">
+          5.2.1. Доставка товаров, заказанных и оплаченных Покупателем, осуществляется Продавцом или Перевозчиком. Покупатель имеет право забрать товар самостоятельно (самовывоз). Адреса, контакты и режим работы пунктов указаны на сайте Продавца. Покупателю при оформлении заказа предоставляется право выбора способа доставки.5.2.2. Продавец доставляет товар после его полной оплаты в согласованные с Покупателем при подтверждении заказа сроки посредством служб доставки (в том числе СДЭК, Boxberry), а также курьерской, почтовой доставки на адрес Покупателя. Срок доставки зависит от выбранного способа доставки товара.
+          5.2.3. При получении товара Покупатель проверяет его внешний вид и комплектность. При отсутствии замечаний при получении, Покупатель тем самым подтверждает, что получил товар и не имеет претензий по его внешнему виду, количеству и комплектности.
+          5.2.4. Право собственности на товар переходит к Покупателю в момент фактической передачи товара.
+          5.2.5. Доставленный товар передается Покупателю по указанному им адресу, а при отсутствии Покупателя — любому лицу, предъявившему информацию о номере заказа, либо иное (в том числе электронное) подтверждение оформления заказа. Если Покупатель не совершит необходимые для принятия товара действия, Продавец доставляет товар заново, в новые сроки, согласованные с Покупателем по телефону. За повторную доставку с Покупателя взимаются расходы Продавца за доставку.
+          5.2.6. Право собственности и риск случайной гибели, утраты или повреждения товара переходит с Продавца на Покупателя с момента передачи товара Перевозчику при подписании Сторонами товарной накладной и/или транспортной накладной и/или товарно-транспортной накладной или иного документа, свидетельствующего о передаче товара.
+          5.2.7. При получении товара Покупатель должен в присутствии Перевозчика проверить соответствие полученного товара по наименованию, количеству, ассортименту, качеству, комплектности заказанному товару. Покупатель при приемке товара подтверждает своей подписью в документе о получении товара, что не имеет претензий к внешнему виду и комплектности товара. Заказ считается доставленным в момент его передачи Покупателю. Подписываясь в листе курьера, Покупатель подтверждает исполнение Заказа.
+        </p>
+      </div>
+    </div>
     <div class="popup" id="oneclick">
       <div class="popup__body popup-oneclick animate__animated">
         <button class="popup__close js-popupClose">

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Keklik | Modals
+	body
+		include ./../sections/_header.pug
+		.templates
+			.container
+				br
+				br
+				h1.forum400 Модальные окна
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#oneclick") 
+					span.text Купить в один клик
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#fastview") 
+					span.text Быстрый просмотр
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#delivery") 
+					span.text Доставка
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#personal") 
+					span.text Вход в личный кабинет
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#register") 
+					span.text Регистрация
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#recovery") 
+					span.text Восстановление пароля
+				br
+				br
+				button.button.button-black(data-popup="popup" data-src="#done") 
+					span.text Вы успешно зарегистрировались!
+				
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug

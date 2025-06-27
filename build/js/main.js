@@ -64,6 +64,16 @@ if(document.querySelector('.js-phone')){
             nationalMode: true,
             strictMode: true,
             loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/utils.js"),
+            customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
+                // Пример: заменяем все цифры на "x"
+                return selectedCountryPlaceholder.replace(/\d/g, 'x');
+                
+                // Или можно на нули:
+                // return selectedCountryPlaceholder.replace(/\d/g, '0');
+
+                // Или на подчёркивания:
+                // return selectedCountryPlaceholder.replace(/\d/g, '_');
+            }
         });
     })
 }

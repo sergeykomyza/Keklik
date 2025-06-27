@@ -78,7 +78,7 @@
   padding: 8px 30px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, border-color 0.3s;
   span{
     transition: color 0.3s;
   }
@@ -139,6 +139,17 @@
       display: none;
       @media(max-width: 768px){
         display: flex;
+      }
+    }
+  }
+  &-transparent{
+    background: transparent;
+    border: 2px solid $light-grey;
+    &:hover{
+      background: $dark;
+      border-color: $dark;
+      span{
+        color: $white;
       }
     }
   }
@@ -894,6 +905,36 @@
     }
   }
 }
+.popup-delivery{
+  max-width: 582px;
+  width: 100%;
+  &__title.page-title{
+    margin-bottom: 20px;
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+}
+.popup-personal{
+  max-width: 375px;
+  width: 100%;
+  &__title.page-title{
+    margin-bottom: 40px;
+  }
+  &__title{
+    &--mb20.page-title{
+      margin-bottom: 20px;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__subtitle{
+    margin-bottom: 40px;
+  }
+}
 .fastview-slider{
   max-width: 100%;
   width: 100%;
@@ -949,6 +990,15 @@
       filter: blur(10px);
     }
   }
+}
+.password-recovery{
+  display: flex;
+  text-decoration: underline;
+  line-height: 120%;
+  text-align: left;
+}
+.recovery-info{
+  padding: 20px 0;
 }
 
 
