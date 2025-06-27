@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include ./../sections/_head.pug
+		title Ошибка 404 - страница не нейдена
+	body
+
+		include ./../sections/_header.pug
+
+		main.error-404
+			.container
+				.error-404__box
+					.error-404__top
+						h1.error-404__title 404
+						p Такой страницы больше не существует — возможно, ссылка устарела или была ошибка при вводе
+					.error-404__middle
+						p что можно сделать прямо сейчас:
+						a.button.button-black.error-404__btn(href="/") 
+							span.text Вернуться на главную
+					p 
+						a(href="#") Посетить каталог
+						| &nbsp;— возможно, вы найдете то, что искали
+					p Воспользоваться 
+						a(href="#") Поиском
+					p 
+						a(href="#") Напишите нам
+						| &nbsp;— мы поможем найти нужную информацию.
+
+
+		include ./../sections/_footer.pug
+
+		include ./../sections/_scripts.pug
