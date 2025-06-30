@@ -517,6 +517,34 @@ const scrollSticky = () => {
 
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ VIDEO
+const video = () => {
+    document.querySelectorAll('.js-videoParent').forEach(wrapper => {
+        const video = wrapper.querySelector('.preview-videoclip');
+        const btn = wrapper.querySelector('.js-videoPlay');
+        const btnContent = btn.querySelector('.preview-video__icon')
+
+        btn.addEventListener('click', () => {
+            if (video.paused) {
+                video.muted = true; // страховка
+                video.play()
+                .then(() => {
+                video.style.cssText = `
+                    opacity: 1;
+                    z-index: 2;
+                `
+                btnContent.innerHTML = `<svg width="36" height="36" viewBox="0 0 20 20" fill="white" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="4" height="14"/><rect x="12" y="3" width="4" height="14"/></svg>`;
+                })
+                .catch(err => {
+                console.error('Ошибка запуска видео:', err);
+                });
+            } else {
+            video.pause();
+                btnContent.innerHTML = `<svg class="" width="34" height="36" viewBox="0 0 34 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.015 13.6857C30.8155 14.1114 31.4851 14.7469 31.952 15.5241C32.419 16.3012 32.6656 17.1908 32.6656 18.0974C32.6656 19.0041 32.419 19.8936 31.952 20.6708C31.4851 21.4479 30.8155 22.0834 30.015 22.5091L8.66167 34.1208C5.22333 35.9924 1 33.5591 1 29.7108V6.48575C1 2.63575 5.22333 0.204082 8.66167 2.07242L30.015 13.6857Z" stroke="white" stroke-width="2"/></svg>`;
+            }
+        });
+    });
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
@@ -549,6 +577,7 @@ clickThisToggle('.infavor')
 clickThisToggle('.product__size')
 popup()
 scrollSticky()
+video()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
 
