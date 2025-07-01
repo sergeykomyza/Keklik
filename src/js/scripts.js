@@ -146,4 +146,43 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	photoSliderInit();
 
+	// Табы. Параметры: класс для кнопок табов и класс содержимого табов
+	const tabsToggle = function (tabBtnClass, tabContentClass) {
+
+		if (document.querySelector(tabBtnClass)) {
+			const tabsBtn = document.querySelectorAll(tabBtnClass); // все кнопки табов
+			const tabsContent = document.querySelectorAll(tabContentClass); // все содержимое табов
+
+			// Перебираем кнопки табов, по которым можем щелкнуть
+			tabsBtn.forEach(function (btn, index) {
+
+				// Вешаем событие клика на каждую кнопку
+				btn.addEventListener('click', function () {
+
+					// у всех кнопок одного родителя убрать класс активности
+					tabsBtn[index].parentNode.querySelectorAll(tabBtnClass).forEach(function (element) {
+						element.classList.remove('is-active');
+					});
+
+					// у кнопки, по которой щелкнули, добавить класс активности
+					tabsBtn[index].classList.add('is-active');
+
+					// у каждого содержимого одного родителя удалить класс активности
+					tabsContent[index].parentNode.querySelectorAll(tabContentClass).forEach(function (element) {
+						element.classList.remove('is-active');
+					});
+
+					// у содержимого с этим индексом добавить класс активности
+					tabsContent[index].classList.add('is-active');
+
+				});
+
+			});
+
+		};
+	};
+
+	tabsToggle('.js-tabs__btns .tags__item', '.tabs-content__item');
+
+
 });

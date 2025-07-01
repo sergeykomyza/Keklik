@@ -2017,3 +2017,21 @@ END .contacts
 /* ========================
 END 404
 ======================== */
+
+.js-tabs__btns .tags__item .tag {
+	color: #222;
+	background: #FFF;
+}
+
+.tags__item.is-active .tag {
+	color: #FFF;
+	background: #373330;
+}
+
+.tabs-content__item {
+	display: none;
+}
+
+.tabs-content__item.is-active {
+	display: block;
+}
