@@ -20,18 +20,18 @@ html(lang="ru")
 							ul.tags__list.js-tabs__btns
 								each item, i in ['Все', 'Аметист', 'Агат', 'Браслет спираль', 'Таро и камни', 'Образы и стиль', 'Подарок маме']
 
-									li.tags__item
+									li.tags__item(class=`${i===0 ? 'tags__item is-active' : 'tags__item'}`)
 										a.tag.text(href="#" class=`${i===0 ? 'is-active' : ''}`)= item 
 						
 					.tabs-content
 
-						.tabs-content__item
+						.tabs-content__item.is-active
 							ul.special-offer-category.so-category
 								li.so-category__item
 									a.so-category__link(href="#")
 										.so-category__img-box
 											img.so-category__img(src="img/blog/01.webp", alt="")
-										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+										.so-category__title --Подойдет ли индивидуальный браслет по стилю?
 								li.so-category__item
 									a.so-category__link(href="#")
 										.so-category__img-box
