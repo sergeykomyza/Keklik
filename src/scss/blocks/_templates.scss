@@ -96,7 +96,11 @@
     span{
       color: $white;
     }
-    
+    @media(hover: hover){
+      &:hover{
+        background: $orange;
+      }
+    }
   }
   &-mobilecart{
     &.is-active{
@@ -1000,7 +1004,18 @@
     }
     &--select{
       cursor: pointer;
+      appearance: none;
     }
+  }
+  &__selectbox{
+    position: relative;
+  }
+  &__selecticon{
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+    top: 50%;
+	  transform: translateY(-50%);
   }
 }
 .hover-blur{

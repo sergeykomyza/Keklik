@@ -94,7 +94,8 @@ html(lang="ru")
 										.photo-slider.swiper.js-sliderPhoto 
 											.swiper-wrapper
 												each item in [1, 2, 3, 4, 5]
-													img.swiper-slide.photo-slider__preview(src=`img/photo-slider/0${item}.webp`, alt="foto")
+													a.swiper-slide(href=`img/photo-slider/0${item}.png` data-fslightbox="gallery1") 
+														img.photo-slider__preview(src=`img/photo-slider/0${item}.webp`, alt="foto")
 										.slider-navbox
 											.slider-nav.js-previewPhotoNav
 
@@ -124,8 +125,9 @@ html(lang="ru")
 												</svg>
 										.photo-slider.swiper.js-sliderPhoto 
 											.swiper-wrapper
-												each item in [1, 2, 3, 4, 5]
-													img.swiper-slide.photo-slider__preview(src=`img/photo-slider/0${item}.webp`, alt="foto")
+												each item in [3, 4, 5, 1, 2]
+													a.swiper-slide(href=`img/photo-slider/0${item}.png` data-fslightbox="gallery2") 
+														img.photo-slider__preview(src=`img/photo-slider/0${item}.webp`, alt="foto")
 										.slider-navbox
 											.slider-nav.js-previewPhotoNav
 

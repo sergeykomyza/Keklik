@@ -1086,12 +1086,16 @@
           <input class="form__input form__input--phone js-phone" name="phone" type="text"/>
           <input class="form__input" name="email" type="text" placeholder="Email *"/>
           <textarea class="form__input form__input--comment" name="comment" placeholder="Комментарий к заказу"> </textarea>
-          <select class="form__input form__input--select">
-            <option value="Стоимость доставки" disabled="disabled" selected="selected">Стоимость длоставки  </option>
-            <option value="Значение 1">Значение 1  </option>
-            <option value="Значение 2">Значение 2</option>
-            <option value="Значение 3">Значение 3  </option>
-          </select>
+          <div class="form__selectbox"><svg class="form__selecticon" width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0L4 5L8 0L0 0Z" fill="#222222"/>
+</svg>
+            <select class="form__input form__input--select">
+              <option value="Стоимость доставки" disabled="disabled" selected="selected">Стоимость длоставки  </option>
+              <option value="Значение 1">Значение 1  </option>
+              <option value="Значение 2">Значение 2</option>
+              <option value="Значение 3">Значение 3  </option>
+            </select>
+          </div>
           <button class="button button-black"> <span class="text">Отправить</span></button>
           <div class="agree"> 
             <label class="checkbox">

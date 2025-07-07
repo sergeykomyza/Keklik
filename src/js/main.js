@@ -58,8 +58,18 @@ const catalogMenu = () => {
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
 if(document.querySelector('.js-phone')){
     const input = document.querySelectorAll(".js-phone");
+    const russianNames = {
+        'ru': 'Россия',
+        'us': 'США',
+        'gb': 'Великобритания',
+        'de': 'Германия',
+        'fr': 'Франция',
+        'cn': 'Китай',
+        'jp': 'Япония'
+        // Добавьте другие страны по необходимости
+    };
     input.forEach(item => {
-        window.intlTelInput(item, {
+        const iti = window.intlTelInput(item, {
             initialCountry: "ru",
             nationalMode: true,
             strictMode: true,
@@ -67,14 +77,24 @@ if(document.querySelector('.js-phone')){
             customPlaceholder: function (selectedCountryPlaceholder, selectedCountryData) {
                 // Пример: заменяем все цифры на "x"
                 return selectedCountryPlaceholder.replace(/\d/g, 'x');
-                
                 // Или можно на нули:
-                // return selectedCountryPlaceholder.replace(/\d/g, '0');
-
+                // return selectedCountryPlaceholder.replace(/\d/g, '0')
                 // Или на подчёркивания:
                 // return selectedCountryPlaceholder.replace(/\d/g, '_');
-            }
+            },
+            localizedCountries: russianNames
         });
+        
+        // Простой хак для перевода после загрузки
+        setTimeout(() => {
+            const dropdownItems = document.querySelectorAll('.iti__country-name');
+            dropdownItems.forEach(el => {
+                const code = el.closest('.iti__country')?.dataset?.countryCode;
+                if(code && russianNames[code]) {
+                    el.textContent = russianNames[code];
+                }
+            });
+        }, 1000);
     })
 }
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ CLICK TOGGLE

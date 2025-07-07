@@ -16,10 +16,10 @@
 .button {
 	&.hover-white {
 		&:hover {
-			background-color: #fff;
+			border: 1px solid var(--wh);
 
 			span {
-				color: var(--gr-e);
+				color: var(--wh);
 			}
 		}
 	}
@@ -1940,6 +1940,7 @@ END .reviews
 }
 
 .photo-slider__preview {
+	width: 100%;
 	border-radius: 10px;
 }
 
