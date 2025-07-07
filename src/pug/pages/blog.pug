@@ -14,46 +14,246 @@ html(lang="ru")
 		.container
 			main.blog
 					h1.page-title Все о камнях
-
-					.tags 
+					
+					.tags
 						.tags__listbox.js-clickParent
-							ul.tags__list 
+							ul.tags__list.js-tabs__btns
 								each item, i in ['Все', 'Аметист', 'Агат', 'Браслет спираль', 'Таро и камни', 'Образы и стиль', 'Подарок маме']
 
-									li.tags__item 
+									li.tags__item(class=`${i===0 ? 'tags__item is-active' : 'tags__item'}`)
 										a.tag.text(href="#" class=`${i===0 ? 'is-active' : ''}`)= item 
+						
+					.tabs-content
 
-					ul.special-offer-category.so-category
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/01.webp", alt="")
-								.so-category__title Подойдет ли индивидуальный браслет по стилю?
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/02.webp", alt="")
-								.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/03.webp", alt="")
-								.so-category__title Патент
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/02.webp", alt="")
-								.so-category__title Патент
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/03.webp", alt="")
-								.so-category__title О Светлане Шахрай
-						li.so-category__item
-							a.so-category__link(href="#")
-								.so-category__img-box
-									img.so-category__img(src="img/blog/01.webp", alt="")
-								.so-category__title Создание личного украшения-талисмана
+						.tabs-content__item.is-active
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title --Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+
+						.tabs-content__item
+							ul.special-offer-category.so-category
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Подойдет ли индивидуальный браслет по стилю?
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title При покупке браслетов от 8 900 руб. дарим сертификат на 1000 руб.
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/02.webp", alt="")
+										.so-category__title Патент
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/03.webp", alt="")
+										.so-category__title О Светлане Шахрай
+								li.so-category__item
+									a.so-category__link(href="#")
+										.so-category__img-box
+											img.so-category__img(src="img/blog/01.webp", alt="")
+										.so-category__title Создание личного украшения-талисмана
 
 
 		include ./../sections/_footer.pug
