@@ -566,6 +566,53 @@ const video = () => {
     });
 }
 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ В КАРТОЧКЕ ТОВАРА ПЕРЕНОСИМ НАЗВАНИЕ ИЗ ОДНОГО МЕСТА НА ДЕСКТОПЕ В ДРУГОЕ МЕСТО НА МОБИЛКЕ
+// Функция для перемещения элемента в другой элемент. Параметры:  что перемещаем, куда перемещаем, способ перемещения
+let movingConstructor = function (block, to, metod) {
+  if (!(document.querySelector(block) && document.querySelector(to))) {
+    // console.log("переноса не будт");
+    return;
+  } else {
+    switch (metod) {
+      case "prepend":
+        document
+          .querySelector(to)
+          .prepend(document.querySelector(block));
+        break;
+
+      case "before":
+        document
+          .querySelector(to)
+          .before(document.querySelector(block));
+        break;
+
+      case "after":
+        document
+          .querySelector(to)
+          .after(document.querySelector(block));
+        break;
+
+      default:
+        document
+          .querySelector(to)
+          .append(document.querySelector(block));
+        break;
+    }
+  }
+};
+// функция будет перемещать блок в указанное место при определенной ширине экрана
+let moving = function () {
+  const windowWidth = window.innerWidth; // ширина экрана
+
+  if (windowWidth <= 768) {
+    movingConstructor(".product__titlebox", ".product__mobiletitlebox", "append");
+  } else {
+    movingConstructor(".product__titlebox", ".product__infobox", "prepend");
+  }
+};
+moving();
+window.addEventListener("resize", moving);
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ INIT
 if(document.documentElement.clientWidth > 768){
     burger('.js-openMobileMenu')
@@ -597,7 +644,7 @@ clickThisToggle('.infavor')
 clickThisToggle('.product__size')
 popup()
 scrollSticky()
-video()
+// video()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ КАРТА, ОТЛОЖЕННАЯ ЗАГРУЗКА (ЧТОБЫ УЛУЧШИТЬ ПОКАЗАТЕЛИ - PageSpeed Insights)
 ymaps.ready(init);
 
