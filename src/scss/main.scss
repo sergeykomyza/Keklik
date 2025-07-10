@@ -629,7 +629,10 @@ textarea {
 		display: flex;
 		align-items: end;
 		gap: 10px;
-		margin-bottom: 15px ;
+		margin-bottom: 15px;
+		@media(max-width: 768px){
+			margin-bottom: 25px;
+		}
 	}
 	&__info{
 		display: flex;
@@ -787,6 +790,9 @@ textarea {
 	flex-wrap: wrap;
 	gap: 4px;
 	margin-bottom: 30px;
+	@media(max-width: 768px){
+		gap: 15px;
+	}
 	&-selected{
 		display: flex;
 		align-items: center;
@@ -810,6 +816,7 @@ textarea {
 .filter{
 	position: relative;
 	&__btn{
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -820,6 +827,23 @@ textarea {
 		border-radius: 6px;
 		svg{
 			transition: transform 0.3s;
+		}
+	}
+	&-quantity{
+		position: absolute;
+		z-index: 1;
+		top: -15px;
+		right: -10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background: $dark;
+		&__count{
+			font-size: 14px;
+			color: $white;
 		}
 	}
 	&__body{
@@ -880,12 +904,12 @@ textarea {
 		border-radius: 8px;
 		background: $white;
 		transition: background 0.3s, color 0.3s;
-		@media(hover: hover){
+		
 			&:hover{
 				color: $white;
 				background: $dark;
 			}
-		}
+		
 	}
 	&-mobilehidden{
 		@media(max-width: 768px){
